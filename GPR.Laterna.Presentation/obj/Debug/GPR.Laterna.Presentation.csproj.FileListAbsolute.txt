@@ -1,0 +1,8 @@
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\GPR.Laterna.Presentation.exe.config
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\GPR.Laterna.Presentation.exe
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\GPR.Laterna.Presentation.pdb
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.csprojAssemblyReference.cache
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.Properties.Resources.resources
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.csproj.GenerateResource.cache
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.exe
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.pdb

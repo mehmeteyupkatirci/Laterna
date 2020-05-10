@@ -1,0 +1,11 @@
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\bin\Debug\GPR.Core.dll.config
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\bin\Debug\GPR.Core.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\bin\Debug\GPR.Core.pdb
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\bin\Debug\EntityFramework.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\bin\Debug\EntityFramework.xml
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\obj\Debug\GPR.Core.csprojAssemblyReference.cache
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\obj\Debug\GPR.Core.csproj.CopyComplete
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\obj\Debug\GPR.Core.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\obj\Debug\GPR.Core.pdb

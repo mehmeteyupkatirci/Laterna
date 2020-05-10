@@ -1,0 +1,16 @@
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\bin\Debug\GPR.Laterna.DataAccess.dll.config
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\bin\Debug\GPR.Laterna.DataAccess.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\bin\Debug\GPR.Laterna.DataAccess.pdb
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\bin\Debug\GPR.Core.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\bin\Debug\GPR.Laterna.Entities.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\bin\Debug\GPR.Core.pdb
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\bin\Debug\GPR.Core.dll.config
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\bin\Debug\GPR.Laterna.Entities.pdb
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\obj\Debug\GPR.Laterna.DataAccess.csprojAssemblyReference.cache
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\obj\Debug\GPR.Laterna.DataAccess.csproj.CopyComplete
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\obj\Debug\GPR.Laterna.DataAccess.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\obj\Debug\GPR.Laterna.DataAccess.pdb

@@ -1,0 +1,11 @@
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\bin\Debug\GPR.Laterna.Entities.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\bin\Debug\GPR.Laterna.Entities.pdb
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\bin\Debug\GPR.Core.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\bin\Debug\EntityFramework.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\bin\Debug\GPR.Core.pdb
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\bin\Debug\GPR.Core.dll.config
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\bin\Debug\EntityFramework.xml
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\obj\Debug\GPR.Laterna.Entities.csprojAssemblyReference.cache
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\obj\Debug\GPR.Laterna.Entities.csproj.CopyComplete
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\obj\Debug\GPR.Laterna.Entities.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\obj\Debug\GPR.Laterna.Entities.pdb
