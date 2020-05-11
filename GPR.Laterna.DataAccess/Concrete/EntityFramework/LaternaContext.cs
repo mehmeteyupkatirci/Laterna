@@ -17,10 +17,12 @@ namespace GPR.Laterna.DataAccess.Concrete.EntityFramework
         }
          
         public DbSet<User> Users { get; set; }
+        public DbSet<Album> Albums { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new UserMap());
+            modelBuilder.Configurations.Add(new AlbumMap());
         }
     }
 }

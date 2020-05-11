@@ -14,5 +14,9 @@ namespace GPR.Laterna.Business.Concrete
         {
             return new EfUserDal();
         }
+        public static IAlbumDal CreateAlbumDal()
+        {
+            return new EfAlbumDal();
+        }
     }
 }
