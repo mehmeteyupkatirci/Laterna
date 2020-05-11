@@ -20,7 +20,7 @@ namespace GPR.Laterna.Entities.Concrete
         public string ReleaseData { get; set; }
         public string Images { get; set; }
         public string Checked { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 }

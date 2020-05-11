@@ -23,6 +23,8 @@ namespace GPR.Laterna.DataAccess.Concrete.EntityFramework
         {
             modelBuilder.Configurations.Add(new UserMap());
             modelBuilder.Configurations.Add(new AlbumMap());
+            modelBuilder.Configurations.Add(new ArtistMap());
+            modelBuilder.Configurations.Add(new AlbumTypesMap());
         }
     }
 }

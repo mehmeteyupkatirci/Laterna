@@ -9,9 +9,6 @@ using GPR.Laterna.Business.Concrete;
 
 namespace GPR.Laterna.DataAccess.Tests
 {
-    /// <summary>
-    /// Summary description for UserDalTests
-    /// </summary>
     [TestClass]
     public class UserDalTests
     {

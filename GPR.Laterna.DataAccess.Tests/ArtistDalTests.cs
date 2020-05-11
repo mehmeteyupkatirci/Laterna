@@ -7,9 +7,6 @@ using GPR.Laterna.Business.Concrete;
 
 namespace GPR.Laterna.DataAccess.Tests
 {
-    /// <summary>
-    /// Summary description for ArtistDalTests
-    /// </summary>
     [TestClass]
     public class ArtistDalTests
     {
@@ -19,13 +16,10 @@ namespace GPR.Laterna.DataAccess.Tests
             _artistDal = DalFactory.CreateArtistDal();
         }
 
-
         [TestMethod]
         public void TestMethod1()
         {
-            //
-            // TODO: Add test logic here
-            //
+            
         }
     }
 }
