@@ -57,6 +57,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlbumTypesDalTests.cs" />
+    <Compile Include="ArtistDalTests.cs" />
+    <Compile Include="PlaylistDalTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AlbumDalTests.cs" />
     <Compile Include="UserDalTests.cs" />

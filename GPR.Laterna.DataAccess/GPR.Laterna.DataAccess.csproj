@@ -52,12 +52,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IAlbumDal.cs" />
+    <Compile Include="Abstract\IAlbumTypesDal.cs" />
+    <Compile Include="Abstract\IArtistDal.cs" />
+    <Compile Include="Abstract\IPlaylistDal.cs" />
     <Compile Include="Abstract\IUserDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfPlaylistDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfAlbumDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfAlbumTypesDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfArtistDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="Concrete\EntityFramework\EfUserDal.cs" />
     <Compile Include="Concrete\EntityFramework\LaternaContext.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\AlbumMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\AlbumTypesMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ArtistMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\PlaylistMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\UserMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

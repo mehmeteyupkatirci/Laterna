@@ -1,4 +1,5 @@
 ﻿using GPR.Laterna.DataAccess.Abstract;
+using GPR.Laterna.DataAccess.Concrete;
 using GPR.Laterna.DataAccess.Concrete.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,10 @@ namespace GPR.Laterna.Business.Concrete
         public static IAlbumTypesDal CreateAlbumTypesDal()
         {
             return new EfAlbumTypesDal();
+        }
+        public static IPlaylistDal CreatePlaylistDal()
+        {
+            return new EfPlaylistDal();
         }
     }
 }

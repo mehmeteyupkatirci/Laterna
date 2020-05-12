@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\Album.cs" />
+    <Compile Include="Concrete\AlbumTypes.cs" />
+    <Compile Include="Concrete\Artist.cs" />
+    <Compile Include="Concrete\Playlist.cs" />
     <Compile Include="Concrete\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
