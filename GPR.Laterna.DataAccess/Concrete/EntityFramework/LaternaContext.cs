@@ -21,6 +21,7 @@ namespace GPR.Laterna.DataAccess.Concrete.EntityFramework
         public DbSet<Artist> Artists { get; set; }
         public DbSet<AlbumTypes> AlbumTypes { get; set; }
         public DbSet<Playlist> Playlists { get; set; }
+        public DbSet<Track> Tracks { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -29,6 +30,7 @@ namespace GPR.Laterna.DataAccess.Concrete.EntityFramework
             modelBuilder.Configurations.Add(new ArtistMap());
             modelBuilder.Configurations.Add(new PlaylistMap());
             modelBuilder.Configurations.Add(new AlbumTypesMap());
+            modelBuilder.Configurations.Add(new TrackMap());
         }
     }
 }
