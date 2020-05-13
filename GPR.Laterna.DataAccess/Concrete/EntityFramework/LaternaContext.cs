@@ -24,6 +24,10 @@ namespace GPR.Laterna.DataAccess.Concrete.EntityFramework
         public DbSet<Track> Tracks { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<PlaylistTrack> PlaylistTracks { get; set; }
+        public DbSet<UserLikedArtist> UserLikedArtists { get; set; }
+        public DbSet<UserLikedAlbum> UserLikedAlbums { get; set; }
+        public DbSet<UserLikedTrack> UserLikedTracks { get; set; }
+        public DbSet<UserLikedPlaylist> UserLikedPlaylists { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -35,6 +39,10 @@ namespace GPR.Laterna.DataAccess.Concrete.EntityFramework
             modelBuilder.Configurations.Add(new TrackMap());
             modelBuilder.Configurations.Add(new UserProfileMap());
             modelBuilder.Configurations.Add(new PlaylistTrackMap());
+            modelBuilder.Configurations.Add(new UserLikedArtistMap());
+            modelBuilder.Configurations.Add(new UserLikedAlbumMap());
+            modelBuilder.Configurations.Add(new UserLikedTrackMap());
+            modelBuilder.Configurations.Add(new UserLikedPlaylistMap());
         }
     }
 }
