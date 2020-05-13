@@ -35,5 +35,13 @@ namespace GPR.Laterna.Business.Concrete
         {
             return new EfTrackDal();
         }
+        public static IUserProfileDal CreateUserProfileDal()
+        {
+            return new EfUserProfileDal();
+        }
+        public static IPlaylistTrackDal CreatePlaylistTrackDal()
+        {
+            return new EfPlaylistTrackDal();
+        }
     }
 }
