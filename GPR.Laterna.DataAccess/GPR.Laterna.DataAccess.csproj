@@ -59,6 +59,10 @@
     <Compile Include="Abstract\ITrackDal.cs" />
     <Compile Include="Abstract\IUserDal.cs" />
     <Compile Include="Abstract\IUserProfileDal.cs" />
+    <Compile Include="Abstract\IUserLikedAlbumDal.cs" />
+    <Compile Include="Abstract\IUserLikedArtistDal.cs" />
+    <Compile Include="Abstract\IUserLikedPlaylistDal.cs" />
+    <Compile Include="Abstract\IUserLikedTrackDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfPlaylistDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfAlbumDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfAlbumTypesDal.cs" />
@@ -67,6 +71,10 @@
     <Compile Include="Concrete\EntityFramework\EfPlaylistTrackDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfTrackDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfUserDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserLikedAlbumDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserLikedArtistDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserLikedPlaylistDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserLikedTrackDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfUserProfileDal.cs" />
     <Compile Include="Concrete\EntityFramework\LaternaContext.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\AlbumMap.cs" />
@@ -75,6 +83,10 @@
     <Compile Include="Concrete\EntityFramework\Mappings\PlaylistMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\PlaylistTrackMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\TrackMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\UserLikedAlbumMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\UserLikedArtistMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\UserLikedPlaylistMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\UserLikedTrackMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\UserMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\UserProfileMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

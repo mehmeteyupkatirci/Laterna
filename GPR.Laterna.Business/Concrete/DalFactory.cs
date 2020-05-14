@@ -59,5 +59,21 @@ namespace GPR.Laterna.Business.Concrete
         {
             return new EfUserLikedPlaylistDal();
         }
+        public static IUserFollowedArtistDal CreateUserFollowedArtistDal()
+        {
+            return new EfUserFollowedArtistDal();
+        }
+        public static IUserFollowedAlbumDal CreateUserFollowedAlbumDal()
+        {
+            return new EfUserFollowedAlbumDal();
+        }
+        public static IUserFollowedTrackDal CreateUserFollowedTrackDal()
+        {
+            return new EfUserFollowedTrackDal();
+        }
+        public static IUserFollowedPlaylistDal CreateUserFollowedPlaylistDal()
+        {
+            return new EfUserFollowedPlaylistDal();
+        }
     }
 }

@@ -48,6 +48,10 @@
     <Compile Include="Concrete\PlaylistTrack.cs" />
     <Compile Include="Concrete\Track.cs" />
     <Compile Include="Concrete\User.cs" />
+    <Compile Include="Concrete\UserLikedAlbum.cs" />
+    <Compile Include="Concrete\UserLikedArtist.cs" />
+    <Compile Include="Concrete\UserLikedPlaylist.cs" />
+    <Compile Include="Concrete\UserLikedTrack.cs" />
     <Compile Include="Concrete\UserProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

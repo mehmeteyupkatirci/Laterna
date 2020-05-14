@@ -65,6 +65,10 @@
     <Compile Include="AlbumDalTests.cs" />
     <Compile Include="TrackDalTests.cs" />
     <Compile Include="UserDalTests.cs" />
+    <Compile Include="UserLikedAlbumDalTests.cs" />
+    <Compile Include="UserLikedArtistDalTests.cs" />
+    <Compile Include="UserLikedPlaylistDalTests.cs" />
+    <Compile Include="UserLikedTrackDalTests.cs" />
     <Compile Include="UserProfileDalTests.cs" />
   </ItemGroup>
   <ItemGroup>
