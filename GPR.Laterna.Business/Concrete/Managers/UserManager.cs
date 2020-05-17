@@ -25,9 +25,6 @@ namespace GPR.Laterna.Business.Concrete.Managers
 
         public User Add(User user)
         {
-            //first send mail
-            //validation
-            //log the info
             return _userDal.Add(user);
         }
 

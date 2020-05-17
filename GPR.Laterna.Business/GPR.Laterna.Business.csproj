@@ -51,8 +51,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAlbumService.cs" />
+    <Compile Include="Abstract\IArtistService.cs" />
+    <Compile Include="Abstract\IPlaylistService.cs" />
+    <Compile Include="Abstract\ITrackService.cs" />
     <Compile Include="Abstract\IUserService.cs" />
     <Compile Include="Concrete\DalFactory.cs" />
+    <Compile Include="Concrete\Managers\AlbumManager.cs" />
+    <Compile Include="Concrete\Managers\ArtistManager.cs" />
+    <Compile Include="Concrete\Managers\PlaylistManager.cs" />
+    <Compile Include="Concrete\Managers\TrackManager.cs" />
     <Compile Include="Concrete\Managers\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

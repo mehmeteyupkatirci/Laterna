@@ -48,6 +48,10 @@
     <Compile Include="Concrete\PlaylistTrack.cs" />
     <Compile Include="Concrete\Track.cs" />
     <Compile Include="Concrete\User.cs" />
+    <Compile Include="Concrete\UserFollowedAlbum.cs" />
+    <Compile Include="Concrete\UserFollowedArtist.cs" />
+    <Compile Include="Concrete\UserFollowedPlaylist.cs" />
+    <Compile Include="Concrete\UserFollowedTrack.cs" />
     <Compile Include="Concrete\UserLikedAlbum.cs" />
     <Compile Include="Concrete\UserLikedArtist.cs" />
     <Compile Include="Concrete\UserLikedPlaylist.cs" />

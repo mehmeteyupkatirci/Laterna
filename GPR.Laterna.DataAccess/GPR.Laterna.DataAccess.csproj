@@ -58,6 +58,10 @@
     <Compile Include="Abstract\IPlaylistTrackDal.cs" />
     <Compile Include="Abstract\ITrackDal.cs" />
     <Compile Include="Abstract\IUserDal.cs" />
+    <Compile Include="Abstract\IUserFollowedAlbumDal.cs" />
+    <Compile Include="Abstract\IUserFollowedArtistDal.cs" />
+    <Compile Include="Abstract\IUserFollowedPlaylistDal.cs" />
+    <Compile Include="Abstract\IUserFollowedTrackDal.cs" />
     <Compile Include="Abstract\IUserProfileDal.cs" />
     <Compile Include="Abstract\IUserLikedAlbumDal.cs" />
     <Compile Include="Abstract\IUserLikedArtistDal.cs" />
@@ -71,6 +75,10 @@
     <Compile Include="Concrete\EntityFramework\EfPlaylistTrackDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfTrackDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfUserDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserFollowedAlbumDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserFollowedArtistDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserFollowedPlaylistDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserFollowedTrackDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfUserLikedAlbumDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfUserLikedArtistDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfUserLikedPlaylistDal.cs" />
@@ -83,6 +91,10 @@
     <Compile Include="Concrete\EntityFramework\Mappings\PlaylistMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\PlaylistTrackMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\TrackMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\UserFollowedAlbumMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\UserFollowedArtistMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\UserFollowedPlaylistMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\UserFollowedTrackMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\UserLikedAlbumMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\UserLikedArtistMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\UserLikedPlaylistMap.cs" />
