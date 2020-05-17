@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GPR.Laterna.Presentation
 {
-    public partial class Form1 : Form
+    public partial class FormArtists : Form
     {
-        public Form1()
+        public FormArtists()
         {
             InitializeComponent();
         }

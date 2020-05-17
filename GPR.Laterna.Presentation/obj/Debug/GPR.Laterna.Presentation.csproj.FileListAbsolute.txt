@@ -6,6 +6,12 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.L
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.csproj.GenerateResource.cache
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.exe
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.pdb
-C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.Form1.resources
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\System.Windows.Forms.Ribbon.dll
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.csproj.CopyComplete
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.ParentForm.resources
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.FormAlbums.resources
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.FormArtists.resources
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.FormPlaylist.resources
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.FormTracks.resources
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.FormUser.resources
