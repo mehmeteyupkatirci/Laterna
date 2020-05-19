@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\AlbumConnector.cs" />
     <Compile Include="Business\ArtistConnector.cs" />
     <Compile Include="Business\ManagerFactory.cs" />
     <Compile Include="FormArtists.cs">

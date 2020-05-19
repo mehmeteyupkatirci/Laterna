@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace GPR.Laterna.Presentation.Business
 {
-    public class ArtistConnector
+    public class AlbumConnector
     {
-        private IArtistService _artistService;
+        private IAlbumService _albumService;
 
-        public ArtistConnector()
+        public AlbumConnector()
         {
-            _artistService = ManagerFactory.CreateArtistService();
+            _albumService = ManagerFactory.CreateAlbumService();
         }
 
-        public List<Artist> GetAll()
+        public List<Album> GetAll()
         {
-            return _artistService.GetAll();
+            return _albumService.GetAll();
         }
     }
 }

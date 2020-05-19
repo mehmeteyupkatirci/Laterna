@@ -145,7 +145,7 @@
             this.dgwAlbum.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwAlbum.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -158,8 +158,8 @@
             this.dgwAlbum.DoubleBuffered = true;
             this.dgwAlbum.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgwAlbum.EnableHeadersVisualStyles = false;
-            this.dgwAlbum.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.dgwAlbum.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.dgwAlbum.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            this.dgwAlbum.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
             this.dgwAlbum.HeaderForeColor = System.Drawing.Color.White;
             this.dgwAlbum.Location = new System.Drawing.Point(0, 0);
             this.dgwAlbum.Margin = new System.Windows.Forms.Padding(10);
@@ -184,6 +184,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAlbums";
             this.Text = "FormAlbums";
+            this.Load += new System.EventHandler(this.FormAlbums_Load);
             this.panelDesktop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgwAlbum)).EndInit();
             this.ResumeLayout(false);

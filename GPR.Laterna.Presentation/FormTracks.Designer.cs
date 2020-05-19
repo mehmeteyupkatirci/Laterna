@@ -55,6 +55,7 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(947, 410);
             this.panelDesktop.TabIndex = 6;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
             // btnTrackFlw
             // 
@@ -81,6 +82,7 @@
             this.btnTrackFlw.Size = new System.Drawing.Size(191, 47);
             this.btnTrackFlw.TabIndex = 3;
             this.btnTrackFlw.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTrackFlw.Click += new System.EventHandler(this.btnTrackFlw_Click);
             // 
             // btnTrackShow
             // 
@@ -107,6 +109,7 @@
             this.btnTrackShow.Size = new System.Drawing.Size(191, 47);
             this.btnTrackShow.TabIndex = 2;
             this.btnTrackShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTrackShow.Click += new System.EventHandler(this.btnTrackShow_Click);
             // 
             // btnTrackLike
             // 
@@ -133,6 +136,7 @@
             this.btnTrackLike.Size = new System.Drawing.Size(191, 47);
             this.btnTrackLike.TabIndex = 1;
             this.btnTrackLike.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTrackLike.Click += new System.EventHandler(this.btnTrackLike_Click);
             // 
             // dgwTrack
             // 
@@ -142,7 +146,7 @@
             this.dgwTrack.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwTrack.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -155,8 +159,8 @@
             this.dgwTrack.DoubleBuffered = true;
             this.dgwTrack.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgwTrack.EnableHeadersVisualStyles = false;
-            this.dgwTrack.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.dgwTrack.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.dgwTrack.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.dgwTrack.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.dgwTrack.HeaderForeColor = System.Drawing.Color.White;
             this.dgwTrack.Location = new System.Drawing.Point(0, 0);
             this.dgwTrack.Margin = new System.Windows.Forms.Padding(10);
@@ -166,6 +170,7 @@
             this.dgwTrack.RowTemplate.Height = 40;
             this.dgwTrack.Size = new System.Drawing.Size(947, 295);
             this.dgwTrack.TabIndex = 0;
+            this.dgwTrack.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwTrack_CellContentClick);
             // 
             // bunifuElipse1
             // 

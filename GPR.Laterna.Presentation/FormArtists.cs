@@ -54,7 +54,6 @@ namespace GPR.Laterna.Presentation
             //    row.Cells[0].Value = bitmap;
             //}
         }
-
     }   
 
 }

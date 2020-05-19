@@ -176,6 +176,5 @@ namespace GPR.Laterna.Presentation
         {
             WindowState = FormWindowState.Minimized;
         }
-
     }
 }

@@ -240,7 +240,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(967, 75);
+            this.panelTitleBar.Size = new System.Drawing.Size(964, 75);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -252,7 +252,7 @@
             this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.btnMinimize.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMinimize.IconSize = 23;
-            this.btnMinimize.Location = new System.Drawing.Point(852, 12);
+            this.btnMinimize.Location = new System.Drawing.Point(849, 12);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(24, 23);
             this.btnMinimize.TabIndex = 4;
@@ -267,7 +267,7 @@
             this.btnExpand.IconChar = FontAwesome.Sharp.IconChar.Expand;
             this.btnExpand.IconColor = System.Drawing.Color.Gainsboro;
             this.btnExpand.IconSize = 23;
-            this.btnExpand.Location = new System.Drawing.Point(890, 12);
+            this.btnExpand.Location = new System.Drawing.Point(887, 12);
             this.btnExpand.Name = "btnExpand";
             this.btnExpand.Size = new System.Drawing.Size(24, 23);
             this.btnExpand.TabIndex = 3;
@@ -282,7 +282,7 @@
             this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.btnExit.IconColor = System.Drawing.Color.Gainsboro;
             this.btnExit.IconSize = 23;
-            this.btnExit.Location = new System.Drawing.Point(928, 12);
+            this.btnExit.Location = new System.Drawing.Point(925, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(24, 23);
             this.btnExit.TabIndex = 2;
@@ -318,7 +318,7 @@
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(220, 75);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(967, 9);
+            this.panelShadow.Size = new System.Drawing.Size(964, 9);
             this.panelShadow.TabIndex = 3;
             // 
             // panelDesktop
@@ -328,7 +328,7 @@
             this.panelDesktop.ForeColor = System.Drawing.Color.Black;
             this.panelDesktop.Location = new System.Drawing.Point(220, 84);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(967, 449);
+            this.panelDesktop.Size = new System.Drawing.Size(964, 449);
             this.panelDesktop.TabIndex = 4;
             // 
             // ParentForm
