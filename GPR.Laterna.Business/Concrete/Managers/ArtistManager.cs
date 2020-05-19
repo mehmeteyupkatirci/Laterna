@@ -1,4 +1,5 @@
 ﻿using GPR.Laterna.Business.Abstract;
+using GPR.Laterna.DataAccess.Abstract;
 using GPR.Laterna.Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,15 @@ namespace GPR.Laterna.Business.Concrete.Managers
 {
     public class ArtistManager : IArtistService
     {
+        private IArtistDal _artistDal;
+
+        public ArtistManager()
+        {
+            _artistDal = DalFactory.CreateArtistDal();
+        }
         public List<Artist> GetAll()
         {
-            throw new NotImplementedException();
+            return _artistDal.GetList();
         }
 
         public Artist GetById(int id)

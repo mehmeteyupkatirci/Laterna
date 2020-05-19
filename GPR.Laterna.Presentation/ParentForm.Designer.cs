@@ -240,7 +240,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(964, 75);
+            this.panelTitleBar.Size = new System.Drawing.Size(967, 75);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -318,7 +318,7 @@
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(220, 75);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(964, 9);
+            this.panelShadow.Size = new System.Drawing.Size(967, 9);
             this.panelShadow.TabIndex = 3;
             // 
             // panelDesktop
@@ -328,7 +328,7 @@
             this.panelDesktop.ForeColor = System.Drawing.Color.Black;
             this.panelDesktop.Location = new System.Drawing.Point(220, 84);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(964, 449);
+            this.panelDesktop.Size = new System.Drawing.Size(967, 449);
             this.panelDesktop.TabIndex = 4;
             // 
             // ParentForm
