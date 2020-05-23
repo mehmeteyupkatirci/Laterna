@@ -70,6 +70,7 @@
     <Compile Include="Business\AlbumConnector.cs" />
     <Compile Include="Business\ArtistConnector.cs" />
     <Compile Include="Business\ManagerFactory.cs" />
+    <Compile Include="Business\TrackConnector.cs" />
     <Compile Include="FormArtists.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -21,7 +21,6 @@ namespace GPR.Laterna.DataAccess.Concrete.EntityFramework.Mappings
             Property(x => x.Name).HasColumnName("name");
             Property(x => x.SpotId).HasColumnName("spot_id");
             Property(x => x.Copyrights).HasColumnName("copyrights");
-            Property(x => x.Genres).HasColumnName("genres");
             Property(x => x.Popularity).HasColumnName("popularity");
             Property(x => x.ReleaseData).HasColumnName("release_date");
             Property(x => x.Images).HasColumnName("images");

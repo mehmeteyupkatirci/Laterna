@@ -16,8 +16,7 @@ namespace GPR.Laterna.Entities.Concrete
         public string DiscNumber { get; set; }
         public string DurationMs { get; set; }
         public string PreviewUrl { get; set; }
-        public int Popularity { get; set; }
-        public string Images { get; set; }
+        public int? Popularity { get; set; }
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
     }

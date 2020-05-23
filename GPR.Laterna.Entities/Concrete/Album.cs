@@ -15,8 +15,7 @@ namespace GPR.Laterna.Entities.Concrete
         public string Name { get; set; }
         public string SpotId { get; set; }
         public string Copyrights { get; set; }
-        public string Genres { get; set; }
-        public int Popularity { get; set; }
+        public int? Popularity { get; set; }
         public string ReleaseData { get; set; }
         public string Images { get; set; }
         public string Checked { get; set; }

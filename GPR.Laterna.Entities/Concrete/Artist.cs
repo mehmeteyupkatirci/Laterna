@@ -12,7 +12,7 @@ namespace GPR.Laterna.Entities.Concrete
         public long Id { get; set; }
         public string Name { get; set; }
         public string Genres { get; set; }
-        public int Popularity { get; set; }
+        public int? Popularity { get; set; }
         public string Images { get; set; }
         public string Checked { get; set; }
         public string Searched { get; set; }

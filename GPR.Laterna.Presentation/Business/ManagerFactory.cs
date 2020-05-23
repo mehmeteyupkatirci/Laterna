@@ -18,5 +18,9 @@ namespace GPR.Laterna.Presentation.Business
         {
             return new AlbumManager();
         }
+        public static ITrackService CreateTrackService()
+        {
+            return new TrackManager();
+        }
     }
 }

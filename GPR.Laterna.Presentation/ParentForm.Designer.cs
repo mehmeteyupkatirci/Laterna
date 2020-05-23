@@ -124,7 +124,7 @@
             this.btnPlaylist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlaylist.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnPlaylist.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPlaylist.IconChar = FontAwesome.Sharp.IconChar.Play;
+            this.btnPlaylist.IconChar = FontAwesome.Sharp.IconChar.PlayCircle;
             this.btnPlaylist.IconColor = System.Drawing.Color.Gainsboro;
             this.btnPlaylist.IconSize = 32;
             this.btnPlaylist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -170,7 +170,7 @@
             this.btnAlbum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlbum.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnAlbum.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAlbum.IconChar = FontAwesome.Sharp.IconChar.Ring;
+            this.btnAlbum.IconChar = FontAwesome.Sharp.IconChar.CompactDisc;
             this.btnAlbum.IconColor = System.Drawing.Color.Gainsboro;
             this.btnAlbum.IconSize = 32;
             this.btnAlbum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -292,10 +292,11 @@
             // lblTitleChildForm
             // 
             this.lblTitleChildForm.AutoSize = true;
+            this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(74, 35);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(89, 35);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(56, 13);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(94, 24);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Ana Sayfa";
             // 
@@ -305,10 +306,10 @@
             this.TitleChildHomeBtn.ForeColor = System.Drawing.Color.MediumPurple;
             this.TitleChildHomeBtn.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.TitleChildHomeBtn.IconColor = System.Drawing.Color.MediumPurple;
-            this.TitleChildHomeBtn.IconSize = 33;
-            this.TitleChildHomeBtn.Location = new System.Drawing.Point(44, 24);
+            this.TitleChildHomeBtn.IconSize = 55;
+            this.TitleChildHomeBtn.Location = new System.Drawing.Point(33, 20);
             this.TitleChildHomeBtn.Name = "TitleChildHomeBtn";
-            this.TitleChildHomeBtn.Size = new System.Drawing.Size(33, 34);
+            this.TitleChildHomeBtn.Size = new System.Drawing.Size(63, 55);
             this.TitleChildHomeBtn.TabIndex = 0;
             this.TitleChildHomeBtn.TabStop = false;
             // 

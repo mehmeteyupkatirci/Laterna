@@ -23,7 +23,6 @@ namespace GPR.Laterna.DataAccess.Concrete.EntityFramework.Mappings
             Property(x => x.DurationMs).HasColumnName("duration_ms");
             Property(x => x.PreviewUrl).HasColumnName("preview_url");
             Property(x => x.Popularity).HasColumnName("popularity");
-            Property(x => x.Images).HasColumnName("images");
             Property(x => x.CreatedAt).HasColumnName("created_at");
             Property(x => x.UpdatedAt).HasColumnName("updated_at");
         }

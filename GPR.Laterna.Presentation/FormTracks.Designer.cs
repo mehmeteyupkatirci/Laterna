@@ -55,7 +55,6 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(947, 410);
             this.panelDesktop.TabIndex = 6;
-            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
             // btnTrackFlw
             // 
@@ -82,7 +81,6 @@
             this.btnTrackFlw.Size = new System.Drawing.Size(191, 47);
             this.btnTrackFlw.TabIndex = 3;
             this.btnTrackFlw.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnTrackFlw.Click += new System.EventHandler(this.btnTrackFlw_Click);
             // 
             // btnTrackShow
             // 
@@ -109,7 +107,6 @@
             this.btnTrackShow.Size = new System.Drawing.Size(191, 47);
             this.btnTrackShow.TabIndex = 2;
             this.btnTrackShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnTrackShow.Click += new System.EventHandler(this.btnTrackShow_Click);
             // 
             // btnTrackLike
             // 
@@ -136,7 +133,6 @@
             this.btnTrackLike.Size = new System.Drawing.Size(191, 47);
             this.btnTrackLike.TabIndex = 1;
             this.btnTrackLike.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnTrackLike.Click += new System.EventHandler(this.btnTrackLike_Click);
             // 
             // dgwTrack
             // 
@@ -170,7 +166,6 @@
             this.dgwTrack.RowTemplate.Height = 40;
             this.dgwTrack.Size = new System.Drawing.Size(947, 295);
             this.dgwTrack.TabIndex = 0;
-            this.dgwTrack.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwTrack_CellContentClick);
             // 
             // bunifuElipse1
             // 
@@ -186,6 +181,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTracks";
             this.Text = "FormTracks";
+            this.Load += new System.EventHandler(this.FormTracks_Load);
             this.panelDesktop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgwTrack)).EndInit();
             this.ResumeLayout(false);

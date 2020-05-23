@@ -1,4 +1,5 @@
 ﻿using GPR.Laterna.Business.Abstract;
+using GPR.Laterna.DataAccess.Abstract;
 using GPR.Laterna.Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,14 @@ namespace GPR.Laterna.Business.Concrete.Managers
 {
     public class TrackManager : ITrackService
     {
+        private ITrackDal _trackDal;
+        public TrackManager()
+        {
+            _trackDal = DalFactory.CreateTrackDal();
+        }
         public List<Track> GetAll()
         {
-            throw new NotImplementedException();
+            return _trackDal.GetList();
         }
 
         public Track GetById(int id)

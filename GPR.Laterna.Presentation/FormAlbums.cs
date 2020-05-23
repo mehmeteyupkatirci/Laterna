@@ -28,7 +28,6 @@ namespace GPR.Laterna.Presentation
             dgwAlbum.Columns["ArtistId"].Visible = false;
             dgwAlbum.Columns["AlbumTypeId"].Visible = false;
             dgwAlbum.Columns["Copyrights"].Visible = false;
-            dgwAlbum.Columns["Genres"].Visible = false;
             dgwAlbum.Columns["Checked"].Visible = false;
             dgwAlbum.Columns["CreatedAt"].Visible = false;
             dgwAlbum.Columns["UpdatedAt"].Visible = false;
