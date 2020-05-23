@@ -29,6 +29,23 @@ namespace GPR.Laterna.Presentation
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            bool _btnHİde = true;
+            BtnHide(_btnHİde);
+        }
+        private void BtnHide(bool BtnHide)
+        {
+            if (BtnHide ==true)
+            {
+                btnUser.Hide();
+                btnLogOut.Hide();
+                btnLogin.Show();
+            }
+            else
+            {
+                btnUser.Show();
+                btnLogOut.Show();
+                btnLogin.Hide();
+            }
         }
         private struct RGBColors
         {
@@ -93,7 +110,6 @@ namespace GPR.Laterna.Presentation
             childForm.Show();
         }
 
-
         private void btnArtist_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColors.color1);
@@ -127,6 +143,11 @@ namespace GPR.Laterna.Presentation
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColors.color6);
+            if(MessageBox.Show("Çıkış Yapmayı Onaylıyor Musunuz", "Çıkış Yap!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                bool _btnHide = true;
+                BtnHide(_btnHide);
+            }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -175,6 +196,14 @@ namespace GPR.Laterna.Presentation
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Login());
+            ActiveButton(sender, RGBColors.color6);
+            bool _btnHide = false;
+            BtnHide(_btnHide);
         }
     }
 }

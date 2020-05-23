@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnLogin = new FontAwesome.Sharp.IconButton();
             this.btnLogOut = new FontAwesome.Sharp.IconButton();
             this.btnUser = new FontAwesome.Sharp.IconButton();
             this.btnPlaylist = new FontAwesome.Sharp.IconButton();
@@ -58,6 +59,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.btnLogin);
             this.panelMenu.Controls.Add(this.btnLogOut);
             this.panelMenu.Controls.Add(this.btnUser);
             this.panelMenu.Controls.Add(this.btnPlaylist);
@@ -70,6 +72,29 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 533);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnLogin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLogin.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.btnLogin.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnLogin.IconSize = 32;
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.Location = new System.Drawing.Point(0, 500);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnLogin.Rotation = 0D;
+            this.btnLogin.Size = new System.Drawing.Size(220, 60);
+            this.btnLogin.TabIndex = 7;
+            this.btnLogin.Text = "Giriş Yap";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnLogOut
             // 
@@ -379,5 +404,6 @@
         private FontAwesome.Sharp.IconPictureBox btnExit;
         private FontAwesome.Sharp.IconPictureBox btnExpand;
         private FontAwesome.Sharp.IconPictureBox btnMinimize;
+        private FontAwesome.Sharp.IconButton btnLogin;
     }
 }

@@ -28,21 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelDesktop.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(144, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Playlist";
             // 
             // panelDesktop
             // 
@@ -54,6 +43,17 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(800, 450);
             this.panelDesktop.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(144, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 42);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Playlist";
             // 
             // FormPlaylist
             // 
@@ -71,7 +71,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.Label label1;
     }
 }

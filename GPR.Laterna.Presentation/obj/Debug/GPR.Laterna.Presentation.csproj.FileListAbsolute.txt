@@ -30,3 +30,4 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\GPR.L
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\GPR.Laterna.Entities.pdb
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\GPR.Core.pdb
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\GPR.Core.dll.config
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.Login.resources
