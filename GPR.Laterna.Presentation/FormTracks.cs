@@ -24,7 +24,6 @@ namespace GPR.Laterna.Presentation
             dgwTrack.DataSource = _trackConnector.GetAll();
             dgwTrack.Columns["Name"].HeaderText = "Şarkı Adı";
             dgwTrack.Columns["Popularity"].HeaderText = "Popülerlik %100";
-            dgwTrack.Columns["Popularity"].HeaderText = "Popülerlik %100";
             dgwTrack.Columns["SpotId"].Visible = false;
             dgwTrack.Columns["Id"].Visible = false;
             dgwTrack.Columns["AlbumId"].Visible = false;

@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.btnTrackShow = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuCustomTextbox2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtPassword = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.txtUsername = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelDesktop.SuspendLayout();
@@ -41,9 +41,9 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.panelDesktop.Controls.Add(this.btnTrackShow);
-            this.panelDesktop.Controls.Add(this.bunifuCustomTextbox2);
-            this.panelDesktop.Controls.Add(this.bunifuCustomTextbox1);
+            this.panelDesktop.Controls.Add(this.btnLogin);
+            this.panelDesktop.Controls.Add(this.txtPassword);
+            this.panelDesktop.Controls.Add(this.txtUsername);
             this.panelDesktop.Controls.Add(this.label2);
             this.panelDesktop.Controls.Add(this.label1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -53,55 +53,55 @@
             this.panelDesktop.Size = new System.Drawing.Size(800, 450);
             this.panelDesktop.TabIndex = 7;
             // 
-            // btnTrackShow
+            // btnLogin
             // 
-            this.btnTrackShow.ActiveBorderThickness = 1;
-            this.btnTrackShow.ActiveCornerRadius = 20;
-            this.btnTrackShow.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.btnTrackShow.ActiveForecolor = System.Drawing.Color.White;
-            this.btnTrackShow.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.btnTrackShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnTrackShow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTrackShow.BackgroundImage")));
-            this.btnTrackShow.ButtonText = "Daha Fazla";
-            this.btnTrackShow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTrackShow.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnTrackShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTrackShow.ForeColor = System.Drawing.Color.MediumPurple;
-            this.btnTrackShow.IdleBorderThickness = 2;
-            this.btnTrackShow.IdleCornerRadius = 20;
-            this.btnTrackShow.IdleFillColor = System.Drawing.Color.White;
-            this.btnTrackShow.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.btnTrackShow.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.btnTrackShow.Location = new System.Drawing.Point(0, 368);
-            this.btnTrackShow.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.btnTrackShow.Name = "btnTrackShow";
-            this.btnTrackShow.Size = new System.Drawing.Size(800, 82);
-            this.btnTrackShow.TabIndex = 4;
-            this.btnTrackShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogin.ActiveBorderThickness = 1;
+            this.btnLogin.ActiveCornerRadius = 20;
+            this.btnLogin.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            this.btnLogin.ActiveForecolor = System.Drawing.Color.White;
+            this.btnLogin.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
+            this.btnLogin.ButtonText = "Giriş Yap";
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLogin.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnLogin.IdleBorderThickness = 2;
+            this.btnLogin.IdleCornerRadius = 20;
+            this.btnLogin.IdleFillColor = System.Drawing.Color.White;
+            this.btnLogin.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            this.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            this.btnLogin.Location = new System.Drawing.Point(0, 368);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(800, 82);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomTextbox2
+            // txtPassword
             // 
-            this.bunifuCustomTextbox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCustomTextbox2.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomTextbox2.Location = new System.Drawing.Point(393, 191);
-            this.bunifuCustomTextbox2.Name = "bunifuCustomTextbox2";
-            this.bunifuCustomTextbox2.Size = new System.Drawing.Size(244, 49);
-            this.bunifuCustomTextbox2.TabIndex = 3;
+            this.txtPassword.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPassword.Location = new System.Drawing.Point(393, 191);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(244, 49);
+            this.txtPassword.TabIndex = 3;
             // 
-            // bunifuCustomTextbox1
+            // txtUsername
             // 
-            this.bunifuCustomTextbox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(393, 116);
-            this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
-            this.bunifuCustomTextbox1.Size = new System.Drawing.Size(244, 49);
-            this.bunifuCustomTextbox1.TabIndex = 2;
+            this.txtUsername.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUsername.Location = new System.Drawing.Point(393, 116);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(244, 49);
+            this.txtUsername.TabIndex = 2;
             // 
             // label2
             // 
@@ -148,9 +148,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panelDesktop;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnTrackShow;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox2;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtPassword;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtUsername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }

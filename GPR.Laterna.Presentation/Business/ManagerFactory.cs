@@ -22,5 +22,9 @@ namespace GPR.Laterna.Presentation.Business
         {
             return new TrackManager();
         }
+        public static IPlaylistService CreatePlaylistService()
+        {
+            return new PlaylistManager();
+        }
     }
 }

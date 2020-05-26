@@ -36,9 +36,6 @@ namespace GPR.Laterna.Presentation
             dgwArtist.Columns["UpdatedAt"].Visible = false;
             dgwArtist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-
-
-
             //DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
             //imageColumn.HeaderText = "image";
             //dgwArtist.Columns.Insert(0, imageColumn);
