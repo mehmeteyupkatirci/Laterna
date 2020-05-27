@@ -21,5 +21,9 @@ namespace GPR.Laterna.Presentation.Business
         {
             return _albumService.GetAll();
         }
+        public Album GetAlbum(int id)
+        {
+            return _albumService.GetById(id);
+        }
     }
 }

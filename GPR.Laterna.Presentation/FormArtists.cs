@@ -14,6 +14,8 @@ namespace GPR.Laterna.Presentation
 {
     public partial class FormArtists : Form
     {
+        public static int ArtistId = 0;
+
         private ArtistConnector _artistConnector;
         public FormArtists()
         {
@@ -35,22 +37,20 @@ namespace GPR.Laterna.Presentation
             dgwArtist.Columns["Searched"].Visible = false;
             dgwArtist.Columns["UpdatedAt"].Visible = false;
             dgwArtist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            //DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-            //imageColumn.HeaderText = "image";
-            //dgwArtist.Columns.Insert(0, imageColumn);
-            //foreach (DataGridViewRow row in dgwArtist.Rows)
-            //{
-            //    var url = row.Cells["Images"].Value.ToString();
-            //    HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(url);
-            //    myRequest.Method = "GET";
-            //    HttpWebResponse myResponse = (HttpWebResponse)myRequest.GetResponse();
-            //    Bitmap bitmap = new Bitmap(myResponse.GetResponseStream());
-            //    myResponse.Close();
-
-            //    row.Cells[0].Value = bitmap;
-            //}
         }
-    }   
+
+        private void dgwArtist_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnArtistShow_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
+            ArtistId = id;
+            MsgArtist msgArtist = new MsgArtist();
+            msgArtist.Show();
+        }
+    }
 
 }

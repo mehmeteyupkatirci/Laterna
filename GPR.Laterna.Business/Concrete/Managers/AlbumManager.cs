@@ -24,7 +24,7 @@ namespace GPR.Laterna.Business.Concrete.Managers
 
         public Album GetById(int id)
         {
-            throw new NotImplementedException();
+            return _albumDal.Get(x=>x.Id == id);
         }
     }
 }

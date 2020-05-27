@@ -108,6 +108,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MsgArtist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgArtist.Designer.cs">
+      <DependentUpon>MsgArtist.cs</DependentUpon>
+    </Compile>
     <Compile Include="ParentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgArtist.resx">
+      <DependentUpon>MsgArtist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>

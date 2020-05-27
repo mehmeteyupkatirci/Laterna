@@ -167,7 +167,7 @@ namespace GPR.Laterna.Presentation
             lblTitleChildForm.Text = "Ana Sayfa";
             leftBorderBtn.Visible = false;
         }
-
+        //panelden formu hareket ettirmek için : 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]

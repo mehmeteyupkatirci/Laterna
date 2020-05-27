@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormArtists));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.btnArtistFlw = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnArtistShow = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -107,6 +107,7 @@
             this.btnArtistShow.Size = new System.Drawing.Size(191, 47);
             this.btnArtistShow.TabIndex = 2;
             this.btnArtistShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnArtistShow.Click += new System.EventHandler(this.btnArtistShow_Click);
             // 
             // btnArtistLike
             // 
@@ -136,19 +137,19 @@
             // 
             // dgwArtist
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgwArtist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgwArtist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgwArtist.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgwArtist.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwArtist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwArtist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwArtist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgwArtist.ColumnHeadersHeight = 40;
             this.dgwArtist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgwArtist.Dock = System.Windows.Forms.DockStyle.Top;
@@ -166,6 +167,7 @@
             this.dgwArtist.RowTemplate.Height = 40;
             this.dgwArtist.Size = new System.Drawing.Size(947, 295);
             this.dgwArtist.TabIndex = 0;
+            this.dgwArtist.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwArtist_CellClick);
             // 
             // bunifuElipse1
             // 

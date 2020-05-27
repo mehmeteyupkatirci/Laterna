@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GPR.Laterna.DataAccess.Abstract
 {
-    public interface IAlbumDal:IEntityRepository<Album>
+    public interface IAlbumDal : IEntityRepository<Album>
     {
     }
 }

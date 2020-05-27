@@ -24,7 +24,7 @@ namespace GPR.Laterna.Business.Concrete.Managers
 
         public Artist GetById(int id)
         {
-            throw new NotImplementedException();
+            return _artistDal.Get(x=>x.Id==id);
         }
     }
 }
