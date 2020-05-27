@@ -15,7 +15,6 @@ namespace GPR.Laterna.Presentation
     public partial class FormArtists : Form
     {
         public static int ArtistId = 0;
-
         private ArtistConnector _artistConnector;
         public FormArtists()
         {

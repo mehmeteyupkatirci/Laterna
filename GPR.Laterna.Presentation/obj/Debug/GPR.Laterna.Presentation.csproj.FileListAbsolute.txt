@@ -32,3 +32,4 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\GPR.C
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\GPR.Core.dll.config
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.Login.resources
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.MsgArtist.resources
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.MsgAlbum.resources

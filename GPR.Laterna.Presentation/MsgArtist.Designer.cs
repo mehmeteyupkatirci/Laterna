@@ -32,12 +32,12 @@
             this.lblName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblPopularity = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGenres = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.pcbImages = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.btnArtistFlw = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pcbImages = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImages)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,15 +73,6 @@
             this.lblGenres.Size = new System.Drawing.Size(190, 26);
             this.lblGenres.TabIndex = 1;
             this.lblGenres.Text = "bunifuCustomLabel1";
-            // 
-            // pcbImages
-            // 
-            this.pcbImages.Location = new System.Drawing.Point(12, 48);
-            this.pcbImages.Name = "pcbImages";
-            this.pcbImages.Size = new System.Drawing.Size(429, 361);
-            this.pcbImages.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbImages.TabIndex = 3;
-            this.pcbImages.TabStop = false;
             // 
             // bunifuCustomLabel1
             // 
@@ -122,7 +113,7 @@
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(861, 31);
+            this.panelTitle.Size = new System.Drawing.Size(947, 31);
             this.panelTitle.TabIndex = 7;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown_1);
             // 
@@ -148,17 +139,26 @@
             this.btnArtistFlw.Location = new System.Drawing.Point(0, 426);
             this.btnArtistFlw.Margin = new System.Windows.Forms.Padding(5);
             this.btnArtistFlw.Name = "btnArtistFlw";
-            this.btnArtistFlw.Size = new System.Drawing.Size(861, 47);
+            this.btnArtistFlw.Size = new System.Drawing.Size(947, 47);
             this.btnArtistFlw.TabIndex = 8;
             this.btnArtistFlw.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnArtistFlw.Click += new System.EventHandler(this.btnArtistFlw_Click);
+            // 
+            // pcbImages
+            // 
+            this.pcbImages.Location = new System.Drawing.Point(12, 48);
+            this.pcbImages.Name = "pcbImages";
+            this.pcbImages.Size = new System.Drawing.Size(429, 361);
+            this.pcbImages.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbImages.TabIndex = 3;
+            this.pcbImages.TabStop = false;
             // 
             // MsgArtist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(861, 473);
+            this.ClientSize = new System.Drawing.Size(947, 473);
             this.Controls.Add(this.btnArtistFlw);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.bunifuCustomLabel1);

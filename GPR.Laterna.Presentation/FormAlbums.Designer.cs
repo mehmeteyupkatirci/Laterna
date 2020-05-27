@@ -109,6 +109,7 @@
             this.btnAlbumShow.Size = new System.Drawing.Size(191, 47);
             this.btnAlbumShow.TabIndex = 2;
             this.btnAlbumShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAlbumShow.Click += new System.EventHandler(this.btnAlbumShow_Click);
             // 
             // btnAlbumLike
             // 
@@ -169,6 +170,7 @@
             this.dgwAlbum.RowTemplate.Height = 40;
             this.dgwAlbum.Size = new System.Drawing.Size(947, 295);
             this.dgwAlbum.TabIndex = 0;
+            this.dgwAlbum.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwAlbum_CellClick);
             // 
             // bunifuElipse1
             // 

@@ -13,45 +13,43 @@ using System.Windows.Forms;
 
 namespace GPR.Laterna.Presentation
 {
-    public partial class MsgArtist : Form
+    public partial class MsgAlbum : Form
     {
+        private AlbumConnector _albumConnector;
         private ArtistConnector _artistConnector;
-        public MsgArtist()
+        public MsgAlbum()
         {
             InitializeComponent();
+            _albumConnector = new AlbumConnector();
             _artistConnector = new ArtistConnector();
         }
 
-        private void MsgArtist_Load(object sender, EventArgs e)
+        private void MsgAlbum_Load(object sender, EventArgs e)
         {
-            int id =Convert.ToInt32( FormArtists.ArtistId );
-            var artist =_artistConnector.GetArtist(id);
-            if (artist.Name.Length > 25)
-            {
-                //veritabanından gelen artist isimlerinin 25 karakterden kısa tutulma işlemi: 
-                lblName.Text = artist.Name.Substring(0, 25) + "...";
-            }
-            else
-            {
-                lblName.Text = artist.Name;
-            }
-            if(artist.Genres != null)
-            {
-                //Artist'in türlerini küçük harften büyük harfe çevirme işlemi:
-                string s = artist.Genres;
-                char[] a = s.ToCharArray();
-                a[0] = char.ToUpper(a[0]);
-                lblGenres.Text = new string(a);
-            }
-            else
-            {
-                lblGenres.Text = "Sanatçının Tür Bilgisi Bulunamadı";
-            }
+            int a = Convert.ToInt32(FormAlbums.AlbumId);
+            var album = _albumConnector.GetAlbum(a);
+            var artistId = Convert.ToInt32(album.ArtistId);
+            var artist = _artistConnector.GetArtist(artistId);
             
-            lblPopularity.Text = artist.Popularity.ToString();
+            if (album.Name.Length > 25)
+            {
+                //Albüm isimlerinin 25 karakterden kısa olması sağlanıyor.
+                lblName.Text = album.Name.Substring(0,25) + "...";
+            }
+            else
+            {
+                lblName.Text = album.Name;
+            }
 
-            //Veritabanında kayıtlı olan şarkıcı resimlerinin url'leri burada internetten stream ediyor
-            string img = artist.Images;
+            //veritabanından gelen verilerin labellara yazıldığı yer
+            lblArtist.Text = artist.Name;
+            lblArtistPop.Text = artist.Popularity.ToString();
+            lblPopularity.Text = album.Popularity.ToString();
+            lblRelease.Text = album.ReleaseData.ToString();
+
+
+            //Veritabanında kayıtlı olan albümlerin resimlerinin url'leri burada internetten stream ediyor
+            string img = album.Images;
             var request = WebRequest.Create(img);
             using (var response = request.GetResponse())
             using (var stream = response.GetResponseStream())
@@ -60,11 +58,10 @@ namespace GPR.Laterna.Presentation
             }
         }
 
-        private void btnArtistFlw_Click(object sender, EventArgs e)
+        private void btnAlbum_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
 
         //panelden formu hareket ettirmek için : 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -72,7 +69,7 @@ namespace GPR.Laterna.Presentation
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void panelTitle_MouseDown_1(object sender, MouseEventArgs e)
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
