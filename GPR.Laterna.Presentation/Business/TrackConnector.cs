@@ -19,5 +19,9 @@ namespace GPR.Laterna.Presentation.Business
         {
             return _trackService.GetAll();
         }
+        public Track GetTrack(int id)
+        {
+            return _trackService.GetById(id);
+        }
     }
 }

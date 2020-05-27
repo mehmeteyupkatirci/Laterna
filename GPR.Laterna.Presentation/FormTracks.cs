@@ -13,6 +13,7 @@ namespace GPR.Laterna.Presentation
 {
     public partial class FormTracks : Form
     {
+        public static int TrackId = 0;
         private TrackConnector _trackConnector;
         public FormTracks()
         {
@@ -33,6 +34,20 @@ namespace GPR.Laterna.Presentation
             dgwTrack.Columns["UpdatedAt"].Visible = false;
             dgwTrack.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+        }
+
+        private void dgwTrack_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void btnTrackShow_Click(object sender, EventArgs e)
+        {
+            //seçili row'daki id ile form çağırma işlemi
+            int id = Convert.ToInt32(dgwTrack.Rows[dgwTrack.CurrentRow.Index].Cells[0].Value);
+            TrackId = id;
+            MsgTrack msgTrack = new MsgTrack();
+            msgTrack.Show();
         }
     }
 }

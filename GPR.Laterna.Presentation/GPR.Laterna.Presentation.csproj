@@ -120,6 +120,12 @@
     <Compile Include="MsgArtist.Designer.cs">
       <DependentUpon>MsgArtist.cs</DependentUpon>
     </Compile>
+    <Compile Include="MsgTrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgTrack.Designer.cs">
+      <DependentUpon>MsgTrack.cs</DependentUpon>
+    </Compile>
     <Compile Include="ParentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MsgArtist.resx">
       <DependentUpon>MsgArtist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgTrack.resx">
+      <DependentUpon>MsgTrack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>

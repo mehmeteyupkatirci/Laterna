@@ -188,7 +188,7 @@
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(266, 26);
             this.bunifuCustomLabel1.TabIndex = 21;
-            this.bunifuCustomLabel1.Text = "Şarkıcı\'nın Popülerlik  100% : ";
+            this.bunifuCustomLabel1.Text = "Şarkıcı\'nın Popülerliği 100% : ";
             // 
             // lblArtistPop
             // 

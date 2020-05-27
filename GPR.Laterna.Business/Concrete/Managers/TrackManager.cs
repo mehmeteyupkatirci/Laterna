@@ -23,7 +23,7 @@ namespace GPR.Laterna.Business.Concrete.Managers
 
         public Track GetById(int id)
         {
-            throw new NotImplementedException();
+            return _trackDal.Get(x => x.Id == id);
         }
     }
 }
