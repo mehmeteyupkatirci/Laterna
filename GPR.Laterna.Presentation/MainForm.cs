@@ -9,16 +9,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using GPR.Laterna.Presentation.Business;
 
 namespace GPR.Laterna.Presentation
 {
-    public partial class ParentForm : Form
+    public partial class MainForm : Form
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
-        public ParentForm()
+        public static int AlbumId = 0;
+
+        private AlbumConnector _albumConnector;
+        public MainForm()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -31,6 +35,26 @@ namespace GPR.Laterna.Presentation
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             bool _btnHİde = true;
             BtnHide(_btnHİde);
+
+
+
+            _albumConnector = new AlbumConnector();
+            dgwAlbums.DataSource = _albumConnector.GetTopAlbums();
+            dgwAlbums.Columns["Id"].Visible = false;
+            dgwAlbums.Columns["ArtistId"].Visible = false;
+            dgwAlbums.Columns["AlbumTypeId"].Visible = false;
+            dgwAlbums.Columns["Copyrights"].Visible = false;
+            dgwAlbums.Columns["Checked"].Visible = false;
+            dgwAlbums.Columns["CreatedAt"].Visible = false;
+            dgwAlbums.Columns["UpdatedAt"].Visible = false;
+            dgwAlbums.Columns["Images"].Visible = false;
+            dgwAlbums.Columns["SpotId"].Visible = false;
+            dgwAlbums.Columns["ReleaseData"].Visible = false;
+
+            dgwAlbums.Columns["Name"].HeaderText = "Albüm Adı";
+            dgwAlbums.Columns["Popularity"].HeaderText = "Popülerlik %100";
+            dgwAlbums.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
         private void BtnHide(bool BtnHide)
         {
@@ -204,6 +228,19 @@ namespace GPR.Laterna.Presentation
             ActiveButton(sender, RGBColors.color6);
             bool _btnHide = false;
             BtnHide(_btnHide);
+        }
+
+        private void btnAlbumShow_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dgwAlbums.Rows[dgwAlbums.CurrentRow.Index].Cells[0].Value);
+            AlbumId = id;
+            MsgAlbum msgAlbum = new MsgAlbum();
+            msgAlbum.Show();
+        }
+
+        private void dgwAlbums_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

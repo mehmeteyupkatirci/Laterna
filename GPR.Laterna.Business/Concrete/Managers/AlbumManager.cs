@@ -26,5 +26,11 @@ namespace GPR.Laterna.Business.Concrete.Managers
         {
             return _albumDal.Get(x=>x.Id == id);
         }
+        public List<Album> GetTop()
+        {
+            var albums = _albumDal.GetList();
+            var desc = albums.OrderByDescending(s=> s.Popularity).Take(3).ToList();
+            return desc;
+        }
     }
 }

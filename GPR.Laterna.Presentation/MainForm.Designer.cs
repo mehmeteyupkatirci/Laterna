@@ -1,6 +1,6 @@
 ﻿namespace GPR.Laterna.Presentation
 {
-    partial class ParentForm
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnLogin = new FontAwesome.Sharp.IconButton();
             this.btnLogOut = new FontAwesome.Sharp.IconButton();
@@ -46,6 +53,12 @@
             this.TitleChildHomeBtn = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.btnTrackShow = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAlbumShow = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnArtistShow = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.dgwAlbums = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dgwArtist = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dgwTracks = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -54,6 +67,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TitleChildHomeBtn)).BeginInit();
+            this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwAlbums)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwArtist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwTracks)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -350,12 +367,195 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.dgwTracks);
+            this.panelDesktop.Controls.Add(this.dgwArtist);
+            this.panelDesktop.Controls.Add(this.dgwAlbums);
+            this.panelDesktop.Controls.Add(this.btnTrackShow);
+            this.panelDesktop.Controls.Add(this.btnAlbumShow);
+            this.panelDesktop.Controls.Add(this.btnArtistShow);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.ForeColor = System.Drawing.Color.Black;
             this.panelDesktop.Location = new System.Drawing.Point(220, 84);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(964, 449);
             this.panelDesktop.TabIndex = 4;
+            // 
+            // btnTrackShow
+            // 
+            this.btnTrackShow.ActiveBorderThickness = 1;
+            this.btnTrackShow.ActiveCornerRadius = 20;
+            this.btnTrackShow.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.btnTrackShow.ActiveForecolor = System.Drawing.Color.White;
+            this.btnTrackShow.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.btnTrackShow.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnTrackShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnTrackShow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTrackShow.BackgroundImage")));
+            this.btnTrackShow.ButtonText = "Daha Fazla";
+            this.btnTrackShow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTrackShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTrackShow.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnTrackShow.IdleBorderThickness = 2;
+            this.btnTrackShow.IdleCornerRadius = 20;
+            this.btnTrackShow.IdleFillColor = System.Drawing.Color.White;
+            this.btnTrackShow.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.btnTrackShow.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.btnTrackShow.Location = new System.Drawing.Point(696, 259);
+            this.btnTrackShow.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTrackShow.Name = "btnTrackShow";
+            this.btnTrackShow.Size = new System.Drawing.Size(191, 47);
+            this.btnTrackShow.TabIndex = 5;
+            this.btnTrackShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnAlbumShow
+            // 
+            this.btnAlbumShow.ActiveBorderThickness = 1;
+            this.btnAlbumShow.ActiveCornerRadius = 20;
+            this.btnAlbumShow.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            this.btnAlbumShow.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAlbumShow.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            this.btnAlbumShow.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAlbumShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnAlbumShow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAlbumShow.BackgroundImage")));
+            this.btnAlbumShow.ButtonText = "Daha Fazla";
+            this.btnAlbumShow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlbumShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAlbumShow.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnAlbumShow.IdleBorderThickness = 2;
+            this.btnAlbumShow.IdleCornerRadius = 20;
+            this.btnAlbumShow.IdleFillColor = System.Drawing.Color.White;
+            this.btnAlbumShow.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            this.btnAlbumShow.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            this.btnAlbumShow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnAlbumShow.Location = new System.Drawing.Point(386, 259);
+            this.btnAlbumShow.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAlbumShow.Name = "btnAlbumShow";
+            this.btnAlbumShow.Size = new System.Drawing.Size(191, 47);
+            this.btnAlbumShow.TabIndex = 4;
+            this.btnAlbumShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAlbumShow.Click += new System.EventHandler(this.btnAlbumShow_Click);
+            // 
+            // btnArtistShow
+            // 
+            this.btnArtistShow.ActiveBorderThickness = 1;
+            this.btnArtistShow.ActiveCornerRadius = 20;
+            this.btnArtistShow.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.btnArtistShow.ActiveForecolor = System.Drawing.Color.White;
+            this.btnArtistShow.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.btnArtistShow.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnArtistShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnArtistShow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnArtistShow.BackgroundImage")));
+            this.btnArtistShow.ButtonText = "Daha Fazla";
+            this.btnArtistShow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnArtistShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnArtistShow.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnArtistShow.IdleBorderThickness = 2;
+            this.btnArtistShow.IdleCornerRadius = 20;
+            this.btnArtistShow.IdleFillColor = System.Drawing.Color.White;
+            this.btnArtistShow.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.btnArtistShow.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.btnArtistShow.Location = new System.Drawing.Point(66, 259);
+            this.btnArtistShow.Margin = new System.Windows.Forms.Padding(5);
+            this.btnArtistShow.Name = "btnArtistShow";
+            this.btnArtistShow.Size = new System.Drawing.Size(191, 47);
+            this.btnArtistShow.TabIndex = 3;
+            this.btnArtistShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dgwAlbums
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgwAlbums.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgwAlbums.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgwAlbums.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgwAlbums.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwAlbums.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgwAlbums.ColumnHeadersHeight = 35;
+            this.dgwAlbums.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgwAlbums.DoubleBuffered = true;
+            this.dgwAlbums.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgwAlbums.EnableHeadersVisualStyles = false;
+            this.dgwAlbums.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            this.dgwAlbums.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            this.dgwAlbums.HeaderForeColor = System.Drawing.Color.White;
+            this.dgwAlbums.Location = new System.Drawing.Point(361, 56);
+            this.dgwAlbums.Margin = new System.Windows.Forms.Padding(10);
+            this.dgwAlbums.Name = "dgwAlbums";
+            this.dgwAlbums.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgwAlbums.RowHeadersWidth = 40;
+            this.dgwAlbums.RowTemplate.Height = 40;
+            this.dgwAlbums.Size = new System.Drawing.Size(240, 150);
+            this.dgwAlbums.TabIndex = 6;
+            this.dgwAlbums.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwAlbums_CellClick);
+            // 
+            // dgwArtist
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgwArtist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgwArtist.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgwArtist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgwArtist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwArtist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgwArtist.ColumnHeadersHeight = 35;
+            this.dgwArtist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgwArtist.DoubleBuffered = true;
+            this.dgwArtist.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgwArtist.EnableHeadersVisualStyles = false;
+            this.dgwArtist.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            this.dgwArtist.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            this.dgwArtist.HeaderForeColor = System.Drawing.Color.White;
+            this.dgwArtist.Location = new System.Drawing.Point(66, 56);
+            this.dgwArtist.Margin = new System.Windows.Forms.Padding(10);
+            this.dgwArtist.Name = "dgwArtist";
+            this.dgwArtist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgwArtist.RowHeadersWidth = 40;
+            this.dgwArtist.RowTemplate.Height = 40;
+            this.dgwArtist.Size = new System.Drawing.Size(240, 150);
+            this.dgwArtist.TabIndex = 7;
+            // 
+            // dgwTracks
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgwTracks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgwTracks.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgwTracks.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgwTracks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwTracks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgwTracks.ColumnHeadersHeight = 35;
+            this.dgwTracks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgwTracks.DoubleBuffered = true;
+            this.dgwTracks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgwTracks.EnableHeadersVisualStyles = false;
+            this.dgwTracks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            this.dgwTracks.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
+            this.dgwTracks.HeaderForeColor = System.Drawing.Color.White;
+            this.dgwTracks.Location = new System.Drawing.Point(671, 56);
+            this.dgwTracks.Margin = new System.Windows.Forms.Padding(10);
+            this.dgwTracks.Name = "dgwTracks";
+            this.dgwTracks.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgwTracks.RowHeadersWidth = 40;
+            this.dgwTracks.RowTemplate.Height = 40;
+            this.dgwTracks.Size = new System.Drawing.Size(240, 150);
+            this.dgwTracks.TabIndex = 8;
             // 
             // ParentForm
             // 
@@ -369,6 +569,7 @@
             this.Controls.Add(this.panelMenu);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ParentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -381,6 +582,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TitleChildHomeBtn)).EndInit();
+            this.panelDesktop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgwAlbums)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwArtist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwTracks)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -405,5 +610,11 @@
         private FontAwesome.Sharp.IconPictureBox btnExpand;
         private FontAwesome.Sharp.IconPictureBox btnMinimize;
         private FontAwesome.Sharp.IconButton btnLogin;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnArtistShow;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnAlbumShow;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnTrackShow;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgwAlbums;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgwTracks;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgwArtist;
     }
 }
