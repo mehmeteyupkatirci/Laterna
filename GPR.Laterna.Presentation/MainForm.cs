@@ -21,9 +21,11 @@ namespace GPR.Laterna.Presentation
 
         public static int AlbumId = 0;
         public static int ArtistId = 0;
+        public static int TrackId = 0;
 
         private AlbumConnector _albumConnector;
         private ArtistConnector _artistConnector;
+        private TrackConnector _trackConnector;
         public MainForm()
         {
             InitializeComponent();
@@ -62,6 +64,7 @@ namespace GPR.Laterna.Presentation
             dgwArtist.DataSource = _artistConnector.GetTopArtist();
             dgwArtist.Columns["Name"].HeaderText = "Şarkıcı Adı";
             dgwArtist.Columns["Popularity"].HeaderText = "Popülerlik %100";
+
             dgwArtist.Columns["Genres"].Visible = false;
             dgwArtist.Columns["SpotId"].Visible = false;
             dgwArtist.Columns["Id"].Visible = false;
@@ -72,6 +75,19 @@ namespace GPR.Laterna.Presentation
             dgwArtist.Columns["UpdatedAt"].Visible = false;
             dgwArtist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            _trackConnector = new TrackConnector();
+            dgwTrack.DataSource = _trackConnector.GetTopTracks();
+            dgwTrack.Columns["Name"].HeaderText = "Şarkı Adı";
+            dgwTrack.Columns["Popularity"].HeaderText = "Popülerlik %100";
+            dgwTrack.Columns["SpotId"].Visible = false;
+            dgwTrack.Columns["PreviewUrl"].Visible = false;
+            dgwTrack.Columns["Id"].Visible = false;
+            dgwTrack.Columns["AlbumId"].Visible = false;
+            dgwTrack.Columns["DurationMs"].Visible = false;
+            dgwTrack.Columns["DiscNumber"].Visible = false;
+            dgwTrack.Columns["CreatedAt"].Visible = false;
+            dgwTrack.Columns["UpdatedAt"].Visible = false;
+            dgwTrack.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void BtnHide(bool BtnHide)
         {
@@ -271,6 +287,19 @@ namespace GPR.Laterna.Presentation
             ArtistId = id;
             MsgArtist msgArtist = new MsgArtist();
             msgArtist.Show();
+        }
+
+        private void dgwTracks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnTrackShow_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dgwTrack.Rows[dgwTrack.CurrentRow.Index].Cells[0].Value);
+            TrackId = id;
+            MsgTrack msgTrack = new MsgTrack();
+            msgTrack.Show();
         }
     }
 }

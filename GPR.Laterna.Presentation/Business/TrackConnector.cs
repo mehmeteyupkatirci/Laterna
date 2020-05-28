@@ -23,5 +23,9 @@ namespace GPR.Laterna.Presentation.Business
         {
             return _trackService.GetById(id);
         }
+        public List<Track> GetTopTracks()
+        {
+            return _trackService.GetTop();
+        }
     }
 }

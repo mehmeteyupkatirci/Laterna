@@ -33,7 +33,15 @@ namespace GPR.Laterna.Presentation
 
         private void MsgTrack_Load(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(FormTracks.TrackId);
+            int id = 0;
+            if (FormTracks.TrackId == 0)
+            {
+                id = MainForm.TrackId;
+            }
+            else
+            {
+                id = FormTracks.TrackId;
+            }
             var track = _trackConnector.GetTrack(id);
             var albumId = Convert.ToInt32(track.AlbumId);
             var album = _albumConnector.GetAlbum(albumId);

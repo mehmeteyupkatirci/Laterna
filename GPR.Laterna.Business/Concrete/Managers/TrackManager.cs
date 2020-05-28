@@ -25,5 +25,12 @@ namespace GPR.Laterna.Business.Concrete.Managers
         {
             return _trackDal.Get(x => x.Id == id);
         }
+
+        public List<Track> GetTop()
+        {
+            var tracks = _trackDal.GetList();
+            var desc = tracks.OrderByDescending(s => s.Popularity).Take(3).ToList();
+            return desc;
+        }
     }
 }

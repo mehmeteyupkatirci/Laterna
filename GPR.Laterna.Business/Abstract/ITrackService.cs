@@ -11,5 +11,6 @@ namespace GPR.Laterna.Business.Abstract
     {
         List<Track> GetAll();
         Track GetById(int id);
+        List<Track> GetTop();
     }
 }
