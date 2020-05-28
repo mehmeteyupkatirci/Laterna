@@ -11,5 +11,6 @@ namespace GPR.Laterna.Business.Abstract
     {
         List<Artist> GetAll();
         Artist GetById(int id);
+        List<Artist> GetTop();
     }
 }

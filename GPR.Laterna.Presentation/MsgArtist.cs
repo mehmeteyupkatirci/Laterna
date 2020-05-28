@@ -24,7 +24,15 @@ namespace GPR.Laterna.Presentation
 
         private void MsgArtist_Load(object sender, EventArgs e)
         {
-            int id =Convert.ToInt32( FormArtists.ArtistId );
+            int id = 0;
+            if (FormArtists.ArtistId == 0)
+            {
+                id = MainForm.ArtistId;
+            }
+            else
+            {
+                id = FormArtists.ArtistId;
+            }
             var artist =_artistConnector.GetArtist(id);
             if (artist.Name.Length > 25)
             {

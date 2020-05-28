@@ -26,5 +26,12 @@ namespace GPR.Laterna.Business.Concrete.Managers
         {
             return _artistDal.Get(x=>x.Id==id);
         }
+
+        public List<Artist> GetTop()
+        {
+            var artists = _artistDal.GetList();
+            var desc = artists.OrderByDescending(s => s.Popularity).Take(3).ToList();
+            return desc;
+        }
     }
 }

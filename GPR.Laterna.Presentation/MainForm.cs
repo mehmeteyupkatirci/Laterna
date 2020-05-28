@@ -20,8 +20,10 @@ namespace GPR.Laterna.Presentation
         private Form currentChildForm;
 
         public static int AlbumId = 0;
+        public static int ArtistId = 0;
 
         private AlbumConnector _albumConnector;
+        private ArtistConnector _artistConnector;
         public MainForm()
         {
             InitializeComponent();
@@ -37,7 +39,7 @@ namespace GPR.Laterna.Presentation
             BtnHide(_btnHİde);
 
 
-
+            //album
             _albumConnector = new AlbumConnector();
             dgwAlbums.DataSource = _albumConnector.GetTopAlbums();
             dgwAlbums.Columns["Id"].Visible = false;
@@ -54,6 +56,21 @@ namespace GPR.Laterna.Presentation
             dgwAlbums.Columns["Name"].HeaderText = "Albüm Adı";
             dgwAlbums.Columns["Popularity"].HeaderText = "Popülerlik %100";
             dgwAlbums.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            //artist
+            _artistConnector = new ArtistConnector();
+            dgwArtist.DataSource = _artistConnector.GetTopArtist();
+            dgwArtist.Columns["Name"].HeaderText = "Şarkıcı Adı";
+            dgwArtist.Columns["Popularity"].HeaderText = "Popülerlik %100";
+            dgwArtist.Columns["Genres"].Visible = false;
+            dgwArtist.Columns["SpotId"].Visible = false;
+            dgwArtist.Columns["Id"].Visible = false;
+            dgwArtist.Columns["Images"].Visible = false;
+            dgwArtist.Columns["CreatedAt"].Visible = false;
+            dgwArtist.Columns["Checked"].Visible = false;
+            dgwArtist.Columns["Searched"].Visible = false;
+            dgwArtist.Columns["UpdatedAt"].Visible = false;
+            dgwArtist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
         private void BtnHide(bool BtnHide)
@@ -241,6 +258,19 @@ namespace GPR.Laterna.Presentation
         private void dgwAlbums_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dgwArtist_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnArtistShow_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
+            ArtistId = id;
+            MsgArtist msgArtist = new MsgArtist();
+            msgArtist.Show();
         }
     }
 }
