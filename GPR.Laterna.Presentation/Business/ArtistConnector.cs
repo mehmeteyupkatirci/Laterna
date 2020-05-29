@@ -21,7 +21,7 @@ namespace GPR.Laterna.Presentation.Business
         {
             return _artistService.GetAll();
         }
-        public Artist GetArtist(int artist)
+        public Artist GetArtist(long artist)
         {
             return _artistService.GetById(artist);
         }

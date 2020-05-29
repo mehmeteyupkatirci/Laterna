@@ -24,7 +24,7 @@ namespace GPR.Laterna.Presentation
 
         private void MsgArtist_Load(object sender, EventArgs e)
         {
-            int id = 0;
+            long id = 0;
             if (FormArtists.ArtistId == 0)
             {
                 id = MainForm.ArtistId;

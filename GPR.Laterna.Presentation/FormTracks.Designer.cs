@@ -81,6 +81,7 @@
             this.btnTrackFlw.Size = new System.Drawing.Size(191, 47);
             this.btnTrackFlw.TabIndex = 3;
             this.btnTrackFlw.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTrackFlw.Click += new System.EventHandler(this.btnTrackFlw_Click);
             // 
             // btnTrackShow
             // 
@@ -134,6 +135,7 @@
             this.btnTrackLike.Size = new System.Drawing.Size(191, 47);
             this.btnTrackLike.TabIndex = 1;
             this.btnTrackLike.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTrackLike.Click += new System.EventHandler(this.btnTrackLike_Click);
             // 
             // dgwTrack
             // 

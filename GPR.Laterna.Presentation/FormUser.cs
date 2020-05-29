@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GPR.Laterna.Entities.Concrete;
+using GPR.Laterna.Presentation.Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,32 @@ namespace GPR.Laterna.Presentation
 {
     public partial class FormUser : Form
     {
+        private UserConnector _userConnector;
         public FormUser()
         {
             InitializeComponent();
+            _userConnector = new UserConnector();
+        }
+
+        private void FormUser_Load(object sender, EventArgs e)
+        {
+            tbxName.Text = Properties.Settings.Default.User.Name;
+            tbxEmail.Text = Properties.Settings.Default.User.Email;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+           User user = _userConnector.Update(tbxEmail.Text, tbxName.Text,tbxPassword.Text,tbxPasswordValidate.Text);
+            if (user==null)
+            {
+                MessageBox.Show("Girdiniz bilgilere bakın");
+            }
+            else
+            {
+                Properties.Settings.Default.User = user;
+                Properties.Settings.Default.Save();
+                MessageBox.Show("Bilgileriniz başarıyla değiştirildi");
+            }
         }
     }
 }

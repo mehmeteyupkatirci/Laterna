@@ -1,4 +1,5 @@
 ﻿using GPR.Laterna.Presentation.Business;
+using GPR.Laterna.Presentation.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,12 +15,14 @@ namespace GPR.Laterna.Presentation
 {
     public partial class FormArtists : Form
     {
-        public static int ArtistId = 0;
+        public static long ArtistId = 0;
         private ArtistConnector _artistConnector;
+        private UserConnector _userConnector;
         public FormArtists()
         {
             InitializeComponent();
             _artistConnector = new ArtistConnector();
+            _userConnector = new UserConnector();
         }
 
         private void FormArtists_Load(object sender, EventArgs e)
@@ -40,15 +43,37 @@ namespace GPR.Laterna.Presentation
 
         private void dgwArtist_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            ArtistId = Convert.ToInt64(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
         }
 
         private void btnArtistShow_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
-            ArtistId = id;
             MsgArtist msgArtist = new MsgArtist();
             msgArtist.Show();
+        }
+
+        private void btnArtistFlw_Click(object sender, EventArgs e)
+        {
+            if (BtnLoginWarning.EvaluateBtnClick())
+            {
+
+            }
+        }
+
+        private void btnArtistLike_Click(object sender, EventArgs e)
+        {
+            if (BtnLoginWarning.EvaluateBtnClick())
+            {
+                var result =  _userConnector.LikedArtist(Properties.Settings.Default.User.Id, ArtistId);
+                if (result)
+                {
+                    MessageBox.Show("Beğenme başarılı");
+                }
+                else
+                {
+                    MessageBox.Show("zaten beğenilmiş");
+                }
+            }
         }
     }
 

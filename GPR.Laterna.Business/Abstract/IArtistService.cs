@@ -10,7 +10,7 @@ namespace GPR.Laterna.Business.Abstract
     public interface IArtistService
     {
         List<Artist> GetAll();
-        Artist GetById(int id);
+        Artist GetById(long id);
         List<Artist> GetTop();
     }
 }

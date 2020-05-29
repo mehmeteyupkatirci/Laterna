@@ -26,5 +26,9 @@ namespace GPR.Laterna.Presentation.Business
         {
             return new PlaylistManager();
         }
+        public static IUserService CreateUserService()
+        {
+            return new UserManager();
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace GPR.Laterna.Presentation
         private Form currentChildForm;
 
         public static int AlbumId = 0;
-        public static int ArtistId = 0;
+        public static long ArtistId = 0;
         public static int TrackId = 0;
 
         private AlbumConnector _albumConnector;
@@ -37,9 +37,6 @@ namespace GPR.Laterna.Presentation
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            bool _btnHİde = true;
-            BtnHide(_btnHİde);
-
 
             //album
             _albumConnector = new AlbumConnector();
@@ -89,18 +86,22 @@ namespace GPR.Laterna.Presentation
             dgwTrack.Columns["UpdatedAt"].Visible = false;
             dgwTrack.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-        private void BtnHide(bool BtnHide)
+        public  void BtnHide()
         {
-            if (BtnHide ==true)
+            bool isLogin = Properties.Settings.Default.isLogin;
+            if (!isLogin)
             {
                 btnUser.Hide();
                 btnLogOut.Hide();
+                btnMyProfile.Hide();
                 btnLogin.Show();
             }
             else
             {
+                btnMyProfile.Text = Properties.Settings.Default.User.Name;
                 btnUser.Show();
                 btnLogOut.Show();
+                btnMyProfile.Show();
                 btnLogin.Hide();
             }
         }
@@ -199,11 +200,12 @@ namespace GPR.Laterna.Presentation
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, RGBColors.color6);
             if(MessageBox.Show("Çıkış Yapmayı Onaylıyor Musunuz", "Çıkış Yap!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                bool _btnHide = true;
-                BtnHide(_btnHide);
+                Properties.Settings.Default.isLogin = false;
+                Properties.Settings.Default.User = null;
+                Properties.Settings.Default.Save();
+                BtnHide();
             }
         }
 
@@ -216,7 +218,7 @@ namespace GPR.Laterna.Presentation
             Reset();
         }
 
-        private void Reset()
+        public void Reset()
         {
             DisableButton();
             TitleChildHomeBtn.IconChar = IconChar.Home;
@@ -257,10 +259,10 @@ namespace GPR.Laterna.Presentation
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Login());
+            OpenChildForm(new Login(this));
             ActiveButton(sender, RGBColors.color6);
-            bool _btnHide = false;
-            BtnHide(_btnHide);
+            //bool _btnHide = false;
+            //BtnHide(_btnHide);
         }
 
         private void btnAlbumShow_Click(object sender, EventArgs e)
@@ -300,6 +302,16 @@ namespace GPR.Laterna.Presentation
             TrackId = id;
             MsgTrack msgTrack = new MsgTrack();
             msgTrack.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            BtnHide();            
+        }
+
+        private void btnMyProfile_Click(object sender, EventArgs e)
+        {
+            btnUser.PerformClick();
         }
     }
 }

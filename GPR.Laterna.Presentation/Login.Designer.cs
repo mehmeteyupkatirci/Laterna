@@ -78,6 +78,7 @@
             this.btnLogin.Size = new System.Drawing.Size(800, 82);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
@@ -88,6 +89,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPassword.Location = new System.Drawing.Point(393, 191);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(244, 49);
             this.txtPassword.TabIndex = 3;
             // 

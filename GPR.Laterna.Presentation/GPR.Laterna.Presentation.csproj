@@ -72,6 +72,7 @@
     <Compile Include="Business\ManagerFactory.cs" />
     <Compile Include="Business\PlaylistConnector.cs" />
     <Compile Include="Business\TrackConnector.cs" />
+    <Compile Include="Business\UserConnector.cs" />
     <Compile Include="FormArtists.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +103,7 @@
     <Compile Include="FormUser.Designer.cs">
       <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\BtnLoginWarning.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,4 +1,5 @@
 ﻿using GPR.Laterna.Presentation.Business;
+using GPR.Laterna.Presentation.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,6 +58,22 @@ namespace GPR.Laterna.Presentation
         private void dgwAlbum_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnAlbumFlw_Click(object sender, EventArgs e)
+        {
+            if (BtnLoginWarning.EvaluateBtnClick())
+            {
+
+            }
+        }
+
+        private void btnAlbumLike_Click(object sender, EventArgs e)
+        {
+            if (BtnLoginWarning.EvaluateBtnClick())
+            {
+
+            }
         }
     }
 }

@@ -14,15 +14,14 @@ namespace GPR.Laterna.Business.Concrete.Managers
     {
 
         private IUserDal _userDal;
-        
+        private IUserLikedArtistDal _userLikedArtistDal;
 
         public UserManager()
         {
             _userDal = DalFactory.CreateUserDal();
+            _userLikedArtistDal = DalFactory.CreateUserLikedArtistDal();
 
         }
-
-
         public User Add(User user)
         {
             return _userDal.Add(user);
@@ -41,6 +40,28 @@ namespace GPR.Laterna.Business.Concrete.Managers
         public User GetById(int id)
         {
             return _userDal.Get(x => x.Id == id);
+        }
+
+        public bool LikeArtist(long userId, long artistId)
+        {
+            var obj = _userLikedArtistDal.Get(x => x.UserId == userId && x.ArtistId == artistId);
+            if (obj == null)
+            {
+                _userLikedArtistDal.Add(new UserLikedArtist()
+                {
+                    ArtistId = artistId,
+                    UserId = userId,
+                    UpdatedAt = DateTime.Now,
+                    CreatedAt = DateTime.Now
+                });
+                return true;
+            }
+            return false;
+        }
+
+        public User Login(string email, string password)
+        {
+            return _userDal.Get(x=>x.Email==email && x.Password == password);
         }
 
         public User Update(User user)

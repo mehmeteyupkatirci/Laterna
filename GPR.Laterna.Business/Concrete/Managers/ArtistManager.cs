@@ -22,7 +22,7 @@ namespace GPR.Laterna.Business.Concrete.Managers
             return _artistDal.GetList();
         }
 
-        public Artist GetById(int id)
+        public Artist GetById(long id)
         {
             return _artistDal.Get(x=>x.Id==id);
         }

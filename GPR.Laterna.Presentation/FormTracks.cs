@@ -1,4 +1,5 @@
 ﻿using GPR.Laterna.Presentation.Business;
+using GPR.Laterna.Presentation.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,6 +49,22 @@ namespace GPR.Laterna.Presentation
             TrackId = id;
             MsgTrack msgTrack = new MsgTrack();
             msgTrack.Show();
+        }
+
+        private void btnTrackFlw_Click(object sender, EventArgs e)
+        {
+            if (BtnLoginWarning.EvaluateBtnClick())
+            {
+
+            }
+        }
+
+        private void btnTrackLike_Click(object sender, EventArgs e)
+        {
+            if (BtnLoginWarning.EvaluateBtnClick())
+            {
+
+            }
         }
     }
 }
