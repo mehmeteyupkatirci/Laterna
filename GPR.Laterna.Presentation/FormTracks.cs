@@ -15,8 +15,12 @@ namespace GPR.Laterna.Presentation
     public partial class FormTracks : Form
     {
         public static long TrackId = 0;
+
+        CustomMessageBox customMessageBox;
+
         private TrackConnector _trackConnector;
         private UserConnector _userConnector;
+
         public FormTracks()
         {
             InitializeComponent();
@@ -64,11 +68,15 @@ namespace GPR.Laterna.Presentation
                 var result = _userConnector.FollowTrack(Properties.Settings.Default.User.Id, TrackId);
                 if (result)
                 {
-                    MessageBox.Show("Takip etme başarılı");
+                    Properties.Settings.Default.CustomMessage = "Takip Etme İşlemi Başarılı";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Zaten takip edilmiş");
+                    Properties.Settings.Default.CustomMessage = "Daha Önceden Takip Edilmiş";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
                 }
             }
         }
@@ -81,11 +89,15 @@ namespace GPR.Laterna.Presentation
                 var result = _userConnector.LikedTrack(Properties.Settings.Default.User.Id, TrackId);
                 if (result)
                 {
-                    MessageBox.Show("Beğenme başarılı");
+                    Properties.Settings.Default.CustomMessage = "Beğenme İşlemi Başarılı";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Zaten beğenilmiş");
+                    Properties.Settings.Default.CustomMessage = "Daha Önceden Beğenilmiş";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
                 }
             }
         }

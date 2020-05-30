@@ -15,6 +15,9 @@ namespace GPR.Laterna.Presentation
     public partial class FormAlbums : Form
     {
         public static long AlbumId = 0;
+
+        CustomMessageBox customMessageBox;
+
         private AlbumConnector _albumConnector;
         private UserConnector _userConnector;
 
@@ -69,13 +72,16 @@ namespace GPR.Laterna.Presentation
                 var result = _userConnector.FollowAlbum(Properties.Settings.Default.User.Id, AlbumId);
                 if (result)
                 {
-                    MessageBox.Show("Rukiye");
+                    Properties.Settings.Default.CustomMessage = "Takip Etme İşlemi Başarılı";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Zeynep");
+                    Properties.Settings.Default.CustomMessage = "Daha Önceden Takip Edilmiş";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
                 }
-
             }
         }
 
@@ -87,11 +93,15 @@ namespace GPR.Laterna.Presentation
                 var result = _userConnector.LikedAlbum(Properties.Settings.Default.User.Id, AlbumId);
                 if (result)
                 {
-                    MessageBox.Show("Beğenme işlemi başarılı");
+                    Properties.Settings.Default.CustomMessage = "Beğenme İşlemi Başarılı";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Zaten beğenilmiş");
+                    Properties.Settings.Default.CustomMessage = "Daha Önceden Beğenilmiş";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
                 }
 
             }

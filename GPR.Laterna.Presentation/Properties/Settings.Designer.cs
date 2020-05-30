@@ -45,5 +45,17 @@ namespace GPR.Laterna.Presentation.Properties {
                 this["User"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("İşlem Bulunamadı")]
+        public string CustomMessage {
+            get {
+                return ((string)(this["CustomMessage"]));
+            }
+            set {
+                this["CustomMessage"] = value;
+            }
+        }
     }
 }

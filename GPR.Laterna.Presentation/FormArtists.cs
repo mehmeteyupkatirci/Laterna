@@ -17,6 +17,8 @@ namespace GPR.Laterna.Presentation
     {
         public static long ArtistId = 0;
 
+        CustomMessageBox customMessageBox;
+
         private ArtistConnector _artistConnector;
         private UserConnector _userConnector;
 
@@ -63,13 +65,16 @@ namespace GPR.Laterna.Presentation
                 var result = _userConnector.FollowArtist(Properties.Settings.Default.User.Id, ArtistId);
                 if (result)
                 {
-                    MessageBox.Show("Takip etme başarılı");
+                    Properties.Settings.Default.CustomMessage = "Takip Etme İşlemi Başarılı";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Zaten takip edilmiş");
+                    Properties.Settings.Default.CustomMessage = "Daha Önceden Takip Edilmiş";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
                 }
-
             }
         }
 
@@ -81,11 +86,15 @@ namespace GPR.Laterna.Presentation
                 var result =  _userConnector.LikedArtist(Properties.Settings.Default.User.Id, ArtistId);
                 if (result)
                 {
-                    MessageBox.Show("Beğenme başarılı");
+                    Properties.Settings.Default.CustomMessage = "Beğenme İşlemi Başarılı";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
                 }
                 else
                 {
-                    MessageBox.Show("zaten beğenilmiş");
+                    Properties.Settings.Default.CustomMessage = "Daha Önceden Beğenilmiş";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
                 }
             }
         } 

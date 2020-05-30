@@ -63,7 +63,6 @@
             this.btnTrackShow = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAlbumShow = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnArtistShow = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -279,7 +278,6 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.panelTitleBar.Controls.Add(this.button1);
             this.panelTitleBar.Controls.Add(this.btnMyProfile);
             this.panelTitleBar.Controls.Add(this.btnMinimize);
             this.panelTitleBar.Controls.Add(this.btnExpand);
@@ -632,16 +630,6 @@
             this.btnArtistShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnArtistShow.Click += new System.EventHandler(this.btnArtistShow_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(497, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "deneme";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -707,6 +695,5 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private FontAwesome.Sharp.IconButton btnMyProfile;
-        private System.Windows.Forms.Button button1;
     }
 }

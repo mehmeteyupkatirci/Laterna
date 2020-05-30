@@ -8,5 +8,8 @@
     <Setting Name="User" Type="GPR.Laterna.Entities.Concrete.User" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="CustomMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">İşlem Bulunamadı</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
