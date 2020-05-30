@@ -10,7 +10,7 @@ namespace GPR.Laterna.Business.Abstract
     public interface ITrackService
     {
         List<Track> GetAll();
-        Track GetById(int id);
+        Track GetById(long id);
         List<Track> GetTop();
     }
 }

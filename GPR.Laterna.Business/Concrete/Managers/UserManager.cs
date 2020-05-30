@@ -14,10 +14,15 @@ namespace GPR.Laterna.Business.Concrete.Managers
     {
 
         private IUserDal _userDal;
+
         private IUserLikedArtistDal _userLikedArtistDal;
         private IUserFollowedArtistDal _userFollowedArtistDal;
+
         private IUserFollowedAlbumDal _userFollowedAlbumDal;
         private IUserLikedAlbumDal _userLikedAlbumDal;
+
+        private IUserLikedTrackDal _userLikedTrackDal;
+        private IUserFollowedTrackDal _userFollowedTrackDal;
 
         public UserManager()
         {
@@ -26,6 +31,8 @@ namespace GPR.Laterna.Business.Concrete.Managers
             _userFollowedArtistDal = DalFactory.CreateUserFollowedArtistDal();
             _userFollowedAlbumDal = DalFactory.CreateUserFollowedAlbumDal();
             _userLikedAlbumDal = DalFactory.CreateUserLikedAlbumDal();
+            _userFollowedTrackDal = DalFactory.CreateUserFollowedTrackDal();
+            _userLikedTrackDal = DalFactory.CreateUserLikedTrackDal();
         }
         public User Add(User user)
         {
@@ -71,6 +78,23 @@ namespace GPR.Laterna.Business.Concrete.Managers
             return false;
         }
 
+        public bool FollowTrack(long userId, long trackId)
+        {
+            var obj = _userFollowedTrackDal.Get(x => x.UserId == userId && x.TrackId == trackId);
+            if (obj == null)
+            {
+                _userFollowedTrackDal.Add(new UserFollowedTrack()
+                {
+                    TrackId = trackId,
+                    UserId = userId,
+                    UpdatedAt = DateTime.Now,
+                    CreatedAt = DateTime.Now
+                });
+                return true;
+            }
+            return false;
+        }
+
         public List<User> GetAll()
         {
             return _userDal.GetList();
@@ -106,6 +130,23 @@ namespace GPR.Laterna.Business.Concrete.Managers
                 _userLikedArtistDal.Add(new UserLikedArtist()
                 {
                     ArtistId = artistId,
+                    UserId = userId,
+                    UpdatedAt = DateTime.Now,
+                    CreatedAt = DateTime.Now
+                });
+                return true;
+            }
+            return false;
+        }
+
+        public bool LikeTrack(long userId, long trackId)
+        {
+            var obj = _userLikedTrackDal.Get(x => x.UserId == userId && x.TrackId == trackId);
+            if (obj == null)
+            {
+                _userLikedTrackDal.Add(new UserLikedTrack()
+                {
+                    TrackId = trackId,
                     UserId = userId,
                     UpdatedAt = DateTime.Now,
                     CreatedAt = DateTime.Now

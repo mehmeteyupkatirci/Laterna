@@ -18,6 +18,7 @@ namespace GPR.Laterna.Presentation
         private AlbumConnector _albumConnector;
         private ArtistConnector _artistConnector;
         private TrackConnector _trackConnector;
+
         public MsgTrack()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace GPR.Laterna.Presentation
 
         private void MsgTrack_Load(object sender, EventArgs e)
         {
-            int id = 0;
+            long id = 0;
             if (FormTracks.TrackId == 0)
             {
                 id = MainForm.TrackId;

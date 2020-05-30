@@ -19,7 +19,7 @@ namespace GPR.Laterna.Presentation.Business
         {
             return _trackService.GetAll();
         }
-        public Track GetTrack(int id)
+        public Track GetTrack(long id)
         {
             return _trackService.GetById(id);
         }

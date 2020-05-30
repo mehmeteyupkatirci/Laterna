@@ -21,7 +21,7 @@ namespace GPR.Laterna.Business.Concrete.Managers
             return _trackDal.GetList();
         }
 
-        public Track GetById(int id)
+        public Track GetById(long id)
         {
             return _trackDal.Get(x => x.Id == id);
         }

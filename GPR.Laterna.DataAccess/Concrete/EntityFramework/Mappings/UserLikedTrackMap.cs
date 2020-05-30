@@ -17,7 +17,7 @@ namespace GPR.Laterna.DataAccess.Concrete.EntityFramework.Mappings
 
             Property(x => x.Id).HasColumnName("id");
             Property(x => x.UserId).HasColumnName("user_id");
-            Property(x => x.TrackId).HasColumnName("playlist_id");
+            Property(x => x.TrackId).HasColumnName("track_id");
             Property(x => x.CreatedAt).HasColumnName("created_at");
             Property(x => x.UpdatedAt).HasColumnName("updated_at");
         }

@@ -19,5 +19,7 @@ namespace GPR.Laterna.Business.Abstract
         bool FollowArtist(long userId,long artistId);
         bool LikeAlbum(long userId, long albumId);
         bool FollowAlbum(long userId, long albumId);
+        bool LikeTrack(long userId, long trackId);
+        bool FollowTrack(long userId, long trackId);
     }
 }

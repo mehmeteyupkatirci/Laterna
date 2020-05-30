@@ -21,7 +21,7 @@ namespace GPR.Laterna.Presentation
 
         public static long AlbumId = 0;
         public static long ArtistId = 0;
-        public static int TrackId = 0;
+        public static long TrackId = 0;
 
         private AlbumConnector _albumConnector;
         private ArtistConnector _artistConnector;
@@ -265,41 +265,35 @@ namespace GPR.Laterna.Presentation
             //BtnHide(_btnHide);
         }
 
-        private void btnAlbumShow_Click(object sender, EventArgs e)
-        {
-            long id = Convert.ToInt64(dgwAlbums.Rows[dgwAlbums.CurrentRow.Index].Cells[0].Value);
-            AlbumId = id;
-            MsgAlbum msgAlbum = new MsgAlbum();
-            msgAlbum.Show();
-        }
-
-        private void dgwAlbums_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dgwArtist_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            ArtistId = Convert.ToInt64(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
         }
 
         private void btnArtistShow_Click(object sender, EventArgs e)
         {
-            long id = Convert.ToInt64(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
-            ArtistId = id;
             MsgArtist msgArtist = new MsgArtist();
             msgArtist.Show();
         }
 
+        private void dgwAlbums_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            AlbumId = Convert.ToInt64(dgwAlbums.Rows[dgwAlbums.CurrentRow.Index].Cells[0].Value);
+        }
+
+        private void btnAlbumShow_Click(object sender, EventArgs e)
+        {
+            MsgAlbum msgAlbum = new MsgAlbum();
+            msgAlbum.Show();
+        }
+
         private void dgwTracks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            TrackId = Convert.ToInt64(dgwTrack.Rows[dgwTrack.CurrentRow.Index].Cells[0].Value);
         }
 
         private void btnTrackShow_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dgwTrack.Rows[dgwTrack.CurrentRow.Index].Cells[0].Value);
-            TrackId = id;
             MsgTrack msgTrack = new MsgTrack();
             msgTrack.Show();
         }
