@@ -44,7 +44,6 @@
             // 
             // lblMessage
             // 
-            this.lblMessage.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMessage.Location = new System.Drawing.Point(213, 70);

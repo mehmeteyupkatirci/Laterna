@@ -1,4 +1,5 @@
-﻿using GPR.Laterna.Presentation.Business;
+﻿using GPR.Laterna.Entities.Concrete;
+using GPR.Laterna.Presentation.Business;
 using GPR.Laterna.Presentation.Helpers;
 using System;
 using System.Collections.Generic;
@@ -21,12 +22,14 @@ namespace GPR.Laterna.Presentation
 
         private ArtistConnector _artistConnector;
         private UserConnector _userConnector;
+        private List<UserLikedArtist> _userLikedArtists;
 
         public FormArtists()
         {
             InitializeComponent();
             _artistConnector = new ArtistConnector();
             _userConnector = new UserConnector();
+            _userLikedArtists = new List<UserLikedArtist>();
         }
 
         private void FormArtists_Load(object sender, EventArgs e)
@@ -43,11 +46,25 @@ namespace GPR.Laterna.Presentation
             dgwArtist.Columns["Searched"].Visible = false;
             dgwArtist.Columns["UpdatedAt"].Visible = false;
             dgwArtist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            if (Properties.Settings.Default.isLogin)
+            {
+                _userLikedArtists = _userConnector.GetUserLikedArtists(Properties.Settings.Default.User.Id);
+            }
         }
 
         private void dgwArtist_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ArtistId = Convert.ToInt64(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
+            var theLikedArtist = _userLikedArtists.Where(x => x.ArtistId == ArtistId).FirstOrDefault();
+            if(theLikedArtist != null)
+            {
+                BtnArtistLike.ButtonText = "Beğendin";
+            }
+            else
+            {
+                BtnArtistLike.ButtonText = "Beğen";
+            }
         }
 
         private void btnArtistShow_Click(object sender, EventArgs e)
@@ -77,13 +94,17 @@ namespace GPR.Laterna.Presentation
                 }
             }
         }
+        private void DgwArtistCurrentRow()
+        {
+            ArtistId = Convert.ToInt64(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
+        }
 
-        private void btnArtistLike_Click(object sender, EventArgs e)
+        private void BtnArtistLike_Click(object sender, EventArgs e)
         {
             DgwArtistCurrentRow();
             if (BtnLoginWarning.EvaluateBtnClick())
             {
-                var result =  _userConnector.LikedArtist(Properties.Settings.Default.User.Id, ArtistId);
+                var result = _userConnector.LikedArtist(Properties.Settings.Default.User.Id, ArtistId);
                 if (result)
                 {
                     Properties.Settings.Default.CustomMessage = "Beğenme İşlemi Başarılı";
@@ -97,11 +118,28 @@ namespace GPR.Laterna.Presentation
                     customMessageBox.Show();
                 }
             }
-        } 
-        
-        private void DgwArtistCurrentRow()
+        }
+
+        private void btnArtistFollow_Click(object sender, EventArgs e)
         {
-            ArtistId = Convert.ToInt64(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
+
+            DgwArtistCurrentRow();
+            if (BtnLoginWarning.EvaluateBtnClick())
+            {
+                var result = _userConnector.FollowArtist(Properties.Settings.Default.User.Id, ArtistId);
+                if (result)
+                {
+                    Properties.Settings.Default.CustomMessage = "Takip Etme İşlemi Başarılı";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
+                }
+                else
+                {
+                    Properties.Settings.Default.CustomMessage = "Daha Önceden Takip Edilmiş";
+                    customMessageBox = new CustomMessageBox();
+                    customMessageBox.Show();
+                }
+            }
         }
     }
 

@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormArtists));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.btnArtistFlw = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnArtistFollow = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.BtnArtistLike = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnArtistShow = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnArtistLike = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dgwArtist = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelDesktop.SuspendLayout();
@@ -45,9 +45,9 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.panelDesktop.Controls.Add(this.btnArtistFlw);
+            this.panelDesktop.Controls.Add(this.btnArtistFollow);
+            this.panelDesktop.Controls.Add(this.BtnArtistLike);
             this.panelDesktop.Controls.Add(this.btnArtistShow);
-            this.panelDesktop.Controls.Add(this.btnArtistLike);
             this.panelDesktop.Controls.Add(this.dgwArtist);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.ForeColor = System.Drawing.Color.Black;
@@ -56,32 +56,59 @@
             this.panelDesktop.Size = new System.Drawing.Size(947, 409);
             this.panelDesktop.TabIndex = 5;
             // 
-            // btnArtistFlw
+            // btnArtistFollow
             // 
-            this.btnArtistFlw.ActiveBorderThickness = 1;
-            this.btnArtistFlw.ActiveCornerRadius = 20;
-            this.btnArtistFlw.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.btnArtistFlw.ActiveForecolor = System.Drawing.Color.White;
-            this.btnArtistFlw.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.btnArtistFlw.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnArtistFlw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnArtistFlw.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnArtistFlw.BackgroundImage")));
-            this.btnArtistFlw.ButtonText = "Takip Et";
-            this.btnArtistFlw.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnArtistFlw.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnArtistFlw.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnArtistFlw.IdleBorderThickness = 2;
-            this.btnArtistFlw.IdleCornerRadius = 20;
-            this.btnArtistFlw.IdleFillColor = System.Drawing.Color.White;
-            this.btnArtistFlw.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.btnArtistFlw.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.btnArtistFlw.Location = new System.Drawing.Point(72, 340);
-            this.btnArtistFlw.Margin = new System.Windows.Forms.Padding(5);
-            this.btnArtistFlw.Name = "btnArtistFlw";
-            this.btnArtistFlw.Size = new System.Drawing.Size(191, 47);
-            this.btnArtistFlw.TabIndex = 3;
-            this.btnArtistFlw.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnArtistFlw.Click += new System.EventHandler(this.btnArtistFlw_Click);
+            this.btnArtistFollow.ActiveBorderThickness = 1;
+            this.btnArtistFollow.ActiveCornerRadius = 20;
+            this.btnArtistFollow.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.btnArtistFollow.ActiveForecolor = System.Drawing.Color.White;
+            this.btnArtistFollow.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.btnArtistFollow.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnArtistFollow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnArtistFollow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnArtistFollow.BackgroundImage")));
+            this.btnArtistFollow.ButtonText = "Takip Et";
+            this.btnArtistFollow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnArtistFollow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnArtistFollow.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnArtistFollow.IdleBorderThickness = 2;
+            this.btnArtistFollow.IdleCornerRadius = 20;
+            this.btnArtistFollow.IdleFillColor = System.Drawing.Color.White;
+            this.btnArtistFollow.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.btnArtistFollow.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.btnArtistFollow.Location = new System.Drawing.Point(67, 340);
+            this.btnArtistFollow.Margin = new System.Windows.Forms.Padding(5);
+            this.btnArtistFollow.Name = "btnArtistFollow";
+            this.btnArtistFollow.Size = new System.Drawing.Size(191, 47);
+            this.btnArtistFollow.TabIndex = 7;
+            this.btnArtistFollow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnArtistFollow.Click += new System.EventHandler(this.btnArtistFollow_Click);
+            // 
+            // BtnArtistLike
+            // 
+            this.BtnArtistLike.ActiveBorderThickness = 1;
+            this.BtnArtistLike.ActiveCornerRadius = 20;
+            this.BtnArtistLike.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.BtnArtistLike.ActiveForecolor = System.Drawing.Color.White;
+            this.BtnArtistLike.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.BtnArtistLike.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnArtistLike.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.BtnArtistLike.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnArtistLike.BackgroundImage")));
+            this.BtnArtistLike.ButtonText = "Beğen";
+            this.BtnArtistLike.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnArtistLike.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnArtistLike.ForeColor = System.Drawing.Color.MediumPurple;
+            this.BtnArtistLike.IdleBorderThickness = 2;
+            this.BtnArtistLike.IdleCornerRadius = 20;
+            this.BtnArtistLike.IdleFillColor = System.Drawing.Color.White;
+            this.BtnArtistLike.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.BtnArtistLike.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.BtnArtistLike.Location = new System.Drawing.Point(705, 340);
+            this.BtnArtistLike.Margin = new System.Windows.Forms.Padding(5);
+            this.BtnArtistLike.Name = "BtnArtistLike";
+            this.BtnArtistLike.Size = new System.Drawing.Size(191, 47);
+            this.BtnArtistLike.TabIndex = 6;
+            this.BtnArtistLike.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnArtistLike.Click += new System.EventHandler(this.BtnArtistLike_Click);
             // 
             // btnArtistShow
             // 
@@ -110,48 +137,21 @@
             this.btnArtistShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnArtistShow.Click += new System.EventHandler(this.btnArtistShow_Click);
             // 
-            // btnArtistLike
-            // 
-            this.btnArtistLike.ActiveBorderThickness = 1;
-            this.btnArtistLike.ActiveCornerRadius = 20;
-            this.btnArtistLike.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.btnArtistLike.ActiveForecolor = System.Drawing.Color.White;
-            this.btnArtistLike.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.btnArtistLike.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnArtistLike.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnArtistLike.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnArtistLike.BackgroundImage")));
-            this.btnArtistLike.ButtonText = "Beğen";
-            this.btnArtistLike.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnArtistLike.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnArtistLike.ForeColor = System.Drawing.Color.MediumPurple;
-            this.btnArtistLike.IdleBorderThickness = 2;
-            this.btnArtistLike.IdleCornerRadius = 20;
-            this.btnArtistLike.IdleFillColor = System.Drawing.Color.White;
-            this.btnArtistLike.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.btnArtistLike.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.btnArtistLike.Location = new System.Drawing.Point(697, 340);
-            this.btnArtistLike.Margin = new System.Windows.Forms.Padding(5);
-            this.btnArtistLike.Name = "btnArtistLike";
-            this.btnArtistLike.Size = new System.Drawing.Size(191, 47);
-            this.btnArtistLike.TabIndex = 1;
-            this.btnArtistLike.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnArtistLike.Click += new System.EventHandler(this.btnArtistLike_Click);
-            // 
             // dgwArtist
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgwArtist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgwArtist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwArtist.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgwArtist.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwArtist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwArtist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwArtist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgwArtist.ColumnHeadersHeight = 40;
             this.dgwArtist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgwArtist.Dock = System.Windows.Forms.DockStyle.Top;
@@ -195,10 +195,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panelDesktop;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnArtistFlw;
         private Bunifu.Framework.UI.BunifuThinButton2 btnArtistShow;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnArtistLike;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgwArtist;
+        private Bunifu.Framework.UI.BunifuThinButton2 BtnArtistLike;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnArtistFollow;
     }
 }

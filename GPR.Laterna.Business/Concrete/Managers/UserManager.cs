@@ -105,6 +105,11 @@ namespace GPR.Laterna.Business.Concrete.Managers
             return _userDal.Get(x => x.Id == id);
         }
 
+        public List<UserLikedArtist> GetUserLikedArtists(long id)
+        {
+            return _userLikedArtistDal.GetList(x=>x.UserId == id);
+        }
+
         public bool LikeAlbum(long userId, long albumId)
         {
             var obj = _userLikedAlbumDal.Get(x => x.UserId == userId && x.AlbumId == albumId);
