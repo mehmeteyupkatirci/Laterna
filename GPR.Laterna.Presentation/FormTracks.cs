@@ -41,17 +41,24 @@ namespace GPR.Laterna.Presentation
 
         private void dgwTrack_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           TrackId = Convert.ToInt64(dgwTrack.Rows[dgwTrack.CurrentRow.Index].Cells[0].Value);
+            TrackId = Convert.ToInt64(dgwTrack.Rows[dgwTrack.CurrentRow.Index].Cells[0].Value);
+        }
+
+        private void DgwTrackCurrentRow()
+        {
+            TrackId = Convert.ToInt64(dgwTrack.Rows[dgwTrack.CurrentRow.Index].Cells[0].Value);
         }
 
         private void btnTrackShow_Click(object sender, EventArgs e)
         {
+            DgwTrackCurrentRow();
             MsgTrack msgTrack = new MsgTrack();
             msgTrack.Show();
         }
 
         private void btnTrackFlw_Click(object sender, EventArgs e)
         {
+            DgwTrackCurrentRow();
             if (BtnLoginWarning.EvaluateBtnClick())
             {
                 var result = _userConnector.FollowTrack(Properties.Settings.Default.User.Id, TrackId);
@@ -68,6 +75,7 @@ namespace GPR.Laterna.Presentation
 
         private void btnTrackLike_Click(object sender, EventArgs e)
         {
+            DgwTrackCurrentRow();
             if (BtnLoginWarning.EvaluateBtnClick())
             {
                 var result = _userConnector.LikedTrack(Properties.Settings.Default.User.Id, TrackId);

@@ -51,7 +51,7 @@
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(947, 31);
+            this.panelTitle.Size = new System.Drawing.Size(940, 31);
             this.panelTitle.TabIndex = 16;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
@@ -143,7 +143,7 @@
             this.btnAlbum.Location = new System.Drawing.Point(0, 426);
             this.btnAlbum.Margin = new System.Windows.Forms.Padding(5);
             this.btnAlbum.Name = "btnAlbum";
-            this.btnAlbum.Size = new System.Drawing.Size(947, 47);
+            this.btnAlbum.Size = new System.Drawing.Size(940, 47);
             this.btnAlbum.TabIndex = 17;
             this.btnAlbum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAlbum.Click += new System.EventHandler(this.btnAlbum_Click);
@@ -206,7 +206,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(947, 473);
+            this.ClientSize = new System.Drawing.Size(940, 473);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.lblArtistPop);
             this.Controls.Add(this.bunifuCustomLabel4);

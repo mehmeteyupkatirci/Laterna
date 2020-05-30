@@ -17,6 +17,7 @@ namespace GPR.Laterna.Presentation
         public static long AlbumId = 0;
         private AlbumConnector _albumConnector;
         private UserConnector _userConnector;
+
         public FormAlbums()
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace GPR.Laterna.Presentation
 
         private void btnAlbumShow_Click(object sender, EventArgs e)
         {
+            DgwAlbumCurrenRow();
             MsgAlbum msgAlbum = new MsgAlbum();
             msgAlbum.Show();
         }
@@ -61,16 +63,17 @@ namespace GPR.Laterna.Presentation
 
         private void btnAlbumFlw_Click(object sender, EventArgs e)
         {
+            DgwAlbumCurrenRow();
             if (BtnLoginWarning.EvaluateBtnClick())
             {
                 var result = _userConnector.FollowAlbum(Properties.Settings.Default.User.Id, AlbumId);
                 if (result)
                 {
-                    MessageBox.Show("Takip etme başarılı");
+                    MessageBox.Show("Rukiye");
                 }
                 else
                 {
-                    MessageBox.Show("Zaten takip edilmiş");
+                    MessageBox.Show("Zeynep");
                 }
 
             }
@@ -78,6 +81,7 @@ namespace GPR.Laterna.Presentation
 
         private void btnAlbumLike_Click(object sender, EventArgs e)
         {
+            DgwAlbumCurrenRow();
             if (BtnLoginWarning.EvaluateBtnClick())
             {
                 var result = _userConnector.LikedAlbum(Properties.Settings.Default.User.Id, AlbumId);
@@ -91,6 +95,11 @@ namespace GPR.Laterna.Presentation
                 }
 
             }
+        }
+
+        private void DgwAlbumCurrenRow()
+        {
+            AlbumId = Convert.ToInt64(dgwAlbum.Rows[dgwAlbum.CurrentRow.Index].Cells[0].Value);
         }
     }
 }

@@ -44,7 +44,7 @@ namespace GPR.Laterna.Presentation
                 id = FormTracks.TrackId;
             }
             var track = _trackConnector.GetTrack(id);
-            var albumId = Convert.ToInt32(track.AlbumId);
+            var albumId = Convert.ToInt64(track.AlbumId);
             var album = _albumConnector.GetAlbum(albumId);
             var artistId = Convert.ToInt32(album.ArtistId);
             var artist = _artistConnector.GetArtist(artistId);

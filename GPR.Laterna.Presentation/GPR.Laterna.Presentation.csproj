@@ -70,6 +70,12 @@
     <Compile Include="Business\PlaylistConnector.cs" />
     <Compile Include="Business\TrackConnector.cs" />
     <Compile Include="Business\UserConnector.cs" />
+    <Compile Include="CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormArtists.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAlbums.resx">
       <DependentUpon>FormAlbums.cs</DependentUpon>
     </EmbeddedResource>

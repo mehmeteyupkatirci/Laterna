@@ -46,6 +46,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnMyProfile = new FontAwesome.Sharp.IconButton();
             this.btnMinimize = new FontAwesome.Sharp.IconPictureBox();
             this.btnExpand = new FontAwesome.Sharp.IconPictureBox();
             this.btnExit = new FontAwesome.Sharp.IconPictureBox();
@@ -62,7 +63,7 @@
             this.btnTrackShow = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAlbumShow = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnArtistShow = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnMyProfile = new FontAwesome.Sharp.IconButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -278,6 +279,7 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelTitleBar.Controls.Add(this.button1);
             this.panelTitleBar.Controls.Add(this.btnMyProfile);
             this.panelTitleBar.Controls.Add(this.btnMinimize);
             this.panelTitleBar.Controls.Add(this.btnExpand);
@@ -290,6 +292,28 @@
             this.panelTitleBar.Size = new System.Drawing.Size(983, 75);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // btnMyProfile
+            // 
+            this.btnMyProfile.FlatAppearance.BorderSize = 0;
+            this.btnMyProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyProfile.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnMyProfile.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMyProfile.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnMyProfile.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnMyProfile.IconSize = 32;
+            this.btnMyProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyProfile.Location = new System.Drawing.Point(726, 3);
+            this.btnMyProfile.Name = "btnMyProfile";
+            this.btnMyProfile.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnMyProfile.Rotation = 0D;
+            this.btnMyProfile.Size = new System.Drawing.Size(136, 42);
+            this.btnMyProfile.TabIndex = 6;
+            this.btnMyProfile.Text = "Profilim";
+            this.btnMyProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMyProfile.UseVisualStyleBackColor = true;
+            this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
             // 
             // btnMinimize
             // 
@@ -608,27 +632,15 @@
             this.btnArtistShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnArtistShow.Click += new System.EventHandler(this.btnArtistShow_Click);
             // 
-            // btnMyProfile
+            // button1
             // 
-            this.btnMyProfile.FlatAppearance.BorderSize = 0;
-            this.btnMyProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyProfile.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnMyProfile.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMyProfile.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.btnMyProfile.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnMyProfile.IconSize = 32;
-            this.btnMyProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyProfile.Location = new System.Drawing.Point(726, 3);
-            this.btnMyProfile.Name = "btnMyProfile";
-            this.btnMyProfile.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnMyProfile.Rotation = 0D;
-            this.btnMyProfile.Size = new System.Drawing.Size(136, 42);
-            this.btnMyProfile.TabIndex = 6;
-            this.btnMyProfile.Text = "Profilim";
-            this.btnMyProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMyProfile.UseVisualStyleBackColor = true;
-            this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
+            this.button1.Location = new System.Drawing.Point(497, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "deneme";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
@@ -695,5 +707,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private FontAwesome.Sharp.IconButton btnMyProfile;
+        private System.Windows.Forms.Button button1;
     }
 }

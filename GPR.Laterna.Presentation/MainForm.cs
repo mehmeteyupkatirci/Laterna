@@ -272,6 +272,7 @@ namespace GPR.Laterna.Presentation
 
         private void btnArtistShow_Click(object sender, EventArgs e)
         {
+            ArtistId = Convert.ToInt64(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
             MsgArtist msgArtist = new MsgArtist();
             msgArtist.Show();
         }
@@ -283,6 +284,7 @@ namespace GPR.Laterna.Presentation
 
         private void btnAlbumShow_Click(object sender, EventArgs e)
         {
+            AlbumId = Convert.ToInt64(dgwAlbums.Rows[dgwAlbums.CurrentRow.Index].Cells[0].Value);
             MsgAlbum msgAlbum = new MsgAlbum();
             msgAlbum.Show();
         }
@@ -294,6 +296,7 @@ namespace GPR.Laterna.Presentation
 
         private void btnTrackShow_Click(object sender, EventArgs e)
         {
+            TrackId = Convert.ToInt64(dgwTrack.Rows[dgwTrack.CurrentRow.Index].Cells[0].Value);
             MsgTrack msgTrack = new MsgTrack();
             msgTrack.Show();
         }
@@ -306,6 +309,12 @@ namespace GPR.Laterna.Presentation
         private void btnMyProfile_Click(object sender, EventArgs e)
         {
             btnUser.PerformClick();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CustomMessageBox customMessageBox = new CustomMessageBox();
+            customMessageBox.Show();
         }
     }
 }

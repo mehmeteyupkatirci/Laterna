@@ -16,8 +16,10 @@ namespace GPR.Laterna.Presentation
     public partial class FormArtists : Form
     {
         public static long ArtistId = 0;
+
         private ArtistConnector _artistConnector;
         private UserConnector _userConnector;
+
         public FormArtists()
         {
             InitializeComponent();
@@ -48,12 +50,14 @@ namespace GPR.Laterna.Presentation
 
         private void btnArtistShow_Click(object sender, EventArgs e)
         {
+            DgwArtistCurrentRow();
             MsgArtist msgArtist = new MsgArtist();
             msgArtist.Show();
         }
 
         private void btnArtistFlw_Click(object sender, EventArgs e)
         {
+            DgwArtistCurrentRow();
             if (BtnLoginWarning.EvaluateBtnClick())
             {
                 var result = _userConnector.FollowArtist(Properties.Settings.Default.User.Id, ArtistId);
@@ -71,6 +75,7 @@ namespace GPR.Laterna.Presentation
 
         private void btnArtistLike_Click(object sender, EventArgs e)
         {
+            DgwArtistCurrentRow();
             if (BtnLoginWarning.EvaluateBtnClick())
             {
                 var result =  _userConnector.LikedArtist(Properties.Settings.Default.User.Id, ArtistId);
@@ -83,6 +88,11 @@ namespace GPR.Laterna.Presentation
                     MessageBox.Show("zaten beğenilmiş");
                 }
             }
+        } 
+        
+        private void DgwArtistCurrentRow()
+        {
+            ArtistId = Convert.ToInt64(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
         }
     }
 
