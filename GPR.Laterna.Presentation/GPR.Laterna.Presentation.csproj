@@ -107,12 +107,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MsgBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MsgBox.Designer.cs">
-      <DependentUpon>MsgBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="MsgAlbum.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,9 +150,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MsgBox.resx">
-      <DependentUpon>MsgBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MsgAlbum.resx">
       <DependentUpon>MsgAlbum.cs</DependentUpon>

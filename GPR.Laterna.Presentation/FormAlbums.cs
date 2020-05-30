@@ -14,12 +14,14 @@ namespace GPR.Laterna.Presentation
 {
     public partial class FormAlbums : Form
     {
-        public static int AlbumId = 0;
+        public static long AlbumId = 0;
         private AlbumConnector _albumConnector;
+        private UserConnector _userConnector;
         public FormAlbums()
         {
             InitializeComponent();
             _albumConnector = new AlbumConnector();
+            _userConnector = new UserConnector();
         }
 
         private void FormAlbums_Load(object sender, EventArgs e)
@@ -48,22 +50,28 @@ namespace GPR.Laterna.Presentation
 
         private void btnAlbumShow_Click(object sender, EventArgs e)
         {
-            //seçili row'daki id ile form çağırma işlemi
-            int id = Convert.ToInt32(dgwAlbum.Rows[dgwAlbum.CurrentRow.Index].Cells[0].Value);
-            AlbumId = id;
             MsgAlbum msgAlbum = new MsgAlbum();
             msgAlbum.Show();
         }
 
         private void dgwAlbum_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            AlbumId = Convert.ToInt64(dgwAlbum.Rows[dgwAlbum.CurrentRow.Index].Cells[0].Value);
         }
 
         private void btnAlbumFlw_Click(object sender, EventArgs e)
         {
             if (BtnLoginWarning.EvaluateBtnClick())
             {
+                var result = _userConnector.FollowAlbum(Properties.Settings.Default.User.Id, AlbumId);
+                if (result)
+                {
+                    MessageBox.Show("Takip etme başarılı");
+                }
+                else
+                {
+                    MessageBox.Show("Zaten takip edilmiş");
+                }
 
             }
         }
@@ -72,6 +80,15 @@ namespace GPR.Laterna.Presentation
         {
             if (BtnLoginWarning.EvaluateBtnClick())
             {
+                var result = _userConnector.LikedAlbum(Properties.Settings.Default.User.Id, AlbumId);
+                if (result)
+                {
+                    MessageBox.Show("Beğenme işlemi başarılı");
+                }
+                else
+                {
+                    MessageBox.Show("Zaten beğenilmiş");
+                }
 
             }
         }

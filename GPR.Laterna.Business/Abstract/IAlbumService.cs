@@ -10,7 +10,7 @@ namespace GPR.Laterna.Business.Abstract
     public interface IAlbumService
     {
         List<Album> GetAll();
-        Album GetById(int id);
+        Album GetById(long id);
         List<Album> GetTop();
     }
 }

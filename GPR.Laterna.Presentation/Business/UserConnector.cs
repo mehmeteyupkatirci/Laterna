@@ -41,5 +41,13 @@ namespace GPR.Laterna.Presentation.Business
         {
             return _userService.FollowArtist(userId, artistId);
         }
+        public bool LikedAlbum(long userId, long albumId)
+        {
+            return _userService.LikeAlbum(userId, albumId);
+        }
+        public bool FollowAlbum(long userId, long albumId)
+        {
+            return _userService.FollowAlbum(userId, albumId);
+        }
     }
 }

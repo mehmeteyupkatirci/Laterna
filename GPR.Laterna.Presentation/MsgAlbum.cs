@@ -26,7 +26,7 @@ namespace GPR.Laterna.Presentation
 
         private void MsgAlbum_Load(object sender, EventArgs e)
         {
-            int id = 0;
+            long id = 0;
             if (FormAlbums.AlbumId == 0)
             {
                 id = MainForm.AlbumId;
@@ -36,7 +36,7 @@ namespace GPR.Laterna.Presentation
                 id = FormAlbums.AlbumId;
             }
             var album = _albumConnector.GetAlbum(id);
-            var artistId = Convert.ToInt32(album.ArtistId);
+            var artistId = Convert.ToInt64(album.ArtistId);
             var artist = _artistConnector.GetArtist(artistId);
             
             if (album.Name.Length > 25)

@@ -33,4 +33,3 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.L
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.MsgAlbum.resources
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.MsgTrack.resources
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.MainForm.resources
-C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.MsgBox.resources

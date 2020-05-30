@@ -19,7 +19,7 @@ namespace GPR.Laterna.Presentation
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
-        public static int AlbumId = 0;
+        public static long AlbumId = 0;
         public static long ArtistId = 0;
         public static int TrackId = 0;
 
@@ -267,7 +267,7 @@ namespace GPR.Laterna.Presentation
 
         private void btnAlbumShow_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dgwAlbums.Rows[dgwAlbums.CurrentRow.Index].Cells[0].Value);
+            long id = Convert.ToInt64(dgwAlbums.Rows[dgwAlbums.CurrentRow.Index].Cells[0].Value);
             AlbumId = id;
             MsgAlbum msgAlbum = new MsgAlbum();
             msgAlbum.Show();
@@ -285,7 +285,7 @@ namespace GPR.Laterna.Presentation
 
         private void btnArtistShow_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
+            long id = Convert.ToInt64(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
             ArtistId = id;
             MsgArtist msgArtist = new MsgArtist();
             msgArtist.Show();
