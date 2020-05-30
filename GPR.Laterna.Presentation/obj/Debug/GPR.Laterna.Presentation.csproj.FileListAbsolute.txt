@@ -6,7 +6,6 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.L
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.csproj.GenerateResource.cache
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.exe
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.pdb
-C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\System.Windows.Forms.Ribbon.dll
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.csproj.CopyComplete
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.FormAlbums.resources
@@ -34,3 +33,4 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.L
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.MsgAlbum.resources
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.MsgTrack.resources
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.MainForm.resources
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.MsgBox.resources

@@ -16,5 +16,6 @@ namespace GPR.Laterna.Business.Abstract
         User Update(User user);
         void Delete(User user);
         bool LikeArtist(long userId,long artistId);
+        bool FollowArtist(long userId,long artistId);
     }
 }

@@ -56,6 +56,15 @@ namespace GPR.Laterna.Presentation
         {
             if (BtnLoginWarning.EvaluateBtnClick())
             {
+                var result = _userConnector.FollowArtist(Properties.Settings.Default.User.Id, ArtistId);
+                if (result)
+                {
+                    MessageBox.Show("Takip etme başarılı");
+                }
+                else
+                {
+                    MessageBox.Show("Zaten takip edilmiş");
+                }
 
             }
         }
