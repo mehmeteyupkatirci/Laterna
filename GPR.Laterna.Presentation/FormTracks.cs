@@ -1,4 +1,5 @@
-﻿using GPR.Laterna.Presentation.Business;
+﻿using GPR.Laterna.Entities.Concrete;
+using GPR.Laterna.Presentation.Business;
 using GPR.Laterna.Presentation.Helpers;
 using System;
 using System.Collections.Generic;
@@ -20,12 +21,15 @@ namespace GPR.Laterna.Presentation
 
         private TrackConnector _trackConnector;
         private UserConnector _userConnector;
-
+        private List<UserLikedTrack> _userLikedTracks;
+        private List<UserFollowedTrack> _userFollowedTracks;
         public FormTracks()
         {
             InitializeComponent();
             _trackConnector = new TrackConnector();
             _userConnector = new UserConnector();
+            _userFollowedTracks = new List<UserFollowedTrack>();
+            _userLikedTracks = new List<UserLikedTrack>();
         }
         private void FormTracks_Load(object sender, EventArgs e)
         {
@@ -41,11 +45,34 @@ namespace GPR.Laterna.Presentation
             dgwTrack.Columns["UpdatedAt"].Visible = false;
             dgwTrack.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            if (Properties.Settings.Default.isLogin)
+            {
+                _userLikedTracks = _userConnector.GetUserLikedTracks(Properties.Settings.Default.User.Id);
+                _userFollowedTracks = _userConnector.GetUserFollowedTracks(Properties.Settings.Default.User.Id);
+            }
         }
 
         private void dgwTrack_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             TrackId = Convert.ToInt64(dgwTrack.Rows[dgwTrack.CurrentRow.Index].Cells[0].Value);
+            var theLikedTrack = _userLikedTracks.Where(x=>x.TrackId==TrackId).FirstOrDefault();
+            var theFollowedTrack = _userFollowedTracks.Where(x=>x.TrackId==TrackId).FirstOrDefault();
+            if (theFollowedTrack != null)
+            {
+                btnTrackFlw.ButtonText = "Takip Ediliyor";
+            }
+            else
+            {
+                btnTrackFlw.ButtonText = "Takip Et";
+            }
+            if (theLikedTrack != null)
+            {
+                btnTrackLike.ButtonText = "Beğendin";
+            }
+            else
+            {
+                btnTrackLike.ButtonText = "Beğen";
+            }
         }
 
         private void DgwTrackCurrentRow()

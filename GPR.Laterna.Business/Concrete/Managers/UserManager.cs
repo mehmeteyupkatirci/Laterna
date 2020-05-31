@@ -115,6 +115,11 @@ namespace GPR.Laterna.Business.Concrete.Managers
             return _userFollowedArtistDal.GetList(x=>x.UserId == id);
         }
 
+        public List<UserFollowedTrack> GetUserFollowedTracks(long id)
+        {
+            return _userFollowedTrackDal.GetList(x=>x.UserId==id);
+        }
+
         public List<UserLikedAlbum> GetUserLikedAlbums(long id)
         {
             return _userLikedAlbumDal.GetList(x => x.AlbumId == id);
@@ -123,6 +128,11 @@ namespace GPR.Laterna.Business.Concrete.Managers
         public List<UserLikedArtist> GetUserLikedArtists(long id)
         {
             return _userLikedArtistDal.GetList(x=>x.UserId == id);
+        }
+
+        public List<UserLikedTrack> GetUserLikedTracks(long id)
+        {
+            return _userLikedTrackDal.GetList(x=>x.UserId == id);
         }
 
         public bool LikeAlbum(long userId, long albumId)
