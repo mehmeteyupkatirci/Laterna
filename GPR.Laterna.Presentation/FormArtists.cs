@@ -22,14 +22,18 @@ namespace GPR.Laterna.Presentation
 
         private ArtistConnector _artistConnector;
         private UserConnector _userConnector;
+
         private List<UserLikedArtist> _userLikedArtists;
+        private List<UserFollowedArtist> _userFollowedArtists;
 
         public FormArtists()
         {
             InitializeComponent();
             _artistConnector = new ArtistConnector();
             _userConnector = new UserConnector();
+
             _userLikedArtists = new List<UserLikedArtist>();
+            _userFollowedArtists = new List<UserFollowedArtist>();
         }
 
         private void FormArtists_Load(object sender, EventArgs e)
@@ -50,6 +54,7 @@ namespace GPR.Laterna.Presentation
             if (Properties.Settings.Default.isLogin)
             {
                 _userLikedArtists = _userConnector.GetUserLikedArtists(Properties.Settings.Default.User.Id);
+                _userFollowedArtists = _userConnector.GetUserFollowedArtists(Properties.Settings.Default.User.Id);
             }
         }
 
@@ -57,6 +62,7 @@ namespace GPR.Laterna.Presentation
         {
             ArtistId = Convert.ToInt64(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
             var theLikedArtist = _userLikedArtists.Where(x => x.ArtistId == ArtistId).FirstOrDefault();
+            var theFollowedArtist = _userFollowedArtists.Where(x=>x.ArtistId == ArtistId).FirstOrDefault();
             if(theLikedArtist != null)
             {
                 BtnArtistLike.ButtonText = "Beğendin";
@@ -64,6 +70,14 @@ namespace GPR.Laterna.Presentation
             else
             {
                 BtnArtistLike.ButtonText = "Beğen";
+            }
+            if (theFollowedArtist != null)
+            {
+                btnArtistFollow.ButtonText = "Takip Ediliyor";
+            }
+            else
+            {
+                btnArtistFollow.ButtonText = "Takip Et";
             }
         }
 
