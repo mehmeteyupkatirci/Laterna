@@ -1,4 +1,5 @@
-﻿using GPR.Laterna.Presentation.Business;
+﻿using GPR.Laterna.Entities.Concrete;
+using GPR.Laterna.Presentation.Business;
 using GPR.Laterna.Presentation.Helpers;
 using System;
 using System.Collections.Generic;
@@ -20,12 +21,17 @@ namespace GPR.Laterna.Presentation
 
         private AlbumConnector _albumConnector;
         private UserConnector _userConnector;
+        private List<UserFollowedAlbum> _userFollowedAlbums;
+        private List<UserLikedAlbum> _userLikedAlbums;
 
         public FormAlbums()
         {
             InitializeComponent();
             _albumConnector = new AlbumConnector();
             _userConnector = new UserConnector();
+
+            _userFollowedAlbums = new List<UserFollowedAlbum>();
+            _userLikedAlbums = new List<UserLikedAlbum>();
         }
 
         private void FormAlbums_Load(object sender, EventArgs e)
@@ -50,6 +56,11 @@ namespace GPR.Laterna.Presentation
             dgwAlbum.Columns["Popularity"].HeaderText = "Popülerlik %100";
             dgwAlbum.Columns["ReleaseData"].HeaderText = "Çıkış Tarihi";
 
+            if (Properties.Settings.Default.isLogin)
+            {
+                _userLikedAlbums = _userConnector.GetUserLikedAlbums(Properties.Settings.Default.User.Id);
+                _userFollowedAlbums = _userConnector.GetUserFollowedAlbums(Properties.Settings.Default.User.Id);
+            }
         }
 
         private void btnAlbumShow_Click(object sender, EventArgs e)
@@ -62,6 +73,24 @@ namespace GPR.Laterna.Presentation
         private void dgwAlbum_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             AlbumId = Convert.ToInt64(dgwAlbum.Rows[dgwAlbum.CurrentRow.Index].Cells[0].Value);
+            var theLikedAlbum = _userLikedAlbums.Where(x=>x.AlbumId==AlbumId).FirstOrDefault();
+            var theFollowedAlbum = _userFollowedAlbums.Where(x=>x.AlbumId==AlbumId).FirstOrDefault();
+            if (theLikedAlbum != null)
+            {
+                btnAlbumLike.ButtonText = "Beğendin";
+            }
+            else
+            {
+                btnAlbumLike.ButtonText = "Beğen";
+            }
+            if (theFollowedAlbum != null)
+            {
+                btnAlbumFlw.ButtonText = "Takip Ediliyor";
+            }
+            else
+            {
+                btnAlbumFlw.ButtonText = "Takip Et";
+            }
         }
 
         private void btnAlbumFlw_Click(object sender, EventArgs e)

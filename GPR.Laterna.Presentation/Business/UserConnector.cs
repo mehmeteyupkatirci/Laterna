@@ -65,5 +65,13 @@ namespace GPR.Laterna.Presentation.Business
         {
             return _userService.GetUserFollowedArtists(id);
         }
+        public List<UserLikedAlbum> GetUserLikedAlbums(long id)
+        {
+            return _userService.GetUserLikedAlbums(id);
+        }
+        public List<UserFollowedAlbum> GetUserFollowedAlbums(long id)
+        {
+            return _userService.GetUserFollowedAlbums(id);
+        }
     }
 }
