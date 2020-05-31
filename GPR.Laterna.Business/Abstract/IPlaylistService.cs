@@ -10,6 +10,6 @@ namespace GPR.Laterna.Business.Abstract
     public interface IPlaylistService
     {
         List<Playlist> GetAll();
-        Playlist GetById(int id);
+        Playlist GetById(long id);
     }
 }

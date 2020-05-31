@@ -16,7 +16,6 @@ namespace GPR.Laterna.Presentation
     public partial class FormTracks : Form
     {
         public static long TrackId = 0;
-
         CustomMessageBox customMessageBox;
 
         private TrackConnector _trackConnector;
@@ -31,6 +30,7 @@ namespace GPR.Laterna.Presentation
             _userFollowedTracks = new List<UserFollowedTrack>();
             _userLikedTracks = new List<UserLikedTrack>();
         }
+
         private void FormTracks_Load(object sender, EventArgs e)
         {
             dgwTrack.DataSource = _trackConnector.GetAll();
@@ -127,6 +127,11 @@ namespace GPR.Laterna.Presentation
                     customMessageBox.Show();
                 }
             }
+        }
+
+        private void dgwTrack_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -19,5 +19,9 @@ namespace GPR.Laterna.Presentation.Business
         {
             return _playlistService.GetAll();
         }
+        public Playlist GetPlaylist(long playlistId)
+        {
+            return _playlistService.GetById(playlistId);
+        }
     }
 }

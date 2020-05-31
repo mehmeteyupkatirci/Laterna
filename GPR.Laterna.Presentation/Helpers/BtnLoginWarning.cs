@@ -11,9 +11,12 @@ namespace GPR.Laterna.Presentation.Helpers
     {
         public static bool EvaluateBtnClick()
         {
+            CustomMessageBox customMessageBox;
             if (!Properties.Settings.Default.isLogin)
             {
-                MessageBox.Show("Lütfen giriş yapınız");
+                Properties.Settings.Default.CustomMessage= "Lütfen giriş yapınız";
+                customMessageBox = new CustomMessageBox();
+                customMessageBox.Show();
                 return false;
             }
             return true;

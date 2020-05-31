@@ -24,6 +24,9 @@ namespace GPR.Laterna.Business.Concrete.Managers
         private IUserLikedTrackDal _userLikedTrackDal;
         private IUserFollowedTrackDal _userFollowedTrackDal;
 
+        private IUserLikedPlaylistDal _userLikedPlaylistDal;
+        private IUserFollowedPlaylistDal _userFollowedPlaylistDal;
+
         public UserManager()
         {
             _userDal = DalFactory.CreateUserDal();
@@ -33,6 +36,8 @@ namespace GPR.Laterna.Business.Concrete.Managers
             _userLikedAlbumDal = DalFactory.CreateUserLikedAlbumDal();
             _userFollowedTrackDal = DalFactory.CreateUserFollowedTrackDal();
             _userLikedTrackDal = DalFactory.CreateUserLikedTrackDal();
+            _userFollowedPlaylistDal = DalFactory.CreateUserFollowedPlaylistDal();
+            _userLikedPlaylistDal = DalFactory.CreateUserLikedPlaylistDal();
         }
         public User Add(User user)
         {
@@ -69,6 +74,23 @@ namespace GPR.Laterna.Business.Concrete.Managers
                 _userFollowedArtistDal.Add(new UserFollowedArtist()
                 {
                     ArtistId = artistId,
+                    UserId = userId,
+                    UpdatedAt = DateTime.Now,
+                    CreatedAt = DateTime.Now
+                });
+                return true;
+            }
+            return false;
+        }
+
+        public bool FollowPlaylist(long userId, long playlistId)
+        {
+            var obj = _userFollowedPlaylistDal.Get(x => x.UserId == userId && x.PlaylistId == playlistId);
+            if (obj == null)
+            {
+                _userFollowedPlaylistDal.Add(new UserFollowedPlaylist()
+                {
+                    PlaylistId = playlistId,
                     UserId = userId,
                     UpdatedAt = DateTime.Now,
                     CreatedAt = DateTime.Now
@@ -115,6 +137,11 @@ namespace GPR.Laterna.Business.Concrete.Managers
             return _userFollowedArtistDal.GetList(x=>x.UserId == id);
         }
 
+        public List<UserFollowedPlaylist> GetUserFollowedPlaylists(long id)
+        {
+            return _userFollowedPlaylistDal.GetList(x=>x.UserId == id);
+        }
+
         public List<UserFollowedTrack> GetUserFollowedTracks(long id)
         {
             return _userFollowedTrackDal.GetList(x=>x.UserId==id);
@@ -128,6 +155,11 @@ namespace GPR.Laterna.Business.Concrete.Managers
         public List<UserLikedArtist> GetUserLikedArtists(long id)
         {
             return _userLikedArtistDal.GetList(x=>x.UserId == id);
+        }
+
+        public List<UserLikedPlaylist> GetUserLikedPlaylists(long id)
+        {
+            return _userLikedPlaylistDal.GetList(x=> x.UserId == id);
         }
 
         public List<UserLikedTrack> GetUserLikedTracks(long id)
@@ -160,6 +192,23 @@ namespace GPR.Laterna.Business.Concrete.Managers
                 _userLikedArtistDal.Add(new UserLikedArtist()
                 {
                     ArtistId = artistId,
+                    UserId = userId,
+                    UpdatedAt = DateTime.Now,
+                    CreatedAt = DateTime.Now
+                });
+                return true;
+            }
+            return false;
+        }
+
+        public bool LikePlaylist(long userId, long playlistId)
+        {
+            var obj = _userLikedPlaylistDal.Get(x => x.UserId == userId && x.PlaylistId == playlistId);
+            if (obj == null)
+            {
+                _userLikedPlaylistDal.Add(new UserLikedPlaylist()
+                {
+                    PlaylistId = playlistId,
                     UserId = userId,
                     UpdatedAt = DateTime.Now,
                     CreatedAt = DateTime.Now

@@ -125,6 +125,12 @@
     <Compile Include="MsgArtist.Designer.cs">
       <DependentUpon>MsgArtist.cs</DependentUpon>
     </Compile>
+    <Compile Include="MsgPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgPlaylist.Designer.cs">
+      <DependentUpon>MsgPlaylist.cs</DependentUpon>
+    </Compile>
     <Compile Include="MsgTrack.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MsgArtist.resx">
       <DependentUpon>MsgArtist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgPlaylist.resx">
+      <DependentUpon>MsgPlaylist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MsgTrack.resx">
       <DependentUpon>MsgTrack.cs</DependentUpon>

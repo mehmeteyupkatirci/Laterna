@@ -68,12 +68,6 @@ namespace GPR.Laterna.Presentation
             }
         }
 
-        private void btnArtistFlw_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
         //panelden formu hareket ettirmek için : 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -84,6 +78,11 @@ namespace GPR.Laterna.Presentation
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnArtistClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

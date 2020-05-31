@@ -22,9 +22,9 @@ namespace GPR.Laterna.Business.Concrete.Managers
             return _playlistDal.GetList();
         }
 
-        public Playlist GetById(int id)
+        public Playlist GetById(long id)
         {
-            throw new NotImplementedException();
+            return _playlistDal.Get(x => x.Id == id);
         }
     }
 }

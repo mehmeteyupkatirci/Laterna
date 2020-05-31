@@ -57,6 +57,14 @@ namespace GPR.Laterna.Presentation.Business
         {
             return _userService.FollowTrack(userId, trackId);
         }
+        public bool LikedPlaylist(long userId, long playlistId)
+        {
+            return _userService.LikePlaylist(userId,playlistId);
+        }
+        public bool FollowedPlaylist(long userId, long playlistId)
+        {
+            return _userService.FollowPlaylist(userId, playlistId);
+        }
         public List<UserLikedArtist> GetUserLikedArtists(long id)
         {
             return _userService.GetUserLikedArtists(id);
@@ -80,6 +88,14 @@ namespace GPR.Laterna.Presentation.Business
         public List<UserFollowedTrack> GetUserFollowedTracks(long id)
         {
             return _userService.GetUserFollowedTracks(id);
+        }
+        public List<UserLikedPlaylist> GetUserLikedPlaylists(long id)
+        {
+            return _userService.GetUserLikedPlaylists(id);
+        }
+        public List<UserFollowedPlaylist> GetUserFollowedPlaylists(long id)
+        {
+            return _userService.GetUserFollowedPlaylists(id);
         }
     }
 }

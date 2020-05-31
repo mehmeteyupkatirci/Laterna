@@ -36,7 +36,7 @@
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panelTitle = new System.Windows.Forms.Panel();
-            this.btnArtistFlw = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnArtistClose = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pcbImages = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImages)).BeginInit();
             this.SuspendLayout();
@@ -103,9 +103,9 @@
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.bunifuCustomLabel3.Location = new System.Drawing.Point(466, 170);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(113, 26);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(118, 26);
             this.bunifuCustomLabel3.TabIndex = 4;
-            this.bunifuCustomLabel3.Text = "Şarkıcı Adı :";
+            this.bunifuCustomLabel3.Text = "Playlist Adı :";
             // 
             // panelTitle
             // 
@@ -117,32 +117,32 @@
             this.panelTitle.TabIndex = 7;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown_1);
             // 
-            // btnArtistFlw
+            // btnArtistClose
             // 
-            this.btnArtistFlw.ActiveBorderThickness = 1;
-            this.btnArtistFlw.ActiveCornerRadius = 20;
-            this.btnArtistFlw.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.btnArtistFlw.ActiveForecolor = System.Drawing.Color.White;
-            this.btnArtistFlw.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.btnArtistFlw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnArtistFlw.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnArtistFlw.BackgroundImage")));
-            this.btnArtistFlw.ButtonText = "Kapat";
-            this.btnArtistFlw.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnArtistFlw.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnArtistFlw.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnArtistFlw.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnArtistFlw.IdleBorderThickness = 2;
-            this.btnArtistFlw.IdleCornerRadius = 20;
-            this.btnArtistFlw.IdleFillColor = System.Drawing.Color.White;
-            this.btnArtistFlw.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.btnArtistFlw.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.btnArtistFlw.Location = new System.Drawing.Point(0, 426);
-            this.btnArtistFlw.Margin = new System.Windows.Forms.Padding(5);
-            this.btnArtistFlw.Name = "btnArtistFlw";
-            this.btnArtistFlw.Size = new System.Drawing.Size(947, 47);
-            this.btnArtistFlw.TabIndex = 8;
-            this.btnArtistFlw.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnArtistFlw.Click += new System.EventHandler(this.btnArtistFlw_Click);
+            this.btnArtistClose.ActiveBorderThickness = 1;
+            this.btnArtistClose.ActiveCornerRadius = 20;
+            this.btnArtistClose.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.btnArtistClose.ActiveForecolor = System.Drawing.Color.White;
+            this.btnArtistClose.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.btnArtistClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnArtistClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnArtistClose.BackgroundImage")));
+            this.btnArtistClose.ButtonText = "Kapat";
+            this.btnArtistClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnArtistClose.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnArtistClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnArtistClose.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnArtistClose.IdleBorderThickness = 2;
+            this.btnArtistClose.IdleCornerRadius = 20;
+            this.btnArtistClose.IdleFillColor = System.Drawing.Color.White;
+            this.btnArtistClose.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.btnArtistClose.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.btnArtistClose.Location = new System.Drawing.Point(0, 426);
+            this.btnArtistClose.Margin = new System.Windows.Forms.Padding(5);
+            this.btnArtistClose.Name = "btnArtistClose";
+            this.btnArtistClose.Size = new System.Drawing.Size(947, 47);
+            this.btnArtistClose.TabIndex = 8;
+            this.btnArtistClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnArtistClose.Click += new System.EventHandler(this.btnArtistClose_Click);
             // 
             // pcbImages
             // 
@@ -159,7 +159,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(947, 473);
-            this.Controls.Add(this.btnArtistFlw);
+            this.Controls.Add(this.btnArtistClose);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCustomLabel2);
@@ -189,6 +189,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private System.Windows.Forms.Panel panelTitle;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnArtistFlw;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnArtistClose;
     }
 }
