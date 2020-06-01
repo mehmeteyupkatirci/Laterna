@@ -25,6 +25,11 @@ namespace GPR.Laterna.Business.Concrete.Managers
             return _playlistDal.Add(playlist);
         }
 
+        public void Delete(Playlist playlist)
+        {
+            _playlistDal.Delete(playlist);
+        }
+
         public List<Playlist> GetAll()
         {
             return _playlistDal.GetList();

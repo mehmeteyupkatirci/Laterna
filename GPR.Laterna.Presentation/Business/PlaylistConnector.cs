@@ -54,5 +54,11 @@ namespace GPR.Laterna.Presentation.Business
             playlist.UpdatedAt = DateTime.Now;
             return _playlistService.Update(playlist);
         }
+        public void DeletePlaylist(long playlistId)
+        {
+            Playlist playlist = new Playlist();
+            playlist.Id = playlistId;
+            _playlistService.Delete(playlist);
+        }
     }
 }

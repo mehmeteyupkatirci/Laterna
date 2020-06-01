@@ -15,5 +15,6 @@ namespace GPR.Laterna.Business.Abstract
         bool PlaylistTracks(long playlistId, long trackId);
         Playlist Add(Playlist playlist);
         Playlist Update(Playlist playlist);
+        void Delete(Playlist playlist);
     }
 }

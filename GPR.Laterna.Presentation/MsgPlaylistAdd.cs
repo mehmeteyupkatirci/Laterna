@@ -1,4 +1,5 @@
-﻿using GPR.Laterna.Presentation.Business;
+﻿using FontAwesome.Sharp;
+using GPR.Laterna.Presentation.Business;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,7 @@ namespace GPR.Laterna.Presentation
             dgwPlaylist.Columns["UpdatedAt"].Visible = false;
             dgwPlaylist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+       
         //panelden formu hareket ettirmek için : 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -53,13 +55,18 @@ namespace GPR.Laterna.Presentation
 
         private void dgwPlaylist_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            PlaylistId = Convert.ToInt64(dgwUserPlaylist.Rows[dgwUserPlaylist.CurrentRow.Index].Cells[0].Value);
+            PlaylistId = Convert.ToInt64(dgwPlaylist.Rows[dgwPlaylist.CurrentRow.Index].Cells[0].Value);
             if (e.RowIndex != -1)
             {
                 DataGridViewRow gridViewRow = dgwPlaylist.Rows[e.RowIndex];
                 tbxName.Text = gridViewRow.Cells["Name"].Value.ToString();
                 tbxDescription.Text = gridViewRow.Cells["Description"].Value.ToString();
             }
+        }
+
+        private void DgwCurrentRows()
+        {
+            PlaylistId = Convert.ToInt64(dgwPlaylist.Rows[dgwPlaylist.CurrentRow.Index].Cells[0].Value);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -76,13 +83,22 @@ namespace GPR.Laterna.Presentation
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
+            DgwCurrentRows();
             string name = tbxName.Text;
             string description = tbxDescription.Text;
             bool isPublic = checkIsPublic.Checked;
-            _playlistConnector.AddPlaylist(name, description, isPublic);
+            _playlistConnector.UpdatePlaylist(name, description, isPublic,PlaylistId);
 
-            Properties.Settings.Default.CustomMessage = "Ekleme İşlemi Başarıyla Gerçekleşti";
+            Properties.Settings.Default.CustomMessage = "Güncelleme İşlemi Başarıyla Gerçekleşti";
+            customMessageBox = new CustomMessageBox();
+            customMessageBox.Show();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DgwCurrentRows();
+            _playlistConnector.DeletePlaylist(PlaylistId);
+            Properties.Settings.Default.CustomMessage = "Silme İşlemi Başarıyla Gerçekleşti";
             customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
         }
