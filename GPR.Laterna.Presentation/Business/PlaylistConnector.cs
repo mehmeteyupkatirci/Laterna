@@ -60,5 +60,15 @@ namespace GPR.Laterna.Presentation.Business
             playlist.Id = playlistId;
             _playlistService.Delete(playlist);
         }
+        public List<PlaylistTrack> GetPlaylistTracks(long playlistId)
+        {
+            return _playlistService.GetPlaylistTracks(playlistId);
+        }
+        public void DeletePlaylistTrack(long playlistTrackId)
+        {
+            PlaylistTrack playlistTrack = new PlaylistTrack();
+            playlistTrack.Id = playlistTrackId;
+            _playlistService.PlaylistTrackDelete(playlistTrack);
+        }
     }
 }

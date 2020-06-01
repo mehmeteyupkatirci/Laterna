@@ -193,8 +193,8 @@ namespace GPR.Laterna.Presentation
                 if (PlaylistUserId == Properties.Settings.Default.User.Id)
                 {
                     DgwPlaylistCurrentRow();
-                    MsgPlaylistAdd msgPlaylist = new MsgPlaylistAdd();
-                    msgPlaylist.Show();
+                    MsgPlaylistTracks msgPlaylistTracks = new MsgPlaylistTracks();
+                    msgPlaylistTracks.Show();
                 }
                 else
                 {
@@ -206,8 +206,8 @@ namespace GPR.Laterna.Presentation
             else
             {
                 DgwPlaylistCurrentRow();
-                MsgPlaylistAdd msgPlaylist = new MsgPlaylistAdd();
-                msgPlaylist.Show();
+                MsgPlaylistTracks msgPlaylistTracks = new MsgPlaylistTracks();
+                msgPlaylistTracks.Show();
             }
         }
 

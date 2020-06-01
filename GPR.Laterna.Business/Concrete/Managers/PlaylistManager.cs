@@ -40,6 +40,11 @@ namespace GPR.Laterna.Business.Concrete.Managers
             return _playlistDal.Get(x => x.Id == id);
         }
 
+        public List<PlaylistTrack> GetPlaylistTracks(long playlistId)
+        {
+            return _playlistTrackDal.GetList(x => x.PlaylistId == playlistId);
+        }
+
         public List<Playlist> GetUserPlaylist(long userId)
         {
             return _playlistDal.GetList(x=>x.UserId==userId);
@@ -60,6 +65,11 @@ namespace GPR.Laterna.Business.Concrete.Managers
                 return true;
             }
             return false;
+        }
+
+        public void PlaylistTrackDelete(PlaylistTrack playlistTrack)
+        {
+            _playlistTrackDal.Delete(playlistTrack);
         }
 
         public Playlist Update(Playlist playlist)
