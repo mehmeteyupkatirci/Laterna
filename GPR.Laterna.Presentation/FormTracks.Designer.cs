@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.btnPlaylistAdd = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnTrackFlw = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnTrackShow = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnTrackLike = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -45,6 +46,7 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.btnPlaylistAdd);
             this.panelDesktop.Controls.Add(this.btnTrackFlw);
             this.panelDesktop.Controls.Add(this.btnTrackShow);
             this.panelDesktop.Controls.Add(this.btnTrackLike);
@@ -55,6 +57,33 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(947, 410);
             this.panelDesktop.TabIndex = 6;
+            // 
+            // btnPlaylistAdd
+            // 
+            this.btnPlaylistAdd.ActiveBorderThickness = 1;
+            this.btnPlaylistAdd.ActiveCornerRadius = 20;
+            this.btnPlaylistAdd.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.btnPlaylistAdd.ActiveForecolor = System.Drawing.Color.White;
+            this.btnPlaylistAdd.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.btnPlaylistAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnPlaylistAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnPlaylistAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlaylistAdd.BackgroundImage")));
+            this.btnPlaylistAdd.ButtonText = "Playliste Ekle";
+            this.btnPlaylistAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlaylistAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPlaylistAdd.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnPlaylistAdd.IdleBorderThickness = 2;
+            this.btnPlaylistAdd.IdleCornerRadius = 20;
+            this.btnPlaylistAdd.IdleFillColor = System.Drawing.Color.White;
+            this.btnPlaylistAdd.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.btnPlaylistAdd.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.btnPlaylistAdd.Location = new System.Drawing.Point(502, 340);
+            this.btnPlaylistAdd.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPlaylistAdd.Name = "btnPlaylistAdd";
+            this.btnPlaylistAdd.Size = new System.Drawing.Size(191, 47);
+            this.btnPlaylistAdd.TabIndex = 4;
+            this.btnPlaylistAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPlaylistAdd.Click += new System.EventHandler(this.btnPlaylistAdd_Click);
             // 
             // btnTrackFlw
             // 
@@ -75,7 +104,7 @@
             this.btnTrackFlw.IdleFillColor = System.Drawing.Color.White;
             this.btnTrackFlw.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.btnTrackFlw.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.btnTrackFlw.Location = new System.Drawing.Point(72, 340);
+            this.btnTrackFlw.Location = new System.Drawing.Point(14, 340);
             this.btnTrackFlw.Margin = new System.Windows.Forms.Padding(5);
             this.btnTrackFlw.Name = "btnTrackFlw";
             this.btnTrackFlw.Size = new System.Drawing.Size(191, 47);
@@ -102,7 +131,7 @@
             this.btnTrackShow.IdleFillColor = System.Drawing.Color.White;
             this.btnTrackShow.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.btnTrackShow.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.btnTrackShow.Location = new System.Drawing.Point(391, 340);
+            this.btnTrackShow.Location = new System.Drawing.Point(262, 340);
             this.btnTrackShow.Margin = new System.Windows.Forms.Padding(5);
             this.btnTrackShow.Name = "btnTrackShow";
             this.btnTrackShow.Size = new System.Drawing.Size(191, 47);
@@ -129,7 +158,7 @@
             this.btnTrackLike.IdleFillColor = System.Drawing.Color.White;
             this.btnTrackLike.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.btnTrackLike.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.btnTrackLike.Location = new System.Drawing.Point(697, 340);
+            this.btnTrackLike.Location = new System.Drawing.Point(742, 340);
             this.btnTrackLike.Margin = new System.Windows.Forms.Padding(5);
             this.btnTrackLike.Name = "btnTrackLike";
             this.btnTrackLike.Size = new System.Drawing.Size(191, 47);
@@ -170,7 +199,6 @@
             this.dgwTrack.Size = new System.Drawing.Size(947, 295);
             this.dgwTrack.TabIndex = 0;
             this.dgwTrack.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwTrack_CellClick);
-            this.dgwTrack.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwTrack_CellContentClick);
             // 
             // bunifuElipse1
             // 
@@ -201,5 +229,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnTrackLike;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgwTrack;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnPlaylistAdd;
     }
 }

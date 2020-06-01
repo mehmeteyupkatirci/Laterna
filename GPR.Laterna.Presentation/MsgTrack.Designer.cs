@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MsgTrack));
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblArtistPop = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -46,6 +47,7 @@
             this.lblAlbumPop = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblAlbumName = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pcbImages)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +78,7 @@
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(466, 314);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(466, 381);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(122, 26);
             this.bunifuCustomLabel4.TabIndex = 32;
@@ -87,7 +89,7 @@
             this.lblDuration.AutoSize = true;
             this.lblDuration.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDuration.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblDuration.Location = new System.Drawing.Point(645, 314);
+            this.lblDuration.Location = new System.Drawing.Point(645, 381);
             this.lblDuration.Name = "lblDuration";
             this.lblDuration.Size = new System.Drawing.Size(190, 26);
             this.lblDuration.TabIndex = 31;
@@ -146,7 +148,7 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(466, 278);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(466, 345);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(173, 26);
             this.bunifuCustomLabel2.TabIndex = 27;
@@ -157,7 +159,7 @@
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(468, 240);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(468, 307);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(99, 26);
             this.bunifuCustomLabel3.TabIndex = 26;
@@ -188,7 +190,7 @@
             this.lblPopularity.AutoSize = true;
             this.lblPopularity.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPopularity.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblPopularity.Location = new System.Drawing.Point(645, 278);
+            this.lblPopularity.Location = new System.Drawing.Point(645, 345);
             this.lblPopularity.Name = "lblPopularity";
             this.lblPopularity.Size = new System.Drawing.Size(190, 26);
             this.lblPopularity.TabIndex = 24;
@@ -199,7 +201,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblName.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblName.Location = new System.Drawing.Point(645, 240);
+            this.lblName.Location = new System.Drawing.Point(645, 307);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(190, 26);
             this.lblName.TabIndex = 22;
@@ -210,7 +212,7 @@
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(466, 200);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(466, 232);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(262, 26);
             this.bunifuCustomLabel5.TabIndex = 38;
@@ -221,7 +223,7 @@
             this.lblAlbumPop.AutoSize = true;
             this.lblAlbumPop.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAlbumPop.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblAlbumPop.Location = new System.Drawing.Point(738, 200);
+            this.lblAlbumPop.Location = new System.Drawing.Point(738, 232);
             this.lblAlbumPop.Name = "lblAlbumPop";
             this.lblAlbumPop.Size = new System.Drawing.Size(190, 26);
             this.lblAlbumPop.TabIndex = 37;
@@ -232,7 +234,7 @@
             this.bunifuCustomLabel7.AutoSize = true;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(466, 164);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(466, 196);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(114, 26);
             this.bunifuCustomLabel7.TabIndex = 36;
@@ -243,11 +245,16 @@
             this.lblAlbumName.AutoSize = true;
             this.lblAlbumName.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAlbumName.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblAlbumName.Location = new System.Drawing.Point(645, 164);
+            this.lblAlbumName.Location = new System.Drawing.Point(645, 196);
             this.lblAlbumName.Name = "lblAlbumName";
             this.lblAlbumName.Size = new System.Drawing.Size(190, 26);
             this.lblAlbumName.TabIndex = 35;
             this.lblAlbumName.Text = "bunifuCustomLabel1";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // MsgTrack
             // 
@@ -302,5 +309,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblAlbumPop;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel lblAlbumName;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

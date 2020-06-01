@@ -11,5 +11,9 @@ namespace GPR.Laterna.Business.Abstract
     {
         List<Playlist> GetAll();
         Playlist GetById(long id);
+        List<Playlist> GetUserPlaylist(long userId);
+        bool PlaylistTracks(long playlistId, long trackId);
+        Playlist Add(Playlist playlist);
+        Playlist Update(Playlist playlist);
     }
 }

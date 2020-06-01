@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPlaylist));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.dgwPlaylist = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -38,6 +38,7 @@
             this.btnPlaylistFlw = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnPlaylistShow = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnPlaylistLike = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAddPlaylist = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPlaylist)).BeginInit();
             this.panelDesktop.SuspendLayout();
             this.SuspendLayout();
@@ -49,19 +50,19 @@
             // 
             // dgwPlaylist
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgwPlaylist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgwPlaylist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgwPlaylist.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgwPlaylist.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwPlaylist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwPlaylist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwPlaylist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgwPlaylist.ColumnHeadersHeight = 40;
             this.dgwPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgwPlaylist.Dock = System.Windows.Forms.DockStyle.Top;
@@ -84,6 +85,7 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.btnAddPlaylist);
             this.panelDesktop.Controls.Add(this.btnPlaylistFlw);
             this.panelDesktop.Controls.Add(this.btnPlaylistShow);
             this.panelDesktop.Controls.Add(this.btnPlaylistLike);
@@ -114,7 +116,7 @@
             this.btnPlaylistFlw.IdleFillColor = System.Drawing.Color.White;
             this.btnPlaylistFlw.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
             this.btnPlaylistFlw.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
-            this.btnPlaylistFlw.Location = new System.Drawing.Point(62, 325);
+            this.btnPlaylistFlw.Location = new System.Drawing.Point(14, 325);
             this.btnPlaylistFlw.Margin = new System.Windows.Forms.Padding(5);
             this.btnPlaylistFlw.Name = "btnPlaylistFlw";
             this.btnPlaylistFlw.Size = new System.Drawing.Size(191, 47);
@@ -141,7 +143,7 @@
             this.btnPlaylistShow.IdleFillColor = System.Drawing.Color.White;
             this.btnPlaylistShow.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
             this.btnPlaylistShow.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
-            this.btnPlaylistShow.Location = new System.Drawing.Point(381, 325);
+            this.btnPlaylistShow.Location = new System.Drawing.Point(249, 325);
             this.btnPlaylistShow.Margin = new System.Windows.Forms.Padding(5);
             this.btnPlaylistShow.Name = "btnPlaylistShow";
             this.btnPlaylistShow.Size = new System.Drawing.Size(191, 47);
@@ -168,13 +170,40 @@
             this.btnPlaylistLike.IdleFillColor = System.Drawing.Color.White;
             this.btnPlaylistLike.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
             this.btnPlaylistLike.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
-            this.btnPlaylistLike.Location = new System.Drawing.Point(687, 325);
+            this.btnPlaylistLike.Location = new System.Drawing.Point(742, 325);
             this.btnPlaylistLike.Margin = new System.Windows.Forms.Padding(5);
             this.btnPlaylistLike.Name = "btnPlaylistLike";
             this.btnPlaylistLike.Size = new System.Drawing.Size(191, 47);
             this.btnPlaylistLike.TabIndex = 4;
             this.btnPlaylistLike.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPlaylistLike.Click += new System.EventHandler(this.btnPlaylistLike_Click);
+            // 
+            // btnAddPlaylist
+            // 
+            this.btnAddPlaylist.ActiveBorderThickness = 1;
+            this.btnAddPlaylist.ActiveCornerRadius = 20;
+            this.btnAddPlaylist.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            this.btnAddPlaylist.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAddPlaylist.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            this.btnAddPlaylist.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAddPlaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnAddPlaylist.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddPlaylist.BackgroundImage")));
+            this.btnAddPlaylist.ButtonText = "Playlist Ekle";
+            this.btnAddPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddPlaylist.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnAddPlaylist.IdleBorderThickness = 2;
+            this.btnAddPlaylist.IdleCornerRadius = 20;
+            this.btnAddPlaylist.IdleFillColor = System.Drawing.Color.White;
+            this.btnAddPlaylist.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            this.btnAddPlaylist.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            this.btnAddPlaylist.Location = new System.Drawing.Point(486, 325);
+            this.btnAddPlaylist.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddPlaylist.Name = "btnAddPlaylist";
+            this.btnAddPlaylist.Size = new System.Drawing.Size(191, 47);
+            this.btnAddPlaylist.TabIndex = 7;
+            this.btnAddPlaylist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddPlaylist.Click += new System.EventHandler(this.btnAddPlaylist_Click);
             // 
             // FormPlaylist
             // 
@@ -200,5 +229,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnPlaylistFlw;
         private Bunifu.Framework.UI.BunifuThinButton2 btnPlaylistShow;
         private Bunifu.Framework.UI.BunifuThinButton2 btnPlaylistLike;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnAddPlaylist;
     }
 }

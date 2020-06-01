@@ -12,11 +12,19 @@ namespace GPR.Laterna.Business.Concrete.Managers
     public class PlaylistManager : IPlaylistService
     {
         private IPlaylistDal _playlistDal;
+        private IPlaylistTrackDal _playlistTrackDal;
 
         public PlaylistManager()
         {
             _playlistDal = DalFactory.CreatePlaylistDal();
+            _playlistTrackDal = DalFactory.CreatePlaylistTrackDal();
         }
+
+        public Playlist Add(Playlist playlist)
+        {
+            return _playlistDal.Add(playlist);
+        }
+
         public List<Playlist> GetAll()
         {
             return _playlistDal.GetList();
@@ -25,6 +33,33 @@ namespace GPR.Laterna.Business.Concrete.Managers
         public Playlist GetById(long id)
         {
             return _playlistDal.Get(x => x.Id == id);
+        }
+
+        public List<Playlist> GetUserPlaylist(long userId)
+        {
+            return _playlistDal.GetList(x=>x.UserId==userId);
+        }
+
+        public bool PlaylistTracks(long playlistId, long trackId)
+        {
+            var obj = _playlistTrackDal.Get(x => x.PlaylistId == playlistId && x.TrackId == trackId);
+            if (obj == null)
+            {
+                _playlistTrackDal.Add(new PlaylistTrack()
+                {
+                    PlaylistId = playlistId,
+                    TrackId = trackId,
+                    UpdatedAt = DateTime.Now,
+                    CreatedAt = DateTime.Now
+                });
+                return true;
+            }
+            return false;
+        }
+
+        public Playlist Update(Playlist playlist)
+        {
+            return _playlistDal.Update(playlist);
         }
     }
 }

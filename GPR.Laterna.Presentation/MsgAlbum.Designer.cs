@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MsgAlbum));
             this.panelTitle = new System.Windows.Forms.Panel();
             this.label2 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -42,6 +43,7 @@
             this.lblRelease = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblArtistPop = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pcbImages)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,6 +203,11 @@
             this.lblArtistPop.TabIndex = 20;
             this.lblArtistPop.Text = "bunifuCustomLabel1";
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // MsgAlbum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,5 +253,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblRelease;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel lblArtistPop;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

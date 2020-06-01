@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelBottom = new System.Windows.Forms.Panel();
             this.lblMessage = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnOkay = new FontAwesome.Sharp.IconButton();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.SuspendLayout();
             // 
             // panelBottom
@@ -44,13 +46,14 @@
             // 
             // lblMessage
             // 
-            this.lblMessage.AutoSize = true;
+            this.lblMessage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMessage.Location = new System.Drawing.Point(213, 70);
+            this.lblMessage.Location = new System.Drawing.Point(0, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(209, 25);
+            this.lblMessage.Size = new System.Drawing.Size(645, 247);
             this.lblMessage.TabIndex = 2;
             this.lblMessage.Text = "bunifuCustomLabel1";
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOkay
             // 
@@ -83,6 +86,11 @@
             this.panelTop.Size = new System.Drawing.Size(645, 25);
             this.panelTop.TabIndex = 4;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // CustomMessageBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -100,7 +108,6 @@
             this.Load += new System.EventHandler(this.CustomMessageBox_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CustomMessageBox_MouseDown);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -110,5 +117,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblMessage;
         private FontAwesome.Sharp.IconButton btnOkay;
         private System.Windows.Forms.Panel panelTop;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

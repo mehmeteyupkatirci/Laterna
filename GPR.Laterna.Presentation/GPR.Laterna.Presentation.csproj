@@ -125,11 +125,11 @@
     <Compile Include="MsgArtist.Designer.cs">
       <DependentUpon>MsgArtist.cs</DependentUpon>
     </Compile>
-    <Compile Include="MsgPlaylist.cs">
+    <Compile Include="MsgPlaylistAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MsgPlaylist.Designer.cs">
-      <DependentUpon>MsgPlaylist.cs</DependentUpon>
+    <Compile Include="MsgPlaylistAdd.Designer.cs">
+      <DependentUpon>MsgPlaylistAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="MsgTrack.cs">
       <SubType>Form</SubType>
@@ -145,6 +145,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MsgUserPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgUserPlaylist.Designer.cs">
+      <DependentUpon>MsgUserPlaylist.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomMessageBox.resx">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,8 +178,8 @@
     <EmbeddedResource Include="MsgArtist.resx">
       <DependentUpon>MsgArtist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MsgPlaylist.resx">
-      <DependentUpon>MsgPlaylist.cs</DependentUpon>
+    <EmbeddedResource Include="MsgPlaylistAdd.resx">
+      <DependentUpon>MsgPlaylistAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MsgTrack.resx">
       <DependentUpon>MsgTrack.cs</DependentUpon>
@@ -191,6 +197,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="MsgUserPlaylist.resx">
+      <DependentUpon>MsgUserPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

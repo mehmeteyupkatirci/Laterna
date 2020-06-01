@@ -128,10 +128,14 @@ namespace GPR.Laterna.Presentation
                 }
             }
         }
-
-        private void dgwTrack_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnPlaylistAdd_Click(object sender, EventArgs e)
         {
-
+            DgwTrackCurrentRow();
+            if (BtnLoginWarning.EvaluateBtnClick())
+            {
+                MsgUserPlaylist userPlaylist = new MsgUserPlaylist();
+                userPlaylist.Show();
+            }
         }
     }
 }
