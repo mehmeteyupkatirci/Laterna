@@ -15,6 +15,21 @@ namespace GPR.Laterna.Presentation.Business
         {
             _userService = ManagerFactory.CreateUserService();
         }
+        public User Add(string email, string name, string password, string rePassword)
+        {
+            if (password != rePassword || password == "" || email == "" || name == "")
+            {
+                return null;
+            }
+            User user = new User();
+            user.Password = password;
+            user.Name = name;
+            user.Email = email;
+            user.UpdatedAt = DateTime.Now;
+            user.CreatedAt = DateTime.Now;
+
+            return _userService.Add(user);
+        }
         public User Login(string email, string password)
         {
             return _userService.Login(email, password);

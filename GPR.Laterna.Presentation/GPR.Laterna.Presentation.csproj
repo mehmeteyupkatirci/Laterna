@@ -94,6 +94,12 @@
     <Compile Include="FormPlaylist.Designer.cs">
       <DependentUpon>FormPlaylist.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegister.Designer.cs">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTracks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,11 +113,11 @@
       <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\BtnLoginWarning.cs" />
-    <Compile Include="Login.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="MsgAlbum.cs">
       <SubType>Form</SubType>
@@ -169,14 +175,17 @@
     <EmbeddedResource Include="FormPlaylist.resx">
       <DependentUpon>FormPlaylist.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRegister.resx">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTracks.resx">
       <DependentUpon>FormTracks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MsgAlbum.resx">
       <DependentUpon>MsgAlbum.cs</DependentUpon>

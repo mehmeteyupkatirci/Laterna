@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace GPR.Laterna.Presentation
 {
-    public partial class Login : Form
+    public partial class FormLogin : Form
     {
         private UserConnector _userConnector;
         private MainForm _mainForm;
-        public Login(MainForm mainForm)
+        public FormLogin(MainForm mainForm)
         {
             InitializeComponent();
             _userConnector = new UserConnector();

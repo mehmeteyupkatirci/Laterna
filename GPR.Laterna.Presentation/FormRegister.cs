@@ -12,28 +12,26 @@ using System.Windows.Forms;
 
 namespace GPR.Laterna.Presentation
 {
-    public partial class FormUser : Form
+    public partial class FormRegister : Form
     {
         private UserConnector _userConnector;
         CustomMessageBox customMessageBox;
-        public FormUser()
+        public FormRegister()
         {
             InitializeComponent();
             _userConnector = new UserConnector();
         }
 
-        private void FormUser_Load(object sender, EventArgs e)
+        private void FormRegister_Load(object sender, EventArgs e)
         {
-            tbxName.Text = Properties.Settings.Default.User.Name;
-            tbxEmail.Text = Properties.Settings.Default.User.Email;
-        }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        }
+        private void btnRegister_Click(object sender, EventArgs e)
         {
-           User user = _userConnector.Update(tbxEmail.Text, tbxName.Text,tbxPassword.Text,tbxPasswordValidate.Text);
-            if (user==null)
+            User user = _userConnector.Add(txtEmail.Text, txtName.Text, txtPassword.Text, txtRePassword.Text);
+            if (user == null)
             {
-                Properties.Settings.Default.CustomMessage = "Girdiğiniz bilgileri kontrol ediniz";
+                Properties.Settings.Default.CustomMessage = "Eksik yada hatalı giriş yaptınız!";
                 customMessageBox = new CustomMessageBox();
                 customMessageBox.Show();
             }
@@ -41,11 +39,11 @@ namespace GPR.Laterna.Presentation
             {
                 Properties.Settings.Default.User = user;
                 Properties.Settings.Default.Save();
-                Properties.Settings.Default.CustomMessage = "Bilgileriniz başarıyla değiştirildi";
+                Properties.Settings.Default.CustomMessage = "Başarıyla üye oldunuz!";
                 customMessageBox = new CustomMessageBox();
                 customMessageBox.Show();
             }
+
         }
     }
 }
-

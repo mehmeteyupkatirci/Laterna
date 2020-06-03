@@ -95,6 +95,7 @@ namespace GPR.Laterna.Presentation
                 btnLogOut.Hide();
                 btnMyProfile.Hide();
                 btnLogin.Show();
+                btnRegister.Show();
             }
             else
             {
@@ -103,6 +104,7 @@ namespace GPR.Laterna.Presentation
                 btnLogOut.Show();
                 btnMyProfile.Show();
                 btnLogin.Hide();
+                btnRegister.Hide();
             }
         }
         private struct RGBColors
@@ -113,6 +115,7 @@ namespace GPR.Laterna.Presentation
             public static Color color4 = Color.FromArgb(95, 77, 221  );
             public static Color color5 = Color.FromArgb(249, 88, 155 );
             public static Color color6 = Color.FromArgb(24, 161, 251);
+            public static Color color7 = Color.FromArgb(28, 239, 124);
         }
         private void ActiveButton(object senderBtn, Color color)
         {
@@ -197,7 +200,11 @@ namespace GPR.Laterna.Presentation
             ActiveButton(sender, RGBColors.color5);
             OpenChildForm(new FormUser());
         }
-
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, RGBColors.color7);
+            OpenChildForm(new FormRegister());
+        }
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Çıkış Yapmayı Onaylıyor Musunuz", "Çıkış Yap!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -259,7 +266,7 @@ namespace GPR.Laterna.Presentation
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Login(this));
+            OpenChildForm(new FormLogin(this));
             ActiveButton(sender, RGBColors.color6);
             //bool _btnHide = false;
             //BtnHide(_btnHide);
@@ -316,5 +323,6 @@ namespace GPR.Laterna.Presentation
             CustomMessageBox customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
         }
+
     }
 }
