@@ -52,6 +52,12 @@ namespace GPR.Laterna.Presentation
             MsgPlaylistAdd msgPlaylistAdd = new MsgPlaylistAdd();
             msgPlaylistAdd.Show();
         }
+
+        private void btnLike_Click(object sender, EventArgs e)
+        {
+            MsgLiked msgLiked = new MsgLiked();
+            msgLiked.Show();
+        }
     }
 }
 

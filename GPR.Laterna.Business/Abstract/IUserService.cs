@@ -16,6 +16,11 @@ namespace GPR.Laterna.Business.Abstract
         User Update(User user);
         void Delete(User user);
 
+        void DeleteLikedArtist(UserLikedArtist userLikedArtist);
+        void DeleteLikedAlbum(UserLikedAlbum userLikedAlbum);
+        void DeleteLikedTrack(UserLikedTrack userLikedTrack);
+        void DeleteLikedPlaylist(UserLikedPlaylist userLikedPlaylist);
+
         List<UserLikedArtist> GetUserLikedArtists(long id);
         List<UserFollowedArtist> GetUserFollowedArtists(long id);
         List<UserLikedAlbum> GetUserLikedAlbums(long id);

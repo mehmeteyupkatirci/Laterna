@@ -49,6 +49,26 @@ namespace GPR.Laterna.Business.Concrete.Managers
             _userDal.Delete(user);
         }
 
+        public void DeleteLikedAlbum(UserLikedAlbum userLikedAlbum)
+        {
+            _userLikedAlbumDal.Delete(userLikedAlbum);
+        }
+
+        public void DeleteLikedArtist(UserLikedArtist userLikedArtist)
+        {
+            _userLikedArtistDal.Delete(userLikedArtist);
+        }
+
+        public void DeleteLikedPlaylist(UserLikedPlaylist userLikedPlaylist)
+        {
+            _userLikedPlaylistDal.Delete(userLikedPlaylist);
+        }
+
+        public void DeleteLikedTrack(UserLikedTrack userLikedTrack)
+        {
+            _userLikedTrackDal.Delete(userLikedTrack);
+        }
+
         public bool FollowAlbum(long userId, long albumId)
         {
             var obj = _userFollowedAlbumDal.Get(x => x.UserId == userId && x.AlbumId == albumId);
@@ -149,7 +169,7 @@ namespace GPR.Laterna.Business.Concrete.Managers
 
         public List<UserLikedAlbum> GetUserLikedAlbums(long id)
         {
-            return _userLikedAlbumDal.GetList(x => x.AlbumId == id);
+            return _userLikedAlbumDal.GetList(x => x.UserId == id);
         }
 
         public List<UserLikedArtist> GetUserLikedArtists(long id)

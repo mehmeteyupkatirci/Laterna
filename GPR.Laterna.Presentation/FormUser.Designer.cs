@@ -143,6 +143,7 @@
             this.btnLike.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLike.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLike.UseVisualStyleBackColor = true;
+            this.btnLike.Click += new System.EventHandler(this.btnLike_Click);
             // 
             // btnUpdate
             // 
