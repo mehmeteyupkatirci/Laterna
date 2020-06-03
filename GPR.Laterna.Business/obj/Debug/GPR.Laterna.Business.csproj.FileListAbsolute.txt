@@ -17,3 +17,4 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Business\bin\Debug\GPR.Later
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Business\bin\Debug\EntityFramework.xml
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Business\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Business\obj\Debug\GPR.Laterna.Business.csproj.CopyComplete
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Business\obj\Debug\GPR.Laterna.Business.csproj.CoreCompileInputs.cache

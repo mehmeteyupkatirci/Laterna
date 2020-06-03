@@ -1,12 +1,15 @@
 ﻿using GPR.Laterna.Entities.Concrete;
 using GPR.Laterna.Presentation.Business;
 using GPR.Laterna.Presentation.Helpers;
+using NAudio.Wave;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,12 +19,16 @@ namespace GPR.Laterna.Presentation
     public partial class FormTracks : Form
     {
         public static long TrackId = 0;
+        public static string PreviewUrl = "";
+        private string _previousUrl = "";
         CustomMessageBox customMessageBox;
 
         private TrackConnector _trackConnector;
         private UserConnector _userConnector;
         private List<UserLikedTrack> _userLikedTracks;
         private List<UserFollowedTrack> _userFollowedTracks;
+
+        private WaveOut _player;
         public FormTracks()
         {
             InitializeComponent();
@@ -29,6 +36,10 @@ namespace GPR.Laterna.Presentation
             _userConnector = new UserConnector();
             _userFollowedTracks = new List<UserFollowedTrack>();
             _userLikedTracks = new List<UserLikedTrack>();
+
+            _player = new WaveOut(WaveCallbackInfo.FunctionCallback());
+
+
         }
 
         private void FormTracks_Load(object sender, EventArgs e)
@@ -55,6 +66,7 @@ namespace GPR.Laterna.Presentation
         private void dgwTrack_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             TrackId = Convert.ToInt64(dgwTrack.Rows[dgwTrack.CurrentRow.Index].Cells[0].Value);
+            PreviewUrl = Convert.ToString(dgwTrack.Rows[dgwTrack.CurrentRow.Index].Cells["PreviewUrl"].Value);
             var theLikedTrack = _userLikedTracks.Where(x=>x.TrackId==TrackId).FirstOrDefault();
             var theFollowedTrack = _userFollowedTracks.Where(x=>x.TrackId==TrackId).FirstOrDefault();
             if (theFollowedTrack != null)
@@ -136,6 +148,101 @@ namespace GPR.Laterna.Presentation
                 MsgUserPlaylist userPlaylist = new MsgUserPlaylist();
                 userPlaylist.Show();
             }
+        }
+        public static void PlayMp3FromUrl(string url)
+        {
+            using (Stream ms = new MemoryStream())
+            {
+                using (Stream stream = WebRequest.Create(url)
+                    .GetResponse().GetResponseStream())
+                {
+                    stream.CopyTo(ms);
+                }
+
+                ms.Position = 0;
+                using (WaveStream blockAlignedStream =
+                    new BlockAlignReductionStream(
+                        WaveFormatConversionStream.CreatePcmStream(
+                            new Mp3FileReader(ms))))
+                {
+                    using (WaveOut waveOut = new WaveOut(WaveCallbackInfo.FunctionCallback()))
+                    {
+                        waveOut.Init(blockAlignedStream);
+                        waveOut.Play();
+                        while (waveOut.PlaybackState == PlaybackState.Playing)
+                        {
+                            System.Threading.Thread.Sleep(100);
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+        public  void StartMp3FromUrl()
+        {
+           
+            using (Stream ms = new MemoryStream())
+            {
+                using (Stream stream = WebRequest.Create(PreviewUrl)
+                    .GetResponse().GetResponseStream())
+                {
+                    stream.CopyTo(ms);
+                }
+
+                ms.Position = 0;
+                using (WaveStream blockAlignedStream =
+                    new BlockAlignReductionStream(
+                        WaveFormatConversionStream.CreatePcmStream(
+                            new Mp3FileReader(ms))))
+                {
+                    _player.Init(blockAlignedStream);
+                    _player.Play();
+
+
+                    while (_player.PlaybackState == PlaybackState.Playing || _player.PlaybackState == PlaybackState.Paused)
+                    {
+                       
+                    }
+
+                }
+            }
+        }
+
+        private void btnPlay_Click_1(object sender, EventArgs e)
+        {
+            if(PreviewUrl == _previousUrl)
+            {
+                if(_player.PlaybackState == PlaybackState.Playing)
+                {
+                    btnPlay.IconChar = FontAwesome.Sharp.IconChar.Play;
+                    _player.Pause();
+                }
+                else if(_player.PlaybackState == PlaybackState.Paused)
+                {
+                    btnPlay.IconChar = FontAwesome.Sharp.IconChar.Pause;
+                    _player.Resume();
+                }
+                else
+                {
+                    btnPlay.IconChar = FontAwesome.Sharp.IconChar.Pause;
+                    Task task = Task.Run((Action)StartMp3FromUrl);
+                }
+            }
+            else
+            {
+                _previousUrl = PreviewUrl;
+                _player.Stop();
+                btnPlay.IconChar = FontAwesome.Sharp.IconChar.Pause;
+                Task task = Task.Run((Action)StartMp3FromUrl);
+            }
+           
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            _player.Stop();
+            btnPlay.IconChar = FontAwesome.Sharp.IconChar.Play;
         }
     }
 }

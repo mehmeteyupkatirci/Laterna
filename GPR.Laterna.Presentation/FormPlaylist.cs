@@ -36,6 +36,18 @@ namespace GPR.Laterna.Presentation
 
         private void FormPlaylist_Load(object sender, EventArgs e)
         {
+            LoadPlaylistDGV();
+
+            if (Properties.Settings.Default.isLogin)
+            {
+                _userLikedPlaylists = _userConnector.GetUserLikedPlaylists(Properties.Settings.Default.User.Id);
+                _userFollowedPlaylists = _userConnector.GetUserFollowedPlaylists(Properties.Settings.Default.User.Id);
+            }
+
+        }
+
+        private void LoadPlaylistDGV()
+        {
             dgwPlaylist.DataSource = _playlistConnector.GetAll();
             dgwPlaylist.Columns["Name"].HeaderText = "Playlist Adı";
             dgwPlaylist.Columns["Description"].HeaderText = "Açıklama";
@@ -46,13 +58,6 @@ namespace GPR.Laterna.Presentation
             dgwPlaylist.Columns["CreatedAt"].Visible = false;
             dgwPlaylist.Columns["UpdatedAt"].Visible = false;
             dgwPlaylist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            if (Properties.Settings.Default.isLogin)
-            {
-                _userLikedPlaylists = _userConnector.GetUserLikedPlaylists(Properties.Settings.Default.User.Id);
-                _userFollowedPlaylists = _userConnector.GetUserFollowedPlaylists(Properties.Settings.Default.User.Id);
-            }
-            
         }
 
         private void btnPlaylsitFlw_Click(object sender, EventArgs e)
@@ -80,7 +85,7 @@ namespace GPR.Laterna.Presentation
                 {
                     if (PlaylistUserId == Properties.Settings.Default.User.Id)
                     {
-                        Properties.Settings.Default.CustomMessage = "Kendi Playlistinizi Beğenemezsiniz";
+                        Properties.Settings.Default.CustomMessage = "Kendi Playlistinizi Takip Edemezsiniz";
                         customMessageBox = new CustomMessageBox();
                         customMessageBox.Show();
                     }
@@ -215,6 +220,7 @@ namespace GPR.Laterna.Presentation
         {
             MsgPlaylistAdd msgPlaylist = new MsgPlaylistAdd();
             msgPlaylist.Show();
+            LoadPlaylistDGV();
         }
     }
 }

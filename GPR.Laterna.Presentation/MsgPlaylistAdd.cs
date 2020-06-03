@@ -25,6 +25,11 @@ namespace GPR.Laterna.Presentation
         }
         private void MsgPlaylist_Load(object sender, EventArgs e)
         {
+            LoadPlaylistDGV();
+        }
+
+        private void LoadPlaylistDGV()
+        {
             dgwPlaylist.DataSource = _playlistConnector.GetUserPlaylists(Properties.Settings.Default.User.Id);
             dgwPlaylist.Columns["Name"].HeaderText = "Playlist Adı";
             dgwPlaylist.Columns["Description"].HeaderText = "Açıklama";
@@ -36,7 +41,7 @@ namespace GPR.Laterna.Presentation
             dgwPlaylist.Columns["UpdatedAt"].Visible = false;
             dgwPlaylist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-       
+
         //panelden formu hareket ettirmek için : 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -47,12 +52,6 @@ namespace GPR.Laterna.Presentation
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void dgwPlaylist_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             PlaylistId = Convert.ToInt64(dgwPlaylist.Rows[dgwPlaylist.CurrentRow.Index].Cells[0].Value);
@@ -75,7 +74,7 @@ namespace GPR.Laterna.Presentation
             string description = tbxDescription.Text;
             bool isPublic = checkIsPublic.Checked;
             _playlistConnector.AddPlaylist(name, description, isPublic);
-
+            LoadPlaylistDGV();
             Properties.Settings.Default.CustomMessage = "Ekleme İşlemi Başarıyla Gerçekleşti";
             customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
@@ -88,7 +87,7 @@ namespace GPR.Laterna.Presentation
             string description = tbxDescription.Text;
             bool isPublic = checkIsPublic.Checked;
             _playlistConnector.UpdatePlaylist(name, description, isPublic,PlaylistId);
-
+            LoadPlaylistDGV();
             Properties.Settings.Default.CustomMessage = "Güncelleme İşlemi Başarıyla Gerçekleşti";
             customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
@@ -98,9 +97,21 @@ namespace GPR.Laterna.Presentation
         {
             DgwCurrentRows();
             _playlistConnector.DeletePlaylist(PlaylistId);
+            LoadPlaylistDGV();
             Properties.Settings.Default.CustomMessage = "Silme İşlemi Başarıyla Gerçekleşti";
             customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnShowTracks_Click(object sender, EventArgs e)
+        {
+            MsgPlaylistTracks msgPlaylistTracks = new MsgPlaylistTracks();
+            msgPlaylistTracks.Show();
         }
     }
 }

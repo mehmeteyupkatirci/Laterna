@@ -40,6 +40,7 @@
             this.tbxDescription = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
+            this.btnShowTracks = new FontAwesome.Sharp.IconButton();
             this.btnUpdate = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
@@ -101,7 +102,7 @@
             this.dgwPlaylist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgwPlaylist.RowHeadersWidth = 40;
             this.dgwPlaylist.RowTemplate.Height = 40;
-            this.dgwPlaylist.Size = new System.Drawing.Size(947, 235);
+            this.dgwPlaylist.Size = new System.Drawing.Size(948, 235);
             this.dgwPlaylist.TabIndex = 18;
             this.dgwPlaylist.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwPlaylist_CellClick);
             // 
@@ -158,13 +159,14 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Controls.Add(this.btnShowTracks);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 433);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(947, 59);
+            this.panel1.Size = new System.Drawing.Size(948, 59);
             this.panel1.TabIndex = 21;
             // 
             // btnCancel
@@ -178,17 +180,40 @@
             this.btnCancel.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCancel.IconSize = 32;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(708, 0);
+            this.btnCancel.Location = new System.Drawing.Point(760, 0);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCancel.Rotation = 0D;
-            this.btnCancel.Size = new System.Drawing.Size(236, 59);
-            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Size = new System.Drawing.Size(190, 59);
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "İptal Et";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnShowTracks
+            // 
+            this.btnShowTracks.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnShowTracks.FlatAppearance.BorderSize = 0;
+            this.btnShowTracks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowTracks.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnShowTracks.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnShowTracks.IconChar = FontAwesome.Sharp.IconChar.Share;
+            this.btnShowTracks.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnShowTracks.IconSize = 32;
+            this.btnShowTracks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShowTracks.Location = new System.Drawing.Point(570, 0);
+            this.btnShowTracks.Name = "btnShowTracks";
+            this.btnShowTracks.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnShowTracks.Rotation = 0D;
+            this.btnShowTracks.Size = new System.Drawing.Size(190, 59);
+            this.btnShowTracks.TabIndex = 5;
+            this.btnShowTracks.Text = "Şarkılarını Göster";
+            this.btnShowTracks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShowTracks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnShowTracks.UseVisualStyleBackColor = true;
+            this.btnShowTracks.Click += new System.EventHandler(this.btnShowTracks_Click);
             // 
             // btnUpdate
             // 
@@ -201,11 +226,11 @@
             this.btnUpdate.IconColor = System.Drawing.Color.Gainsboro;
             this.btnUpdate.IconSize = 32;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(472, 0);
+            this.btnUpdate.Location = new System.Drawing.Point(380, 0);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnUpdate.Rotation = 0D;
-            this.btnUpdate.Size = new System.Drawing.Size(236, 59);
+            this.btnUpdate.Size = new System.Drawing.Size(190, 59);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -224,11 +249,11 @@
             this.btnDelete.IconColor = System.Drawing.Color.Gainsboro;
             this.btnDelete.IconSize = 32;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(236, 0);
+            this.btnDelete.Location = new System.Drawing.Point(190, 0);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnDelete.Rotation = 0D;
-            this.btnDelete.Size = new System.Drawing.Size(236, 59);
+            this.btnDelete.Size = new System.Drawing.Size(190, 59);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Sil";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,7 +276,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnAdd.Rotation = 0D;
-            this.btnAdd.Size = new System.Drawing.Size(236, 59);
+            this.btnAdd.Size = new System.Drawing.Size(190, 59);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -287,7 +312,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(947, 492);
+            this.ClientSize = new System.Drawing.Size(948, 492);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.checkIsPublic);
             this.Controls.Add(this.panel1);
@@ -321,8 +346,9 @@
         private FontAwesome.Sharp.IconButton btnUpdate;
         private FontAwesome.Sharp.IconButton btnDelete;
         private FontAwesome.Sharp.IconButton btnAdd;
-        private FontAwesome.Sharp.IconButton btnCancel;
+        private FontAwesome.Sharp.IconButton btnShowTracks;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCheckbox checkIsPublic;
+        private FontAwesome.Sharp.IconButton btnCancel;
     }
 }

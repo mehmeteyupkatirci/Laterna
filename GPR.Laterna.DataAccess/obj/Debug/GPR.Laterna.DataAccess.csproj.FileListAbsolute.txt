@@ -14,3 +14,4 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\obj\Debug\GPR.Lat
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\obj\Debug\GPR.Laterna.DataAccess.csproj.CopyComplete
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\obj\Debug\GPR.Laterna.DataAccess.dll
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\obj\Debug\GPR.Laterna.DataAccess.pdb
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess\obj\Debug\GPR.Laterna.DataAccess.csproj.CoreCompileInputs.cache

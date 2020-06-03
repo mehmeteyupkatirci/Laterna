@@ -53,8 +53,7 @@ namespace GPR.Laterna.Presentation
                 Properties.Settings.Default.CustomMessage = "Silme İşlemini Yalnızca Playlist \nSahibi Yapabilir";
                 customMessageBox = new CustomMessageBox();
                 customMessageBox.Show();
-            }
-           
+            } 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

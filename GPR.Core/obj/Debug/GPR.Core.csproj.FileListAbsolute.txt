@@ -9,3 +9,4 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\obj\Debug\GPR.Core.csprojAssemb
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\obj\Debug\GPR.Core.csproj.CopyComplete
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\obj\Debug\GPR.Core.dll
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\obj\Debug\GPR.Core.pdb
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Core\obj\Debug\GPR.Core.csproj.CoreCompileInputs.cache

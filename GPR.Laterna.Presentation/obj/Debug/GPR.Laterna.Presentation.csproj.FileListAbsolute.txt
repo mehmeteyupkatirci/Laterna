@@ -40,3 +40,6 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.L
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.FormLogin.resources
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.MsgLiked.resources
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.MsgFollowed.resources
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\NAudio.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\NAudio.xml
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.csproj.CoreCompileInputs.cache

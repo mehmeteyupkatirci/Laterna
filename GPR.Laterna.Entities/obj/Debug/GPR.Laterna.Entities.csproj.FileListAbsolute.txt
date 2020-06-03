@@ -9,3 +9,4 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\obj\Debug\GPR.Later
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\obj\Debug\GPR.Laterna.Entities.csproj.CopyComplete
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\obj\Debug\GPR.Laterna.Entities.dll
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\obj\Debug\GPR.Laterna.Entities.pdb
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Entities\obj\Debug\GPR.Laterna.Entities.csproj.CoreCompileInputs.cache
