@@ -77,7 +77,7 @@ namespace GPR.Laterna.Presentation
             var theFollowedAlbum = _userFollowedAlbums.Where(x=>x.AlbumId==AlbumId).FirstOrDefault();
             if (theLikedAlbum != null)
             {
-                btnAlbumLike.ButtonText = "Beğendin";
+                btnAlbumLike.ButtonText = "Beğenmekten vageç";
             }
             else
             {
@@ -85,7 +85,7 @@ namespace GPR.Laterna.Presentation
             }
             if (theFollowedAlbum != null)
             {
-                btnAlbumFlw.ButtonText = "Takip Ediliyor";
+                btnAlbumFlw.ButtonText = "Takipten Çık";
             }
             else
             {
@@ -107,7 +107,9 @@ namespace GPR.Laterna.Presentation
                 }
                 else
                 {
-                    Properties.Settings.Default.CustomMessage = "Daha Önceden Takip Edilmiş";
+                    var theFollowedAlbum = _userFollowedAlbums.Where(x => x.AlbumId == AlbumId).FirstOrDefault();
+                    _userConnector.DeleteUserFollowedAlbum(theFollowedAlbum.Id);
+                    Properties.Settings.Default.CustomMessage = "Takipten Çıkarıldı";
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }
@@ -128,7 +130,9 @@ namespace GPR.Laterna.Presentation
                 }
                 else
                 {
-                    Properties.Settings.Default.CustomMessage = "Daha Önceden Beğenilmiş";
+                    var theLikedAlbum = _userLikedAlbums.Where(x => x.AlbumId == AlbumId).FirstOrDefault();
+                    _userConnector.DeleteUserLikedAlbum(theLikedAlbum.Id);
+                    Properties.Settings.Default.CustomMessage = "Beğenmekten Vazgeçildi";
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }
