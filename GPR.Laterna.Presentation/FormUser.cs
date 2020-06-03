@@ -46,6 +46,12 @@ namespace GPR.Laterna.Presentation
                 customMessageBox.Show();
             }
         }
+
+        private void btnPlaylists_Click(object sender, EventArgs e)
+        {
+            MsgPlaylistAdd msgPlaylistAdd = new MsgPlaylistAdd();
+            msgPlaylistAdd.Show();
+        }
     }
 }
 

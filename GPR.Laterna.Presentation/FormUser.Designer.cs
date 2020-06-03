@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPlaylists = new FontAwesome.Sharp.IconButton();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.btnLike = new FontAwesome.Sharp.IconButton();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxPasswordValidate = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -39,11 +43,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbxName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.panelDesktop.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.panel1);
             this.panelDesktop.Controls.Add(this.btnUpdate);
             this.panelDesktop.Controls.Add(this.label4);
             this.panelDesktop.Controls.Add(this.tbxPasswordValidate);
@@ -57,8 +63,86 @@
             this.panelDesktop.ForeColor = System.Drawing.Color.Black;
             this.panelDesktop.Location = new System.Drawing.Point(0, 0);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(800, 450);
+            this.panelDesktop.Size = new System.Drawing.Size(931, 371);
             this.panelDesktop.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnPlaylists);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnLike);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 312);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(931, 59);
+            this.panel1.TabIndex = 22;
+            // 
+            // btnPlaylists
+            // 
+            this.btnPlaylists.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPlaylists.FlatAppearance.BorderSize = 0;
+            this.btnPlaylists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlaylists.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPlaylists.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPlaylists.IconChar = FontAwesome.Sharp.IconChar.PlayCircle;
+            this.btnPlaylists.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnPlaylists.IconSize = 32;
+            this.btnPlaylists.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlaylists.Location = new System.Drawing.Point(629, 0);
+            this.btnPlaylists.Name = "btnPlaylists";
+            this.btnPlaylists.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnPlaylists.Rotation = 0D;
+            this.btnPlaylists.Size = new System.Drawing.Size(316, 59);
+            this.btnPlaylists.TabIndex = 4;
+            this.btnPlaylists.Text = "Playlistlerim";
+            this.btnPlaylists.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlaylists.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPlaylists.UseVisualStyleBackColor = true;
+            this.btnPlaylists.Click += new System.EventHandler(this.btnPlaylists_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnDelete.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnDelete.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnDelete.IconSize = 32;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(313, 0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnDelete.Rotation = 0D;
+            this.btnDelete.Size = new System.Drawing.Size(316, 59);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Takip Ettiklerim";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnLike
+            // 
+            this.btnLike.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnLike.FlatAppearance.BorderSize = 0;
+            this.btnLike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLike.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnLike.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLike.IconChar = FontAwesome.Sharp.IconChar.ThumbsUp;
+            this.btnLike.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnLike.IconSize = 32;
+            this.btnLike.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLike.Location = new System.Drawing.Point(0, 0);
+            this.btnLike.Name = "btnLike";
+            this.btnLike.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnLike.Rotation = 0D;
+            this.btnLike.Size = new System.Drawing.Size(313, 59);
+            this.btnLike.TabIndex = 2;
+            this.btnLike.Text = "Beğendiklerim";
+            this.btnLike.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLike.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLike.UseVisualStyleBackColor = true;
             // 
             // btnUpdate
             // 
@@ -148,13 +232,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(931, 371);
             this.Controls.Add(this.panelDesktop);
             this.Name = "FormUser";
             this.Text = "FormUser";
             this.Load += new System.EventHandler(this.FormUser_Load);
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -170,5 +255,9 @@
         private WindowsFormsControlLibrary1.BunifuCustomTextbox tbxEmail;
         private System.Windows.Forms.Label label1;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox tbxName;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton btnPlaylists;
+        private FontAwesome.Sharp.IconButton btnDelete;
+        private FontAwesome.Sharp.IconButton btnLike;
     }
 }

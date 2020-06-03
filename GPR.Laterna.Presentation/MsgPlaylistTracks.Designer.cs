@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgwPlaylistTracks = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -43,19 +43,19 @@
             // 
             // dgwPlaylistTracks
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgwPlaylistTracks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgwPlaylistTracks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwPlaylistTracks.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgwPlaylistTracks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwPlaylistTracks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwPlaylistTracks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwPlaylistTracks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgwPlaylistTracks.ColumnHeadersHeight = 40;
             this.dgwPlaylistTracks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgwPlaylistTracks.Dock = System.Windows.Forms.DockStyle.Top;
@@ -71,7 +71,7 @@
             this.dgwPlaylistTracks.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgwPlaylistTracks.RowHeadersWidth = 40;
             this.dgwPlaylistTracks.RowTemplate.Height = 40;
-            this.dgwPlaylistTracks.Size = new System.Drawing.Size(947, 235);
+            this.dgwPlaylistTracks.Size = new System.Drawing.Size(947, 238);
             this.dgwPlaylistTracks.TabIndex = 26;
             this.dgwPlaylistTracks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwPlaylistTracks_CellClick);
             // 
@@ -151,6 +151,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MsgPlaylistTracks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MsgPlaylistTracks";
             this.Load += new System.EventHandler(this.MsgPlaylistTracks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwPlaylistTracks)).EndInit();

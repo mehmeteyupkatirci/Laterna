@@ -17,6 +17,8 @@ namespace GPR.Laterna.Presentation
         CustomMessageBox customMessageBox;
         public static long PlaylistId = FormPlaylist.PlaylistId;
         public static long PlaylistTrackId = 0;
+        public static long UserId = 0;
+
         public MsgPlaylistTracks()
         {
             InitializeComponent();
@@ -39,10 +41,20 @@ namespace GPR.Laterna.Presentation
         private void btnDelete_Click(object sender, EventArgs e)
         {
             PlaylistTrackId = Convert.ToInt64(dgwPlaylistTracks.Rows[dgwPlaylistTracks.CurrentRow.Index].Cells[0].Value);
-            _playlistConnector.DeletePlaylistTrack(PlaylistTrackId);
-            Properties.Settings.Default.CustomMessage = "Silme İşlemi Başarıyla Gerçekleşti";
-            customMessageBox = new CustomMessageBox();
-            customMessageBox.Show();
+            if (FormPlaylist.PlaylistUserId == Properties.Settings.Default.User.Id)
+            {
+                _playlistConnector.DeletePlaylistTrack(PlaylistTrackId);
+                Properties.Settings.Default.CustomMessage = "Silme İşlemi Başarıyla Gerçekleşti";
+                customMessageBox = new CustomMessageBox();
+                customMessageBox.Show();
+            }
+            else
+            {
+                Properties.Settings.Default.CustomMessage = "Silme İşlemini Yalnızca Playlist \nSahibi Yapabilir";
+                customMessageBox = new CustomMessageBox();
+                customMessageBox.Show();
+            }
+           
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
