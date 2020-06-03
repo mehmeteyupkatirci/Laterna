@@ -38,6 +38,21 @@ namespace GPR.Laterna.Presentation
 
         private void FormArtists_Load(object sender, EventArgs e)
         {
+            LoadArtistDGV();
+            LoadUserArtistOperation();
+        }
+
+        private void LoadUserArtistOperation()
+        {
+            if (Properties.Settings.Default.isLogin)
+            {
+                _userLikedArtists = _userConnector.GetUserLikedArtists(Properties.Settings.Default.User.Id);
+                _userFollowedArtists = _userConnector.GetUserFollowedArtists(Properties.Settings.Default.User.Id);
+            }
+        }
+
+        private void LoadArtistDGV()
+        {
             dgwArtist.DataSource = _artistConnector.GetAll();
             dgwArtist.Columns["Name"].HeaderText = "Şarkıcı Adı";
             dgwArtist.Columns["Genres"].HeaderText = "Türü";
@@ -50,12 +65,6 @@ namespace GPR.Laterna.Presentation
             dgwArtist.Columns["Searched"].Visible = false;
             dgwArtist.Columns["UpdatedAt"].Visible = false;
             dgwArtist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            if (Properties.Settings.Default.isLogin)
-            {
-                _userLikedArtists = _userConnector.GetUserLikedArtists(Properties.Settings.Default.User.Id);
-                _userFollowedArtists = _userConnector.GetUserFollowedArtists(Properties.Settings.Default.User.Id);
-            }
         }
 
         private void dgwArtist_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -65,10 +74,12 @@ namespace GPR.Laterna.Presentation
             var theFollowedArtist = _userFollowedArtists.Where(x=>x.ArtistId == ArtistId).FirstOrDefault();
             if(theLikedArtist != null)
             {
-                BtnArtistLike.ButtonText = "Beğenmekten Vazgeç";
+                BtnArtistLike.ButtonText = "Beğenmekten\nVazgeç";
+                BtnArtistLike.Font = new Font("Microsoft Sans Serif", 10);
             }
             else
             {
+                BtnArtistLike.Font = new Font("Microsoft Sans Serif", 14);
                 BtnArtistLike.ButtonText = "Beğen";
             }
             if (theFollowedArtist != null)
@@ -102,6 +113,8 @@ namespace GPR.Laterna.Presentation
                 if (result)
                 {
                     Properties.Settings.Default.CustomMessage = "Beğenme İşlemi Başarılı";
+                    LoadArtistDGV();
+                    LoadUserArtistOperation();
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }
@@ -110,6 +123,8 @@ namespace GPR.Laterna.Presentation
                     var theLikedArtist = _userLikedArtists.Where(x => x.ArtistId == ArtistId).FirstOrDefault();
                     _userConnector.DeleteUserLikedArtist(theLikedArtist.Id);
                     Properties.Settings.Default.CustomMessage = "Beğenmekten Vazgeçildi";
+                    LoadArtistDGV();
+                    LoadUserArtistOperation();
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }
@@ -126,6 +141,8 @@ namespace GPR.Laterna.Presentation
                 if (result)
                 {
                     Properties.Settings.Default.CustomMessage = "Takip Etme İşlemi Başarılı";
+                    LoadArtistDGV();
+                    LoadUserArtistOperation();
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }
@@ -133,7 +150,7 @@ namespace GPR.Laterna.Presentation
                 {
                     var theFollowedArtist = _userFollowedArtists.Where(x => x.ArtistId == ArtistId).FirstOrDefault();
                     _userConnector.DeleteUserFollowedArtist(theFollowedArtist.Id);
-                    Properties.Settings.Default.CustomMessage = "Daha Önceden Takip Edilmiş";
+                    Properties.Settings.Default.CustomMessage = "Takipten Çıkıldı";
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }

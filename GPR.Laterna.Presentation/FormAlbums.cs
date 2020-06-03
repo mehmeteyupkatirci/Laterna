@@ -36,6 +36,21 @@ namespace GPR.Laterna.Presentation
 
         private void FormAlbums_Load(object sender, EventArgs e)
         {
+            LoadAlbumDGV();
+            LoadUserAlbumDGV();
+        }
+
+        private void LoadUserAlbumDGV()
+        {
+            if (Properties.Settings.Default.isLogin)
+            {
+                _userLikedAlbums = _userConnector.GetUserLikedAlbums(Properties.Settings.Default.User.Id);
+                _userFollowedAlbums = _userConnector.GetUserFollowedAlbums(Properties.Settings.Default.User.Id);
+            }
+        }
+
+        private void LoadAlbumDGV()
+        {
             dgwAlbum.DataSource = _albumConnector.GetAll();
             dgwAlbum.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -55,12 +70,6 @@ namespace GPR.Laterna.Presentation
             dgwAlbum.Columns["SpotId"].HeaderText = "Spotify Id";
             dgwAlbum.Columns["Popularity"].HeaderText = "Popülerlik %100";
             dgwAlbum.Columns["ReleaseData"].HeaderText = "Çıkış Tarihi";
-
-            if (Properties.Settings.Default.isLogin)
-            {
-                _userLikedAlbums = _userConnector.GetUserLikedAlbums(Properties.Settings.Default.User.Id);
-                _userFollowedAlbums = _userConnector.GetUserFollowedAlbums(Properties.Settings.Default.User.Id);
-            }
         }
 
         private void btnAlbumShow_Click(object sender, EventArgs e)
@@ -77,10 +86,12 @@ namespace GPR.Laterna.Presentation
             var theFollowedAlbum = _userFollowedAlbums.Where(x=>x.AlbumId==AlbumId).FirstOrDefault();
             if (theLikedAlbum != null)
             {
-                btnAlbumLike.ButtonText = "Beğenmekten vageç";
+                btnAlbumLike.ButtonText = "Beğenmekten\nVazgeç";
+                btnAlbumLike.Font = new Font("Microsoft Sans Serif", 10);
             }
             else
             {
+                btnAlbumLike.Font = new Font("Microsoft Sans Serif", 14);
                 btnAlbumLike.ButtonText = "Beğen";
             }
             if (theFollowedAlbum != null)
@@ -102,6 +113,8 @@ namespace GPR.Laterna.Presentation
                 if (result)
                 {
                     Properties.Settings.Default.CustomMessage = "Takip Etme İşlemi Başarılı";
+                    LoadAlbumDGV();
+                    LoadUserAlbumDGV();
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }
@@ -110,6 +123,8 @@ namespace GPR.Laterna.Presentation
                     var theFollowedAlbum = _userFollowedAlbums.Where(x => x.AlbumId == AlbumId).FirstOrDefault();
                     _userConnector.DeleteUserFollowedAlbum(theFollowedAlbum.Id);
                     Properties.Settings.Default.CustomMessage = "Takipten Çıkarıldı";
+                    LoadAlbumDGV();
+                    LoadUserAlbumDGV();
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }
@@ -125,6 +140,8 @@ namespace GPR.Laterna.Presentation
                 if (result)
                 {
                     Properties.Settings.Default.CustomMessage = "Beğenme İşlemi Başarılı";
+                    LoadAlbumDGV();
+                    LoadUserAlbumDGV();
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }
@@ -133,6 +150,8 @@ namespace GPR.Laterna.Presentation
                     var theLikedAlbum = _userLikedAlbums.Where(x => x.AlbumId == AlbumId).FirstOrDefault();
                     _userConnector.DeleteUserLikedAlbum(theLikedAlbum.Id);
                     Properties.Settings.Default.CustomMessage = "Beğenmekten Vazgeçildi";
+                    LoadAlbumDGV();
+                    LoadUserAlbumDGV();
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }

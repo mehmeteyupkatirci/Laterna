@@ -36,13 +36,25 @@ namespace GPR.Laterna.Presentation
             _userConnector = new UserConnector();
             _userFollowedTracks = new List<UserFollowedTrack>();
             _userLikedTracks = new List<UserLikedTrack>();
-
             _player = new WaveOut(WaveCallbackInfo.FunctionCallback());
-
-
         }
 
         private void FormTracks_Load(object sender, EventArgs e)
+        {
+            LoadTrackDGV();
+            LoadTrackUserOperation();
+        }
+
+        private void LoadTrackUserOperation()
+        {
+            if (Properties.Settings.Default.isLogin)
+            {
+                _userLikedTracks = _userConnector.GetUserLikedTracks(Properties.Settings.Default.User.Id);
+                _userFollowedTracks = _userConnector.GetUserFollowedTracks(Properties.Settings.Default.User.Id);
+            }
+        }
+
+        private void LoadTrackDGV()
         {
             dgwTrack.DataSource = _trackConnector.GetAll();
             dgwTrack.Columns["Name"].HeaderText = "Şarkı Adı";
@@ -55,12 +67,6 @@ namespace GPR.Laterna.Presentation
             dgwTrack.Columns["CreatedAt"].Visible = false;
             dgwTrack.Columns["UpdatedAt"].Visible = false;
             dgwTrack.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            if (Properties.Settings.Default.isLogin)
-            {
-                _userLikedTracks = _userConnector.GetUserLikedTracks(Properties.Settings.Default.User.Id);
-                _userFollowedTracks = _userConnector.GetUserFollowedTracks(Properties.Settings.Default.User.Id);
-            }
         }
 
         private void dgwTrack_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -71,7 +77,7 @@ namespace GPR.Laterna.Presentation
             var theFollowedTrack = _userFollowedTracks.Where(x=>x.TrackId==TrackId).FirstOrDefault();
             if (theFollowedTrack != null)
             {
-                btnTrackFlw.ButtonText = "Takip Ediliyor";
+                btnTrackFlw.ButtonText = "Takipten Çık";
             }
             else
             {
@@ -79,11 +85,13 @@ namespace GPR.Laterna.Presentation
             }
             if (theLikedTrack != null)
             {
-                btnTrackLike.ButtonText = "Beğendin";
+                btnTrackLike.ButtonText = "Beğenmekten\nVazgeç";
+                btnTrackLike.Font = new Font("Microsoft Sans Serif", 10);
             }
             else
             {
                 btnTrackLike.ButtonText = "Beğen";
+                btnTrackLike.Font = new Font("Microsoft Sans Serif", 14);
             }
         }
 
@@ -108,12 +116,18 @@ namespace GPR.Laterna.Presentation
                 if (result)
                 {
                     Properties.Settings.Default.CustomMessage = "Takip Etme İşlemi Başarılı";
+                    LoadTrackDGV();
+                    LoadTrackUserOperation();
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }
                 else
                 {
-                    Properties.Settings.Default.CustomMessage = "Daha Önceden Takip Edilmiş";
+                    var theFollowedTrack = _userFollowedTracks.Where(x => x.TrackId == TrackId).FirstOrDefault();
+                    _userConnector.DeleteUserFollowedTrack(theFollowedTrack.Id);
+                    Properties.Settings.Default.CustomMessage = "Takipten Çıkıldı";
+                    LoadTrackDGV();
+                    LoadTrackUserOperation();
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }
@@ -129,12 +143,18 @@ namespace GPR.Laterna.Presentation
                 if (result)
                 {
                     Properties.Settings.Default.CustomMessage = "Beğenme İşlemi Başarılı";
+                    LoadTrackDGV();
+                    LoadTrackUserOperation();
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }
                 else
                 {
-                    Properties.Settings.Default.CustomMessage = "Daha Önceden Beğenilmiş";
+                    var theLikedTrack = _userLikedTracks.Where(x => x.TrackId == TrackId).FirstOrDefault();
+                    _userConnector.DeleteUserLikedTrack(theLikedTrack.Id);
+                    Properties.Settings.Default.CustomMessage = "Beğenmekten Vazgeçildi";
+                    LoadTrackDGV();
+                    LoadTrackUserOperation();
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }

@@ -37,13 +37,16 @@ namespace GPR.Laterna.Presentation
         private void FormPlaylist_Load(object sender, EventArgs e)
         {
             LoadPlaylistDGV();
+            LoadUserPlaylistOperation();
+        }
 
+        private void LoadUserPlaylistOperation()
+        {
             if (Properties.Settings.Default.isLogin)
             {
                 _userLikedPlaylists = _userConnector.GetUserLikedPlaylists(Properties.Settings.Default.User.Id);
                 _userFollowedPlaylists = _userConnector.GetUserFollowedPlaylists(Properties.Settings.Default.User.Id);
             }
-
         }
 
         private void LoadPlaylistDGV()
@@ -95,12 +98,18 @@ namespace GPR.Laterna.Presentation
                         if (result)
                         {
                             Properties.Settings.Default.CustomMessage = "Takip Etme İşlemi Başarılı";
+                            LoadUserPlaylistOperation();
+                            LoadPlaylistDGV();
                             customMessageBox = new CustomMessageBox();
                             customMessageBox.Show();
                         }
                         else
                         {
-                            Properties.Settings.Default.CustomMessage = "Daha Önceden Takip Edilmiş";
+                            var theFollowedPlaylist = _userFollowedPlaylists.Where(x => x.PlaylistId == PlaylistId).FirstOrDefault();
+                            _userConnector.DeleteUserFollowedPlaylist(theFollowedPlaylist.Id);
+                            Properties.Settings.Default.CustomMessage = "Takipten Çıkıldı";
+                            LoadUserPlaylistOperation();
+                            LoadPlaylistDGV();
                             customMessageBox = new CustomMessageBox();
                             customMessageBox.Show();
                         }
@@ -118,15 +127,17 @@ namespace GPR.Laterna.Presentation
             var theFollowedPlaylist = _userFollowedPlaylists.Where(x=>x.PlaylistId == PlaylistId).FirstOrDefault();
             if (theLikedPlaylist != null)
             {
-                btnPlaylistLike.ButtonText = "Beğenilmiş";
+                btnPlaylistLike.ButtonText = "Beğenmekten\nVazgeç";
+                btnPlaylistLike.Font = new Font("Microsoft Sans Serif", 10);
             }
             else
             {
                 btnPlaylistLike.ButtonText = "Beğen";
+                btnPlaylistLike.Font = new Font("Microsoft Sans Serif", 14);
             }
             if (theFollowedPlaylist !=null)
             {
-                btnPlaylistFlw.ButtonText = "Takip Ediliyor";
+                btnPlaylistFlw.ButtonText = "Takipten Çık";
             }
             else
             {
@@ -175,12 +186,18 @@ namespace GPR.Laterna.Presentation
                         if (result)
                         {
                             Properties.Settings.Default.CustomMessage = "Beğenme İşlemi Başarılı";
+                            LoadUserPlaylistOperation();
+                            LoadPlaylistDGV();
                             customMessageBox = new CustomMessageBox();
                             customMessageBox.Show();
                         }
                         else
                         {
+                            var theLikedPlaylist = _userLikedPlaylists.Where(x => x.PlaylistId == PlaylistId).FirstOrDefault();
+                            _userConnector.DeleteUserLikedPlaylist(theLikedPlaylist.Id);
                             Properties.Settings.Default.CustomMessage = "Daha Önceden Beğenilmiş";
+                            LoadUserPlaylistOperation();
+                            LoadPlaylistDGV();
                             customMessageBox = new CustomMessageBox();
                             customMessageBox.Show();
                         }
