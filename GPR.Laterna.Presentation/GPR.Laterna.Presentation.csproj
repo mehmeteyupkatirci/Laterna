@@ -131,6 +131,12 @@
     <Compile Include="MsgArtist.Designer.cs">
       <DependentUpon>MsgArtist.cs</DependentUpon>
     </Compile>
+    <Compile Include="MsgFollowed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgFollowed.Designer.cs">
+      <DependentUpon>MsgFollowed.cs</DependentUpon>
+    </Compile>
     <Compile Include="MsgLiked.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MsgArtist.resx">
       <DependentUpon>MsgArtist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgFollowed.resx">
+      <DependentUpon>MsgFollowed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MsgLiked.resx">
       <DependentUpon>MsgLiked.cs</DependentUpon>

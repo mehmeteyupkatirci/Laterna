@@ -136,5 +136,29 @@ namespace GPR.Laterna.Presentation.Business
             userLikedPlaylist.Id = userLikedPlaylistId;
             _userService.DeleteLikedPlaylist(userLikedPlaylist);
         }
+        public void DeleteUserFollowedArtist(long userFollowedArtistId)
+        {
+            UserFollowedArtist userFollowedArtist = new UserFollowedArtist();
+            userFollowedArtist.Id = userFollowedArtistId;
+            _userService.DeleteFollowedArtist(userFollowedArtist);
+        }
+        public void DeleteUserFollowedAlbum(long userFollowedAlbumId)
+        {
+            UserFollowedAlbum userFollowedAlbum = new UserFollowedAlbum();
+            userFollowedAlbum.Id = userFollowedAlbumId;
+            _userService.DeleteFollowedAlbum(userFollowedAlbum);
+        }
+        public void DeleteUserFollowedTrack(long userFollowedTrackId)
+        {
+            UserFollowedTrack userFollowedTrack = new UserFollowedTrack();
+            userFollowedTrack.Id = userFollowedTrackId;
+            _userService.DeleteFollowedTrack(userFollowedTrack);
+        }
+        public void DeleteUserFollowedPlaylist(long userFollowedPlaylistId)
+        {
+            UserFollowedPlaylist userFollowedPlaylist = new UserFollowedPlaylist();
+            userFollowedPlaylist.Id = userFollowedPlaylistId;
+            _userService.DeleteFollowedPlaylist(userFollowedPlaylist);
+        }
     }
 }

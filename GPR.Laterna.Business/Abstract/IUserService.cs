@@ -21,6 +21,11 @@ namespace GPR.Laterna.Business.Abstract
         void DeleteLikedTrack(UserLikedTrack userLikedTrack);
         void DeleteLikedPlaylist(UserLikedPlaylist userLikedPlaylist);
 
+        void DeleteFollowedArtist(UserFollowedArtist userFollowedArtist);
+        void DeleteFollowedAlbum(UserFollowedAlbum userFollowedAlbum);
+        void DeleteFollowedTrack(UserFollowedTrack userFollowedTrack);
+        void DeleteFollowedPlaylist(UserFollowedPlaylist userFollowedPlaylist);
+                   
         List<UserLikedArtist> GetUserLikedArtists(long id);
         List<UserFollowedArtist> GetUserFollowedArtists(long id);
         List<UserLikedAlbum> GetUserLikedAlbums(long id);

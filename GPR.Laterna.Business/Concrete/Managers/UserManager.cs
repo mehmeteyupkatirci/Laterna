@@ -49,6 +49,26 @@ namespace GPR.Laterna.Business.Concrete.Managers
             _userDal.Delete(user);
         }
 
+        public void DeleteFollowedAlbum(UserFollowedAlbum userFollowedAlbum)
+        {
+            _userFollowedAlbumDal.Delete(userFollowedAlbum);
+        }
+
+        public void DeleteFollowedArtist(UserFollowedArtist userFollowedArtist)
+        {
+            _userFollowedArtistDal.Delete(userFollowedArtist);
+        }
+
+        public void DeleteFollowedPlaylist(UserFollowedPlaylist userFollowedPlaylist)
+        {
+            _userFollowedPlaylistDal.Delete(userFollowedPlaylist);
+        }
+
+        public void DeleteFollowedTrack(UserFollowedTrack userFollowedTrack)
+        {
+            _userFollowedTrackDal.Delete(userFollowedTrack);
+        }
+
         public void DeleteLikedAlbum(UserLikedAlbum userLikedAlbum)
         {
             _userLikedAlbumDal.Delete(userLikedAlbum);

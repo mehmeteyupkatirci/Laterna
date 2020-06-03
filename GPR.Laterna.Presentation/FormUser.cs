@@ -58,6 +58,12 @@ namespace GPR.Laterna.Presentation
             MsgLiked msgLiked = new MsgLiked();
             msgLiked.Show();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            MsgFollowed msgFollowed = new MsgFollowed();
+            msgFollowed.Show();
+        }
     }
 }
 
