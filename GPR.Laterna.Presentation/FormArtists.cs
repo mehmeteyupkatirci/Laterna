@@ -65,7 +65,7 @@ namespace GPR.Laterna.Presentation
             var theFollowedArtist = _userFollowedArtists.Where(x=>x.ArtistId == ArtistId).FirstOrDefault();
             if(theLikedArtist != null)
             {
-                BtnArtistLike.ButtonText = "Beğendin";
+                BtnArtistLike.ButtonText = "Beğenmekten Vazgeç";
             }
             else
             {
@@ -73,7 +73,7 @@ namespace GPR.Laterna.Presentation
             }
             if (theFollowedArtist != null)
             {
-                btnArtistFollow.ButtonText = "Takip Ediliyor";
+                btnArtistFollow.ButtonText = "Takipten Çık";
             }
             else
             {
@@ -87,27 +87,7 @@ namespace GPR.Laterna.Presentation
             MsgArtist msgArtist = new MsgArtist();
             msgArtist.Show();
         }
-
-        private void btnArtistFlw_Click(object sender, EventArgs e)
-        {
-            DgwArtistCurrentRow();
-            if (BtnLoginWarning.EvaluateBtnClick())
-            {
-                var result = _userConnector.FollowArtist(Properties.Settings.Default.User.Id, ArtistId);
-                if (result)
-                {
-                    Properties.Settings.Default.CustomMessage = "Takip Etme İşlemi Başarılı";
-                    customMessageBox = new CustomMessageBox();
-                    customMessageBox.Show();
-                }
-                else
-                {
-                    Properties.Settings.Default.CustomMessage = "Daha Önceden Takip Edilmiş";
-                    customMessageBox = new CustomMessageBox();
-                    customMessageBox.Show();
-                }
-            }
-        }
+       
         private void DgwArtistCurrentRow()
         {
             ArtistId = Convert.ToInt64(dgwArtist.Rows[dgwArtist.CurrentRow.Index].Cells[0].Value);
@@ -127,7 +107,9 @@ namespace GPR.Laterna.Presentation
                 }
                 else
                 {
-                    Properties.Settings.Default.CustomMessage = "Daha Önceden Beğenilmiş";
+                    var theLikedArtist = _userLikedArtists.Where(x => x.ArtistId == ArtistId).FirstOrDefault();
+                    _userConnector.DeleteUserLikedArtist(theLikedArtist.Id);
+                    Properties.Settings.Default.CustomMessage = "Beğenmekten Vazgeçildi";
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
                 }
@@ -149,6 +131,8 @@ namespace GPR.Laterna.Presentation
                 }
                 else
                 {
+                    var theFollowedArtist = _userFollowedArtists.Where(x => x.ArtistId == ArtistId).FirstOrDefault();
+                    _userConnector.DeleteUserFollowedArtist(theFollowedArtist.Id);
                     Properties.Settings.Default.CustomMessage = "Daha Önceden Takip Edilmiş";
                     customMessageBox = new CustomMessageBox();
                     customMessageBox.Show();
