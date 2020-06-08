@@ -13,9 +13,20 @@ namespace GPR.Laterna.DataAccess.Tests
         {
             _userLikedTrackDal = DalFactory.CreateUserLikedTrackDal();
         }
+
         [TestMethod]
-        public void TestMethod1()
+        public void GetOneUserLikedTrackTest()
         {
+            var userLikedTrack = _userLikedTrackDal.Get(x => x.Id == 10007);
+
+            Assert.IsNotNull(userLikedTrack);
+        }
+
+        [TestMethod]
+        public void GetUserLikedTrackListTest()
+        {
+            var list = _userLikedTrackDal.GetList();
+            Assert.IsTrue(list.Count > 0);
         }
     }
 }

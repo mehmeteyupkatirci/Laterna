@@ -13,9 +13,20 @@ namespace GPR.Laterna.DataAccess.Tests
         {
             _userLikedAlbumDal = DalFactory.CreateUserLikedAlbumDal();
         }
+
         [TestMethod]
-        public void TestMethod1()
+        public void GetOneUserLikedAlbum()
         {
+            var userLikedAlbum = _userLikedAlbumDal.Get(x => x.Id == 1);
+
+            Assert.IsNotNull(userLikedAlbum);
+        }
+
+        [TestMethod]
+        public void GetUserLikedAlbumListTest()
+        {
+            var list = _userLikedAlbumDal.GetList();
+            Assert.IsTrue(list.Count > 0);
         }
     }
 }
