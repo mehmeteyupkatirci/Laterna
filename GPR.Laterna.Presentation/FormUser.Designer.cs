@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUser));
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPlaylists = new FontAwesome.Sharp.IconButton();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.btnFollow = new FontAwesome.Sharp.IconButton();
             this.btnLike = new FontAwesome.Sharp.IconButton();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxPasswordValidate = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,8 +50,8 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.panelDesktop.Controls.Add(this.panel1);
             this.panelDesktop.Controls.Add(this.btnUpdate);
+            this.panelDesktop.Controls.Add(this.panel1);
             this.panelDesktop.Controls.Add(this.label4);
             this.panelDesktop.Controls.Add(this.tbxPasswordValidate);
             this.panelDesktop.Controls.Add(this.label3);
@@ -66,10 +67,36 @@
             this.panelDesktop.Size = new System.Drawing.Size(931, 371);
             this.panelDesktop.TabIndex = 6;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.ActiveBorderThickness = 1;
+            this.btnUpdate.ActiveCornerRadius = 20;
+            this.btnUpdate.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(88)))), ((int)(((byte)(155)))));
+            this.btnUpdate.ActiveForecolor = System.Drawing.Color.White;
+            this.btnUpdate.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(88)))), ((int)(((byte)(155)))));
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
+            this.btnUpdate.ButtonText = "Güncelle";
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(88)))), ((int)(((byte)(155)))));
+            this.btnUpdate.IdleBorderThickness = 1;
+            this.btnUpdate.IdleCornerRadius = 20;
+            this.btnUpdate.IdleFillColor = System.Drawing.Color.White;
+            this.btnUpdate.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(88)))), ((int)(((byte)(155)))));
+            this.btnUpdate.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(88)))), ((int)(((byte)(155)))));
+            this.btnUpdate.Location = new System.Drawing.Point(200, 213);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(5);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(181, 41);
+            this.btnUpdate.TabIndex = 23;
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnPlaylists);
-            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnFollow);
             this.panel1.Controls.Add(this.btnLike);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 312);
@@ -100,28 +127,28 @@
             this.btnPlaylists.UseVisualStyleBackColor = true;
             this.btnPlaylists.Click += new System.EventHandler(this.btnPlaylists_Click);
             // 
-            // btnDelete
+            // btnFollow
             // 
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnDelete.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnDelete.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnDelete.IconSize = 32;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(313, 0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnDelete.Rotation = 0D;
-            this.btnDelete.Size = new System.Drawing.Size(316, 59);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Takip Ettiklerim";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnFollow.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnFollow.FlatAppearance.BorderSize = 0;
+            this.btnFollow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFollow.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnFollow.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFollow.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnFollow.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnFollow.IconSize = 32;
+            this.btnFollow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFollow.Location = new System.Drawing.Point(313, 0);
+            this.btnFollow.Name = "btnFollow";
+            this.btnFollow.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnFollow.Rotation = 0D;
+            this.btnFollow.Size = new System.Drawing.Size(316, 59);
+            this.btnFollow.TabIndex = 3;
+            this.btnFollow.Text = "Takip Ettiklerim";
+            this.btnFollow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFollow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFollow.UseVisualStyleBackColor = true;
+            this.btnFollow.Click += new System.EventHandler(this.btnFollow_Click);
             // 
             // btnLike
             // 
@@ -146,88 +173,86 @@
             this.btnLike.UseVisualStyleBackColor = true;
             this.btnLike.Click += new System.EventHandler(this.btnLike_Click);
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(266, 193);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 8;
-            this.btnUpdate.Text = "Güncelle";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(289, 99);
+            this.label4.Location = new System.Drawing.Point(310, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 13);
+            this.label4.Size = new System.Drawing.Size(103, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Parola Tekrar";
             // 
             // tbxPasswordValidate
             // 
             this.tbxPasswordValidate.BorderColor = System.Drawing.Color.SeaGreen;
-            this.tbxPasswordValidate.Location = new System.Drawing.Point(384, 96);
+            this.tbxPasswordValidate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxPasswordValidate.Location = new System.Drawing.Point(430, 96);
             this.tbxPasswordValidate.Name = "tbxPasswordValidate";
             this.tbxPasswordValidate.PasswordChar = '*';
-            this.tbxPasswordValidate.Size = new System.Drawing.Size(100, 20);
+            this.tbxPasswordValidate.Size = new System.Drawing.Size(115, 26);
             this.tbxPasswordValidate.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(289, 56);
+            this.label3.Location = new System.Drawing.Point(310, 56);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Parola";
             // 
             // tbxPassword
             // 
             this.tbxPassword.BorderColor = System.Drawing.Color.SeaGreen;
-            this.tbxPassword.Location = new System.Drawing.Point(384, 53);
+            this.tbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxPassword.Location = new System.Drawing.Point(430, 53);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.PasswordChar = '*';
-            this.tbxPassword.Size = new System.Drawing.Size(100, 20);
+            this.tbxPassword.Size = new System.Drawing.Size(115, 26);
             this.tbxPassword.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(34, 95);
+            this.label2.Location = new System.Drawing.Point(34, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Email";
             // 
             // tbxEmail
             // 
             this.tbxEmail.BorderColor = System.Drawing.Color.SeaGreen;
-            this.tbxEmail.Location = new System.Drawing.Point(129, 92);
+            this.tbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxEmail.Location = new System.Drawing.Point(129, 99);
             this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbxEmail.Size = new System.Drawing.Size(100, 26);
             this.tbxEmail.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 52);
+            this.label1.Location = new System.Drawing.Point(34, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 13);
+            this.label1.Size = new System.Drawing.Size(32, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Adı";
             // 
             // tbxName
             // 
             this.tbxName.BorderColor = System.Drawing.Color.SeaGreen;
-            this.tbxName.Location = new System.Drawing.Point(129, 49);
+            this.tbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxName.Location = new System.Drawing.Point(129, 56);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(100, 20);
+            this.tbxName.Size = new System.Drawing.Size(100, 26);
             this.tbxName.TabIndex = 0;
             // 
             // FormUser
@@ -248,7 +273,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panelDesktop;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label4;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox tbxPasswordValidate;
         private System.Windows.Forms.Label label3;
@@ -259,7 +283,8 @@
         private WindowsFormsControlLibrary1.BunifuCustomTextbox tbxName;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnPlaylists;
-        private FontAwesome.Sharp.IconButton btnDelete;
+        private FontAwesome.Sharp.IconButton btnFollow;
         private FontAwesome.Sharp.IconButton btnLike;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnUpdate;
     }
 }

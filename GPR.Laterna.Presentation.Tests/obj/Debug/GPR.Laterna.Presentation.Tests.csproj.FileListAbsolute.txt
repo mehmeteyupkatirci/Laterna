@@ -11,3 +11,4 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation.Tests\obj\Debug
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation.Tests\obj\Debug\GPR.Laterna.Presentation.Tests.csproj.CopyComplete
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation.Tests\obj\Debug\GPR.Laterna.Presentation.Tests.dll
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation.Tests\obj\Debug\GPR.Laterna.Presentation.Tests.pdb
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation.Tests\obj\Debug\GPR.Laterna.Presentation.Tests.csproj.CoreCompileInputs.cache

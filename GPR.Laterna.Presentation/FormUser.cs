@@ -28,10 +28,28 @@ namespace GPR.Laterna.Presentation
             tbxEmail.Text = Properties.Settings.Default.User.Email;
         }
 
+        private void btnPlaylists_Click(object sender, EventArgs e)
+        {
+            MsgPlaylistAdd msgPlaylistAdd = new MsgPlaylistAdd();
+            msgPlaylistAdd.Show();
+        }
+
+        private void btnLike_Click(object sender, EventArgs e)
+        {
+            MsgLiked msgLiked = new MsgLiked();
+            msgLiked.Show();
+        }
+
+        private void btnFollow_Click(object sender, EventArgs e)
+        {
+            MsgFollowed msgFollowed = new MsgFollowed();
+            msgFollowed.Show();
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-           User user = _userConnector.Update(tbxEmail.Text, tbxName.Text,tbxPassword.Text,tbxPasswordValidate.Text);
-            if (user==null)
+            User user = _userConnector.Update(tbxEmail.Text, tbxName.Text, tbxPassword.Text, tbxPasswordValidate.Text);
+            if (user == null)
             {
                 Properties.Settings.Default.CustomMessage = "Girdiğiniz bilgileri kontrol ediniz";
                 customMessageBox = new CustomMessageBox();
@@ -45,24 +63,6 @@ namespace GPR.Laterna.Presentation
                 customMessageBox = new CustomMessageBox();
                 customMessageBox.Show();
             }
-        }
-
-        private void btnPlaylists_Click(object sender, EventArgs e)
-        {
-            MsgPlaylistAdd msgPlaylistAdd = new MsgPlaylistAdd();
-            msgPlaylistAdd.Show();
-        }
-
-        private void btnLike_Click(object sender, EventArgs e)
-        {
-            MsgLiked msgLiked = new MsgLiked();
-            msgLiked.Show();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            MsgFollowed msgFollowed = new MsgFollowed();
-            msgFollowed.Show();
         }
     }
 }

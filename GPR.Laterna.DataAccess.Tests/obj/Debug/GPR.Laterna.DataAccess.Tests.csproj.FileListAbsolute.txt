@@ -27,3 +27,4 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess.Tests\obj\Debug\G
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess.Tests\bin\Debug\GPR.Laterna.Business.dll
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess.Tests\bin\Debug\GPR.Laterna.Business.pdb
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess.Tests\bin\Debug\GPR.Laterna.Business.dll.config
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.DataAccess.Tests\obj\Debug\GPR.Laterna.DataAccess.Tests.csproj.CoreCompileInputs.cache
