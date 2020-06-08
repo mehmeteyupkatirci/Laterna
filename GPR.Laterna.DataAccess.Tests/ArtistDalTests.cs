@@ -47,9 +47,9 @@ namespace GPR.Laterna.DataAccess.Tests
         [TestMethod]
         public void GetOneArtistTest()
         {
-            var playlist = _artistDal.Get(x => x.Id == 1);
+            var artist = _artistDal.Get(x => x.Id == 1);
 
-            Assert.IsNotNull(playlist);
+            Assert.IsNotNull(artist);
         }
 
         [TestMethod]

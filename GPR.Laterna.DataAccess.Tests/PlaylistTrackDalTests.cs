@@ -42,9 +42,9 @@ namespace GPR.Laterna.DataAccess.Tests
         [TestMethod]
         public void GetOnePlaylistTrackTest()
         {
-            var playlist = _playlistTrackDal.Get(x => x.PlaylistId == 10011 && x.TrackId == 100);
+            var playlistTrack = _playlistTrackDal.Get(x => x.PlaylistId == 10011 && x.TrackId == 100);
 
-            Assert.IsNotNull(playlist);
+            Assert.IsNotNull(playlistTrack);
         }
 
         [TestMethod]
