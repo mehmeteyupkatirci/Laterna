@@ -112,22 +112,6 @@ namespace GPR.Laterna.Presentation.Business
         {
             return _userService.GetUserFollowedPlaylists(id);
         }
-        public Artist GetFollowedArtistName(long id)
-        {
-            return _userService.GetFollowedArtistName(id);
-        }
-        public Album GetFollowedAlbumName(long id)
-        {
-            return _userService.GetFollowedAlbumName(id);
-        }
-        public Track GetFollowedTrackName(long id)
-        {
-            return _userService.GetFollowedTrackName(id);
-        }
-        public Playlist GetFollowedPlaylistName(long id)
-        {
-            return _userService.GetFollowedPlaylistName(id);
-        }
         public void DeleteUserLikedArtist(long userLikedArtistId)
         {
             UserLikedArtist userLikedArtist = new UserLikedArtist();
@@ -175,6 +159,38 @@ namespace GPR.Laterna.Presentation.Business
             UserFollowedPlaylist userFollowedPlaylist = new UserFollowedPlaylist();
             userFollowedPlaylist.Id = userFollowedPlaylistId;
             _userService.DeleteFollowedPlaylist(userFollowedPlaylist);
+        }
+        public Artist GetLikedArtistName(long id)
+        {
+            return _userService.GetLikedArtistName(id);
+        }
+        public Album GetLikedAlbumName(long id)
+        {
+            return _userService.GetLikedAlbumName(id);
+        }
+        public Track GetLikedTrackName(long id)
+        {
+            return _userService.GetLikedTrackName(id);
+        }
+        public Playlist GetLikedPlaylistName(long id)
+        {
+            return _userService.GetLikedPlaylistName(id);
+        }
+        public Artist GetFollowedArtistName(long id)
+        {
+            return _userService.GetFollowedArtistName(id);
+        }
+        public Album GetFollowedAlbumName(long id)
+        {
+            return _userService.GetFollowedAlbumName(id);
+        }
+        public Track GetFollowedTrackName(long id)
+        {
+            return _userService.GetFollowedTrackName(id);
+        }
+        public Playlist GetFollowedPlaylistName(long id)
+        {
+            return _userService.GetFollowedPlaylistName(id);
         }
     }
 }

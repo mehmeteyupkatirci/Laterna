@@ -97,35 +97,39 @@ namespace GPR.Laterna.Presentation
 
         private void btnAlbum_Click(object sender, EventArgs e)
         {
+            var album = _userConnector.GetLikedAlbumName(ULAlbumId);
             _userConnector.DeleteUserLikedAlbum(ULAlbumId);
             LoadAlbumDGV();
-            Properties.Settings.Default.CustomMessage = "Seçtiğiniz Album Beğenmekten Vazgeçildi";
+            Properties.Settings.Default.CustomMessage = album.Name +", Beğenmekten Vazgeçildi";
             customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
         }
         private void btnArtist_Click(object sender, EventArgs e)
         {
+            var artist = _userConnector.GetLikedArtistName(ULArtistId);
             _userConnector.DeleteUserLikedArtist(ULArtistId);
             LoadArtistDGV();
-            Properties.Settings.Default.CustomMessage = "Seçtiğiniz Şarkıcı Beğenmekten Vazgeçildi";
+            Properties.Settings.Default.CustomMessage = artist.Name +", Beğenmekten Vazgeçildi";
             customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
         }
 
         private void btnTrack_Click(object sender, EventArgs e)
         {
+            var track = _userConnector.GetLikedTrackName(ULTrackId);
             _userConnector.DeleteUserLikedTrack(ULTrackId);
             LoadTrackDGV();
-            Properties.Settings.Default.CustomMessage = "Seçtiğiniz Şarkı Beğenmekten Vazgeçildi";
+            Properties.Settings.Default.CustomMessage = track.Name + ", Beğenmekten Vazgeçildi";
             customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
         }
 
         private void btnPlaylist_Click(object sender, EventArgs e)
         {
+            var playlist = _userConnector.GetLikedPlaylistName(ULPlaylistId);
             _userConnector.DeleteUserLikedPlaylist(ULPlaylistId);
             LoadPlaylistDGV();
-            Properties.Settings.Default.CustomMessage = "Seçtiğiniz Playlist Beğenmekten Vazgeçildi";
+            Properties.Settings.Default.CustomMessage = playlist.Name + ", Beğenmekten Vazgeçildi";
             customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
         }

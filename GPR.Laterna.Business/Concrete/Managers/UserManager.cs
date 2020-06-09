@@ -186,13 +186,6 @@ namespace GPR.Laterna.Business.Concrete.Managers
             return _userFollowedArtistDal.GetList(x=>x.UserId == id);
         }
 
-        public Artist GetFollowedArtistName(long id)
-        {
-            var userFollowedArtist = _userFollowedArtistDal.Get(x => x.Id == id);
-            var artist = _artistDal.Get(x => x.Id == userFollowedArtist.ArtistId);
-            return artist;
-        }
-
         public List<UserFollowedPlaylist> GetUserFollowedPlaylists(long id)
         {
             return _userFollowedPlaylistDal.GetList(x=>x.UserId == id);
@@ -300,6 +293,13 @@ namespace GPR.Laterna.Business.Concrete.Managers
         {
             return _userDal.Update(user);
         }
+        
+        public Artist GetFollowedArtistName(long id)
+        {
+            var userFollowedArtist = _userFollowedArtistDal.Get(x => x.Id == id);
+            var artist = _artistDal.Get(x => x.Id == userFollowedArtist.ArtistId);
+            return artist;
+        }
 
         public Album GetFollowedAlbumName(long id)
         {
@@ -319,6 +319,34 @@ namespace GPR.Laterna.Business.Concrete.Managers
         {
             var userFollowedPlaylist = _userFollowedPlaylistDal.Get(x => x.Id == id);
             var playlist = _playlistDal.Get(x => x.Id == userFollowedPlaylist.PlaylistId);
+            return playlist;
+        }
+
+        public Artist GetLikedArtistName(long id)
+        {
+            var userLikedArtist = _userLikedArtistDal.Get(x => x.Id == id);
+            var artist = _artistDal.Get(x => x.Id == userLikedArtist.ArtistId);
+            return artist;
+        }
+
+        public Album GetLikedAlbumName(long id)
+        {
+            var userLikedAlbum = _userLikedAlbumDal.Get(x => x.Id == id);
+            var album = _albumDal.Get(x => x.Id == userLikedAlbum.AlbumId);
+            return album;
+        }
+
+        public Track GetLikedTrackName(long id)
+        {
+            var userLikedTrack = _userLikedTrackDal.Get(x => x.Id == id);
+            var track = _trackDal.Get(x => x.Id == userLikedTrack.TrackId);
+            return track;
+        }
+
+        public Playlist GetLikedPlaylistName(long id)
+        {
+            var userLikedPlaylist = _userLikedPlaylistDal.Get(x => x.Id == id);
+            var playlist = _playlistDal.Get(x => x.Id == userLikedPlaylist.PlaylistId);
             return playlist;
         }
     }
