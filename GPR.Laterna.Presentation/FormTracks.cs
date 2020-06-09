@@ -229,16 +229,23 @@ namespace GPR.Laterna.Presentation
             }
         }
 
-        private void btnPlay_Click_1(object sender, EventArgs e)
+        private void btnStop_Click(object sender, EventArgs e)
         {
-            if(PreviewUrl == _previousUrl)
+            _player.Stop();
+            btnPlay.IconChar = FontAwesome.Sharp.IconChar.Play;
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+
+            if (PreviewUrl == _previousUrl)
             {
-                if(_player.PlaybackState == PlaybackState.Playing)
+                if (_player.PlaybackState == PlaybackState.Playing)
                 {
                     btnPlay.IconChar = FontAwesome.Sharp.IconChar.Play;
                     _player.Pause();
                 }
-                else if(_player.PlaybackState == PlaybackState.Paused)
+                else if (_player.PlaybackState == PlaybackState.Paused)
                 {
                     btnPlay.IconChar = FontAwesome.Sharp.IconChar.Pause;
                     _player.Resume();
@@ -256,13 +263,6 @@ namespace GPR.Laterna.Presentation
                 btnPlay.IconChar = FontAwesome.Sharp.IconChar.Pause;
                 Task task = Task.Run((Action)StartMp3FromUrl);
             }
-           
-        }
-
-        private void btnStop_Click(object sender, EventArgs e)
-        {
-            _player.Stop();
-            btnPlay.IconChar = FontAwesome.Sharp.IconChar.Play;
         }
     }
 }

@@ -235,9 +235,12 @@ namespace GPR.Laterna.Presentation
 
         private void btnAddPlaylist_Click(object sender, EventArgs e)
         {
-            MsgPlaylistAdd msgPlaylist = new MsgPlaylistAdd();
-            msgPlaylist.Show();
-            LoadPlaylistDGV();
+            if (BtnLoginWarning.EvaluateBtnClick())
+            {
+                MsgPlaylistAdd msgPlaylist = new MsgPlaylistAdd();
+                msgPlaylist.Show();
+                LoadPlaylistDGV();
+            }
         }
     }
 }
