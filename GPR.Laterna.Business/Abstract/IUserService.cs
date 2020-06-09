@@ -34,6 +34,10 @@ namespace GPR.Laterna.Business.Abstract
         List<UserFollowedTrack> GetUserFollowedTracks(long id);
         List<UserFollowedPlaylist> GetUserFollowedPlaylists(long id);
         List<UserLikedPlaylist> GetUserLikedPlaylists(long id);
+        Artist GetFollowedArtistName(long id);
+        Album GetFollowedAlbumName(long id);
+        Track GetFollowedTrackName(long id);
+        Playlist GetFollowedPlaylistName(long id);
 
         bool LikeArtist(long userId,long artistId);
         bool FollowArtist(long userId,long artistId);

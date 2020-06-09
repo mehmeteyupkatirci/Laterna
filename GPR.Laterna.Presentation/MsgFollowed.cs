@@ -96,36 +96,40 @@ namespace GPR.Laterna.Presentation
 
         private void btnArtist_Click(object sender, EventArgs e)
         {
+            var artist =  _userConnector.GetFollowedArtistName(UFArtistId);
             _userConnector.DeleteUserFollowedArtist(UFArtistId);
             LoadArtistDGV();
-            Properties.Settings.Default.CustomMessage = "Seçtiğiniz Şarkıcı Beğenmekten Vazgeçildi";
+            Properties.Settings.Default.CustomMessage = artist.Name + ", Takipten Çıkıldı";
             customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
         }
 
         private void btnAlbum_Click(object sender, EventArgs e)
         {
+            var album = _userConnector.GetFollowedAlbumName(UFAlbumId);
             _userConnector.DeleteUserFollowedAlbum(UFAlbumId);
             LoadAlbumDGV();
-            Properties.Settings.Default.CustomMessage = "Seçtiğiniz Album Beğenmekten Vazgeçildi";
+            Properties.Settings.Default.CustomMessage = album.Name +", Takipten Çıkıldı";
             customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
         }
 
         private void btnTrack_Click(object sender, EventArgs e)
         {
+            var track = _userConnector.GetFollowedTrackName(UFTrackId);
             _userConnector.DeleteUserFollowedTrack(UFTrackId);
             LoadTrackDGV();
-            Properties.Settings.Default.CustomMessage = "Seçtiğiniz Şarkı Beğenmekten Vazgeçildi";
+            Properties.Settings.Default.CustomMessage = track.Name+  ", Takipten Çıkıldı";
             customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
         }
 
         private void btnPlaylist_Click(object sender, EventArgs e)
         {
+            var playlist = _userConnector.GetFollowedPlaylistName(UFPlaylistId);
             _userConnector.DeleteUserFollowedPlaylist(UFPlaylistId);
             LoadPlaylistDGV();
-            Properties.Settings.Default.CustomMessage = "Seçtiğiniz Playlist Beğenmekten Vazgeçildi";
+            Properties.Settings.Default.CustomMessage = playlist.Name +", Takipten Çıkıldı";
             customMessageBox = new CustomMessageBox();
             customMessageBox.Show();
         }

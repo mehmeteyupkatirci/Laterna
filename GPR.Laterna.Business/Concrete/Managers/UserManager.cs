@@ -15,6 +15,10 @@ namespace GPR.Laterna.Business.Concrete.Managers
 
         private IUserDal _userDal;
 
+        private IArtistDal _artistDal;
+        private IAlbumDal _albumDal;
+        private ITrackDal _trackDal;
+        private IPlaylistDal _playlistDal;
         private IUserLikedArtistDal _userLikedArtistDal;
         private IUserFollowedArtistDal _userFollowedArtistDal;
 
@@ -38,6 +42,10 @@ namespace GPR.Laterna.Business.Concrete.Managers
             _userLikedTrackDal = DalFactory.CreateUserLikedTrackDal();
             _userFollowedPlaylistDal = DalFactory.CreateUserFollowedPlaylistDal();
             _userLikedPlaylistDal = DalFactory.CreateUserLikedPlaylistDal();
+            _artistDal = DalFactory.CreateArtistDal();
+            _albumDal = DalFactory.CreateAlbumDal();
+            _trackDal = DalFactory.CreateTrackDal();
+            _playlistDal = DalFactory.CreatePlaylistDal();
         }
         public User Add(User user)
         {
@@ -169,12 +177,20 @@ namespace GPR.Laterna.Business.Concrete.Managers
 
         public List<UserFollowedAlbum> GetUserFollowedAlbums(long id)
         {
+           
             return _userFollowedAlbumDal.GetList(x=>x.UserId == id);
         }
 
         public List<UserFollowedArtist> GetUserFollowedArtists(long id)
         {
             return _userFollowedArtistDal.GetList(x=>x.UserId == id);
+        }
+
+        public Artist GetFollowedArtistName(long id)
+        {
+            var userFollowedArtist = _userFollowedArtistDal.Get(x => x.Id == id);
+            var artist = _artistDal.Get(x => x.Id == userFollowedArtist.ArtistId);
+            return artist;
         }
 
         public List<UserFollowedPlaylist> GetUserFollowedPlaylists(long id)
@@ -283,6 +299,27 @@ namespace GPR.Laterna.Business.Concrete.Managers
         public User Update(User user)
         {
             return _userDal.Update(user);
+        }
+
+        public Album GetFollowedAlbumName(long id)
+        {
+            var userFollowedAlbum = _userFollowedAlbumDal.Get(x => x.Id == id);
+            var album = _albumDal.Get(x => x.Id == userFollowedAlbum.AlbumId);
+            return album;
+        }
+
+        public Track GetFollowedTrackName(long id)
+        {
+            var userFollowedTrack = _userFollowedTrackDal.Get(x => x.Id == id);
+            var track = _trackDal.Get(x => x.Id == userFollowedTrack.TrackId);
+            return track;
+        }
+
+        public Playlist GetFollowedPlaylistName(long id)
+        {
+            var userFollowedPlaylist = _userFollowedPlaylistDal.Get(x => x.Id == id);
+            var playlist = _playlistDal.Get(x => x.Id == userFollowedPlaylist.PlaylistId);
+            return playlist;
         }
     }
 }
