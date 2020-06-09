@@ -17,7 +17,7 @@ namespace GPR.Laterna.Presentation
     {
         private PlaylistConnector _playlistConnector;
         CustomMessageBox customMessageBox;
-        public static long PlaylistId = 0;
+        public static long FormPlaylistId = 0;
         public MsgPlaylistAdd()
         {
             InitializeComponent();
@@ -54,7 +54,7 @@ namespace GPR.Laterna.Presentation
         }
         private void dgwPlaylist_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            PlaylistId = Convert.ToInt64(dgwPlaylist.Rows[dgwPlaylist.CurrentRow.Index].Cells[0].Value);
+            FormPlaylistId = Convert.ToInt64(dgwPlaylist.Rows[dgwPlaylist.CurrentRow.Index].Cells[0].Value);
             if (e.RowIndex != -1)
             {
                 DataGridViewRow gridViewRow = dgwPlaylist.Rows[e.RowIndex];
@@ -65,7 +65,7 @@ namespace GPR.Laterna.Presentation
 
         private void DgwCurrentRows()
         {
-            PlaylistId = Convert.ToInt64(dgwPlaylist.Rows[dgwPlaylist.CurrentRow.Index].Cells[0].Value);
+            FormPlaylistId = Convert.ToInt64(dgwPlaylist.Rows[dgwPlaylist.CurrentRow.Index].Cells[0].Value);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace GPR.Laterna.Presentation
             string name = tbxName.Text;
             string description = tbxDescription.Text;
             bool isPublic = checkIsPublic.Checked;
-            _playlistConnector.UpdatePlaylist(name, description, isPublic,PlaylistId);
+            _playlistConnector.UpdatePlaylist(name, description, isPublic,FormPlaylistId);
             LoadPlaylistDGV();
             Properties.Settings.Default.CustomMessage = "Güncelleme İşlemi Başarıyla Gerçekleşti";
             customMessageBox = new CustomMessageBox();
@@ -96,7 +96,7 @@ namespace GPR.Laterna.Presentation
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DgwCurrentRows();
-            _playlistConnector.DeletePlaylist(PlaylistId);
+            _playlistConnector.DeletePlaylist(FormPlaylistId);
             LoadPlaylistDGV();
             Properties.Settings.Default.CustomMessage = "Silme İşlemi Başarıyla Gerçekleşti";
             customMessageBox = new CustomMessageBox();

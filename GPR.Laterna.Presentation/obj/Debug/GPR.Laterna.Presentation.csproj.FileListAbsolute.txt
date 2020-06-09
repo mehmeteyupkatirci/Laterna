@@ -43,3 +43,9 @@ C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.L
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\NAudio.dll
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\NAudio.xml
 C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\obj\Debug\GPR.Laterna.Presentation.ReportViever.resources
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\System.IO.Pipelines.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\System.Memory.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\System.Buffers.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\90553\source\repos\GPR.Laterna\GPR.Laterna.Presentation\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll

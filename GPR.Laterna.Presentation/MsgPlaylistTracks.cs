@@ -16,6 +16,7 @@ namespace GPR.Laterna.Presentation
         private PlaylistConnector _playlistConnector;
         CustomMessageBox customMessageBox;
         public static long PlaylistId = FormPlaylist.PlaylistId;
+        public static long FormPlaylistId = MsgPlaylistAdd.FormPlaylistId;
         public static long PlaylistTrackId = 0;
         public static long UserId = 0;
 
@@ -27,7 +28,14 @@ namespace GPR.Laterna.Presentation
 
         private void MsgPlaylistTracks_Load(object sender, EventArgs e)
         {
-            dgwPlaylistTracks.DataSource = _playlistConnector.GetPlaylistTracks(PlaylistId);
+            if (PlaylistId == 0)
+            {
+                dgwPlaylistTracks.DataSource = _playlistConnector.GetPlaylistTracks(FormPlaylistId);
+            }
+            else
+            {
+                dgwPlaylistTracks.DataSource = _playlistConnector.GetPlaylistTracks(PlaylistId);
+            }
             dgwPlaylistTracks.Columns["Id"].Visible = false;
             dgwPlaylistTracks.Columns["CreatedAt"].Visible = false;
             dgwPlaylistTracks.Columns["UpdatedAt"].Visible = false;
